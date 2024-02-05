@@ -1,6 +1,6 @@
 <template >
     <div>
-        Favorites
+        FAVORITES
     </div>
 </template>
 

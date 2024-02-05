@@ -1,15 +1,16 @@
 <template>
     <header>
         <div class="headerTop">
-            <p class="headerLinks">
-                FAVORITES
-                ABOUT US
-            </p>
-            <img src="../img/logo_infoDisney.png" alt="InfoDisney Logo">
-            <p>
-                LOG IN
-                SIGN UP
-            </p>
+            <span>
+                <router-link to="favorites" class="headerLinks">FAVORITES</router-link>
+                <router-link to="about-us" class="headerLinks">ABOUT US</router-link>
+            </span>
+            <router-link to="/"><img src="../img/logo_infoDisney.png" alt="InfoDisney Logo"></router-link>
+            <span>
+                <router-link to="logIn" class="btnLogIn">LOG IN</router-link>
+                <router-link to="signUp" class="btnSignUp">SIGN UP</router-link>
+            </span>
+
         </div>
         <div class="headerBottom">
             <input type="checkbox" id="__btnSwitch">
@@ -42,6 +43,44 @@ export default {
 
 .headerLinks {
     color: #FF5757;
+    text-decoration: none;
+}
+
+.btnLogIn,
+.btnSignUp {
+    padding: 10px 20px;
+    margin-right: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btnLogIn {
+    background-color: #FFAFAF;
+}
+
+.btnSignUp {
+    background-color: #FF5757;
+}
+
+.btnLogIn:hover {
+    background-color: #FFCFCF;
+}
+
+.btnSignUp:hover {
+    background-color: #FF7777;
+}
+
+.btnLogIn:focus,
+.btnSignUp:focus {
+    outline: none;
+}
+
+.btnLogIn:active,
+.btnSignUp:active {
+    transform: translateY(1px);
 }
 
 .headerBottom {
@@ -91,5 +130,5 @@ export default {
 #__btnSwitch {
     display: none;
 }
-/* End of Button Switch */
-</style>
+
+/* End of Button Switch */</style>
