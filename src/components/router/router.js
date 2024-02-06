@@ -12,22 +12,40 @@ import StarWarsCharacter from "../infoDisney/pages/Star Wars/StarWarsCharacter.v
 import StarWarsPage from "../infoDisney/pages/Star Wars/StarWarsPage.vue"
 import AboutPage from "../infoDisney/pages/AboutPage.vue"
 import HomePage from "../infoDisney/pages/HomePage.vue"
-import Favorites from "../infoDisney/layout/Favorites.vue"
+import FavoritesPage from "../infoDisney/pages/FavoritesPage.vue"
+import LayoutPublic from "../infoDisney/layout/LayoutPublic.vue"
+import LayoutPrivate from "../infoDisney/layout/LayoutPrivate.vue"
+import UserProfile from "../infoDisney/pages/UserProfile.vue"
+import ContactPage from "../infoDisney/pages/ContactPage.vue"
 
 const routes = [
-    { path: "/", component: HomePage },
-    { path: "/logIn", component: LogIn },
-    { path: "/signUp", component: SignUp },
-    { path: "/disneyPage", component: DisneyPage },
-    { path: "/disneyCharacter", component: DisneyCharacter },
-    { path: "/pixarPage", component: PixarPage },
-    { path: "/pixarCharacter", component: PixarCharacter },
-    { path: "/star-warsPage", component: StarWarsPage },
-    { path: "/star-warsCharacter", component: StarWarsCharacter },
-    { path: "/marvelPage", component: MarvelPage },
-    { path: "/marvelCharacter", component: MarvelCharacter },
-    { path: "/about-us", component: AboutPage },
-    { path: "/favorites", component: Favorites }
+    {
+        path: "/",
+        component: LayoutPublic,
+        children: [
+            { path: "", component: HomePage },
+            { path: "/logIn", component: LogIn },
+            { path: "/signUp", component: SignUp },
+            { path: "/disneyPage", component: DisneyPage },
+            { path: "/disneyCharacter", component: DisneyCharacter },
+            { path: "/pixarPage", component: PixarPage },
+            { path: "/pixarCharacter", component: PixarCharacter },
+            { path: "/star-warsPage", component: StarWarsPage },
+            { path: "/star-warsCharacter", component: StarWarsCharacter },
+            { path: "/marvelPage", component: MarvelPage },
+            { path: "/marvelCharacter", component: MarvelCharacter },
+            { path: "/about-us", component: AboutPage },
+            { path: "/contact", component: ContactPage }
+        ]
+    },
+    {
+        path: "/private",
+        component: LayoutPrivate,
+        children: [
+            { path: "/userProfile", component: UserProfile },
+            { path: "/favorites", component: FavoritesPage }
+        ]
+    }
 ]
 
 const router = createRouter({

@@ -1,9 +1,10 @@
-  @import "./base.css";
+@import "./base.css";
 
-  #app {
-    min-width: 100vw;
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-    display: grid;
-  }
+#app {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 100%;
+  font-weight: normal;
+}

@@ -1,21 +1,24 @@
 <template>
     <header>
-        <div class="headerTop">
-            <span>
-                <router-link to="favorites" class="headerLinks">FAVORITES</router-link>
-                <router-link to="about-us" class="headerLinks">ABOUT US</router-link>
-            </span>
-            <router-link to="/"><img src="../img/logo_infoDisney.png" alt="InfoDisney Logo"
-                    class="headerLogo"></router-link>
-            <span>
-                <router-link to="logIn" class="btnLogIn">LOG IN</router-link>
-                <router-link to="signUp" class="btnSignUp">SIGN UP</router-link>
-            </span>
+        <div class="header__top">
+            <nav>
+                <ul class="header__list">
+                    <li><router-link to="favorites" class="header__links">FAVORITES</router-link></li>
+                    <li><router-link to="about-us" class="header__links">ABOUT US</router-link></li>
+                </ul>
+            </nav>
+            <router-link to="/"><img src="../img/logo_infoDisney.png" alt="InfoDisney Logo" class="header__logo"></router-link>
+            <nav>
+                <ul class="header__list">
+                    <li><router-link to="logIn" class="btn__logIn">LOG IN</router-link></li>
+                    <li><router-link to="signUp" class="btn__signUp">SIGN UP</router-link></li>
+                </ul>
+            </nav>
         </div>
         <div class="headerBottom">
-            <input type="checkbox" id="__btnSwitch">
-            <label for="__btnSwitch" class="btnSwitch"></label>
-            <input type="search" name="search" class="searchInput" placeholder="SEARCH" spellcheck>
+            <input type="checkbox" id="__btn__switch">
+            <label for="__btn__switch" class="btn__switch"></label>
+            <input type="search" name="search" class="search_input" placeholder="SEARCH" spellcheck>
         </div>
     </header>
 </template>
@@ -27,7 +30,7 @@ export default {
 </script>
 
 <style>
-.headerTop,
+.header__top,
 .headerBottom {
     display: flex;
     justify-content: space-between;
@@ -35,28 +38,33 @@ export default {
     padding-right: 1vw;
 }
 
-.headerTop {
-    background-color: #fff;
+.header__top {
     align-items: center;
     min-height: 10vh;
+    background-color: #fff;
 }
 
-.headerLinks {
+.header__list {
+    display: flex;
+    list-style-type: none;
+}
+
+.header__links {
+    margin-right: 0.5vw;
     color: #FF5757;
     text-decoration: none;
-    margin-right: 0.5vw;
 }
 
-.headerLinks:hover {
+.header__links:hover {
     color: #FFAFAF;
 }
 
-.headerLinks:focus {
+.header__links:focus {
     outline: none;
 }
 
 /* Animation for header logo */
-.headerLogo {
+.header__logo {
     -webkit-animation: text-flicker-in-glow 4s linear both;
     animation: text-flicker-in-glow 4s linear both;
 }
@@ -375,8 +383,8 @@ export default {
 
 /* Emd pf animation for header logo */
 
-.btnLogIn,
-.btnSignUp {
+.btn__logIn,
+.btn__signUp {
     padding: 1vh 1vw;
     margin-right: 0.5vw;
     color: #fff;
@@ -387,78 +395,78 @@ export default {
     transition: background-color 0.3s ease;
 }
 
-.btnLogIn {
+.btn__logIn {
     background-color: #FFAFAF;
 }
 
-.btnSignUp {
+.btn__signUp {
     background-color: #FF5757;
 }
 
-.btnLogIn:hover {
+.btn__logIn:hover {
     background-color: #FFCFCF;
 }
 
-.btnSignUp:hover {
+.btn__signUp:hover {
     background-color: #FF7777;
 }
 
-.btnLogIn:focus,
-.btnSignUp:focus {
+.btn__logIn:focus,
+.btn__signUp:focus {
     outline: none;
 }
 
-.btnLogIn:active,
-.btnSignUp:active,
-.headerLinks:active {
+.btn__logIn:active,
+.btn__signUp:active,
+.header__links:active {
     transform: translateY(1px);
 }
 
 .headerBottom {
-    background-color: #FF5757;
-    min-height: 5vh;
     align-items: center;
+    min-height: 5vh;
+    background-color: #FF5757;
 }
 
 /* Button Switch for Dark/Light Mode */
-.btnSwitch {
+.btn__switch {
     display: inline-block;
+    position: relative;
     width: 55px;
     height: 30px;
     border-radius: 100px;
     cursor: pointer;
-    position: relative;
 }
 
-#__btnSwitch~.btnSwitch {
+#__btn__switch~.btn__switch {
     background: #fff;
     transition: all ease 0.6s;
 }
 
-.btnSwitch::after {
+.btn__switch::after {
     position: absolute;
-    content: "";
     width: 22px;
     height: 22px;
-    background: #000;
-    border-radius: 100px;
     top: 4px;
     left: 5px;
+    content: "";
+    border-radius: 100px;
+    background: #000;
     transition: all ease 0.6s;
 }
 
-#__btnSwitch:checked~.btnSwitch::after {
+#__btn__switch:checked~.btn__switch::after {
     left: 28px;
     background: #fff;
     transition: all ease 0.6s;
 }
 
-#__btnSwitch:checked~.btnSwitch {
+#__btn__switch:checked~.btn__switch {
     background: #000;
     transition: all ease 0.6s;
 }
 
-#__btnSwitch {
+#__btn__switch {
     display: none;
 }
 
