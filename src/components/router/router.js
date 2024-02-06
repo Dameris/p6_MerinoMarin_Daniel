@@ -10,8 +10,8 @@ import PixarCharacter from "../infoDisney/pages/Pixar/PixarCharacter.vue"
 import PixarPage from "../infoDisney/pages/Pixar/PixarPage.vue"
 import StarWarsCharacter from "../infoDisney/pages/Star Wars/StarWarsCharacter.vue"
 import StarWarsPage from "../infoDisney/pages/Star Wars/StarWarsPage.vue"
-import AboutPage from "../shared/AboutPage.vue"
-import HomePage from "../shared/HomePage.vue"
+import AboutPage from "../infoDisney/pages/AboutPage.vue"
+import HomePage from "../infoDisney/pages/HomePage.vue"
 import Favorites from "../infoDisney/layout/Favorites.vue"
 
 const routes = [

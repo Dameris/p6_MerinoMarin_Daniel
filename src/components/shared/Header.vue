@@ -26,7 +26,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 .headerTop,
 .headerBottom {
     display: flex;
@@ -372,6 +372,7 @@ export default {
         text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
     }
 }
+
 /* Emd pf animation for header logo */
 
 .btnLogIn,
@@ -460,5 +461,6 @@ export default {
 #__btnSwitch {
     display: none;
 }
+
 /* End of Button Switch */
 </style>
