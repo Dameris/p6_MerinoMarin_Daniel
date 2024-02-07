@@ -1,5 +1,6 @@
 <template>
 	<header>
+		<!-- Sección superior del encabezado -->
 		<div class="header__top">
 			<nav>
 				<ul class="header__list">
@@ -49,6 +50,7 @@
 				</ul>
 			</nav>
 		</div>
+		<!-- Sección inferior del encabezado -->
 		<div class="headerBottom">
 			<input
 				type="checkbox"

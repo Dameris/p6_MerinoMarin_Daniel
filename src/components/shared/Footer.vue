@@ -1,5 +1,6 @@
 <template>
 	<footer>
+		<!-- Sección superior del pie de página -->
 		<div class="footer__top">
 			<div class="box__logo__social">
 				<img
@@ -51,6 +52,7 @@
 				</p>
 			</div>
 		</div>
+		<!-- Sección inferior del pie de página -->
 		<div class="footer__bottom">
 			<h4>INFO DISNEY</h4>
 		</div>

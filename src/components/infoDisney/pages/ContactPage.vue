@@ -8,6 +8,7 @@
 			CONTACT WITH <br />
 			<strong>INFO DISNEY</strong>
 		</p>
+		<!-- Formulario de contacto -->
 		<form
 			class="form__contact"
 			id="formContact"
@@ -92,12 +93,14 @@
 		data() {
 			return {
 				pageTitle: "Contact Info Disney",
+				// Objeto para almacenar los datos del formulario
 				formData: {
 					email: "",
 					firstName: "",
 					lastName: "",
 					message: ""
 				},
+				// Variables para controlar los errores de validación de los campos del formulario
 				emailError: false,
 				firstNameError: false,
 				lastNameError: false,
@@ -106,6 +109,7 @@
 		},
 
 		methods: {
+			// Método para validar el formulario antes de enviarlo
 			checkForm() {
 				if (this.emailError || this.firstNameError || this.lastNameError || this.messageError) {
 					alert("All input fields must contain valid information.")
@@ -113,7 +117,7 @@
 					alert("Form has been sent")
 					console.log("Data", this.formData)
 
-					// Logic to send data to the backend
+					// Lógica para enviar los datos al backend
 
 					this.formData.email = ""
 					this.formData.firstName = ""
@@ -122,21 +126,25 @@
 				}
 			},
 
+			// Método para validar el formato del correo electrónico
 			validateEmail() {
 				const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$/
 				this.emailError = !emailPattern.test(this.formData.email)
 			},
 
+			// Método para validar el formato del nombre
 			validateFirstName() {
 				const namePattern = /^[A-Za-zÀ-ÿ\s]{2,}$/
 				this.firstNameError = !namePattern.test(this.formData.firstName)
 			},
 
+			// Método para validar el formato del apellido
 			validateLastName() {
 				const namePattern = /^[A-Za-zÀ-ÿ\s]{2,}$/
 				this.lastNameError = !namePattern.test(this.formData.lastName)
 			},
 
+			// Método para validar la longitud del mensaje
 			validateMessage() {
 				this.messageError = this.formData.message.length < 20
 			}

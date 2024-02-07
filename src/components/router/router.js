@@ -14,6 +14,7 @@ import LayoutPublic from "../infoDisney/layout/LayoutPublic.vue"
 import LayoutPrivate from "../infoDisney/layout/LayoutPrivate.vue"
 import UserProfile from "../infoDisney/pages/UserProfile.vue"
 
+// Definición de las rutas de la aplicación
 const routes = [
 	{
 		path: "/",
@@ -51,6 +52,7 @@ const routes = [
 	}
 ]
 
+// Crea el enrutador de la aplicación con la configuración de rutas y el historial de navegación
 const router = createRouter({
 	history: createWebHashHistory(),
 	routes
