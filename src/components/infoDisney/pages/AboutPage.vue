@@ -1,15 +1,9 @@
 <template>
-    <div>
-        ABOUT PAGE
-    </div>
+  <div>ABOUT PAGE</div>
 </template>
 
 <script>
-export default {
-    
-}
+export default {};
 </script>
 
-<style>
-    
-</style>
+<style></style>

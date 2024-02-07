@@ -1,15 +1,9 @@
 <template>
-    <div>
-        DISNEY CHARACTER
-    </div>
+  <div>DISNEY CHARACTER</div>
 </template>
 
 <script>
-export default {
-    
-}
+export default {};
 </script>
 
-<style>
-    
-</style>
+<style></style>

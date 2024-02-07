@@ -1,15 +1,9 @@
 <template>
-    <div>
-        USER PROFILE
-    </div>
+  <div>USER PROFILE</div>
 </template>
 
 <script>
-export default {
-    
-}
+export default {};
 </script>
 
-<style>
-    
-</style>
+<style></style>

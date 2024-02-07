@@ -1,15 +1,9 @@
 <template>
-    <div>
-        DISNEY PAGE
-    </div>
+  <div>DISNEY PAGE</div>
 </template>
 
 <script>
-export default {
-    
-}
+export default {};
 </script>
 
-<style>
-    
-</style>
+<style></style>

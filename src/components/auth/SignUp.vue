@@ -1,15 +1,9 @@
 <template>
-    <div>
-        Sign Up
-    </div>
+  <div>Sign Up</div>
 </template>
 
 <script>
-export default {
-    
-}
+export default {};
 </script>
 
-<style>
-    
-</style>
+<style></style>
