@@ -8,11 +8,13 @@
             <input class="form__input" type="email" name="email" id="email" placeholder="EMAIL" required
                 v-model="formData.email">
             <input class="form__input" type="text" name="first_name" id="first_name" placeholder="FIRST NAME"
-                spellcheck="true" required v-model="formData.firstName" @input="validateName">
+                spellcheck="true" required v-model="formData.firstName">
+
             <input class="form__input" type="text" name="last_name" id="last_name" placeholder="LAST NAME" spellcheck="true"
-                required v-model="formData.lastName" @input="validateName">
-            <textarea class="form__textarea" name="message" id="message" placeholder="YOUR MESSAGE" pattern=".{20,}" spellcheck="true"
-                required v-model="formData.message" @input="validateMessage" />
+                required v-model="formData.lastName">
+
+            <textarea class="form__textarea" name="message" id="message" placeholder="YOUR MESSAGE" pattern=".{20,}"
+                spellcheck="true" required v-model="formData.message" @input="validateMessage" />
             <button class="form__btn" type="submit" name="send" id="send" value="send">SEND</button>
         </form>
     </section>
@@ -124,4 +126,5 @@ export default {
 
 .form__btn:active {
     transform: translateY(1px);
-}</style>
+}
+</style>
