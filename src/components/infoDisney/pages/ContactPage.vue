@@ -10,56 +10,76 @@
 		</p>
 		<form
 			class="form__contact"
-			@submit.prevent="submitForm"
+			id="formContact"
+			@submit.prevent="checkForm"
 		>
 			<input
 				class="form__input"
 				type="email"
+				title="email"
 				name="email"
-				id="email"
 				placeholder="EMAIL"
 				required
 				v-model="formData.email"
+				@input="validateEmail"
 			/>
+			<span
+				v-if="emailError"
+				class="error-message"
+				>Please enter a valid email address.</span
+			>
 			<input
 				class="form__input"
 				type="text"
+				title="first_name"
 				name="first_name"
-				id="first_name"
 				placeholder="FIRST NAME"
 				spellcheck="true"
 				required
 				v-model="formData.firstName"
+				@input="validateFirstName"
 			/>
-
+			<span
+				v-if="firstNameError"
+				class="error-message"
+				>Please enter a valid first name.</span
+			>
 			<input
 				class="form__input"
 				type="text"
+				title="last_name"
 				name="last_name"
-				id="last_name"
 				placeholder="LAST NAME"
 				spellcheck="true"
 				required
 				v-model="formData.lastName"
+				@input="validateLastName"
 			/>
-
+			<span
+				v-if="lastNameError"
+				class="error-message"
+				>Please enter a valid last name.</span
+			>
 			<textarea
 				class="form__textarea"
+				title="message"
 				name="message"
-				id="message"
 				placeholder="YOUR MESSAGE"
-				pattern=".{20,}"
 				spellcheck="true"
 				required
 				v-model="formData.message"
 				@input="validateMessage"
 			/>
+			<span
+				v-if="messageError"
+				class="error-message"
+				>Message must be at least 20 characters long.</span
+			>
 			<button
 				class="form__btn"
 				type="submit"
+				title="send"
 				name="send"
-				id="send"
-				value="send"
 			>
 				SEND
 			</button>
@@ -82,15 +102,35 @@
 		},
 
 		methods: {
-			submitForm() {
-				console.log("Form has been send")
+			checkForm() {
+				alert("Form has been send")
 				console.log("Data", this.formData)
+
+				// Logic to send data to the backend
+
 				this.formData.email = ""
 				this.formData.firstName = ""
 				this.formData.lastName = ""
 				this.formData.message = ""
+			},
 
-				// Logic to send data to the backend
+			validateEmail() {
+				const emailPattern = "[A-Za-z@.]*"
+				this.emailError = !emailPattern.test(this.formData.email)
+			},
+
+			validateFirstName() {
+				const namePattern = "[A-Za-zÀ-ÿ\s]{2,}"
+				this.firstNameError = !namePattern.test(this.formData.firstName)
+			},
+
+			validateLastName() {
+				const namePattern = "[A-Za-zÀ-ÿ\s]{2,}"
+				this.lastNameError = !namePattern.test(this.formData.lastName)
+			},
+
+			validateMessage() {
+				this.messageError = this.formData.message.length < 20
 			}
 		}
 	}
