@@ -1,5 +1,5 @@
 <template>
-	<section class="box__contact">
+	<div class="box__contact">
 		<img
 			src="../../img/logo_infoDisney.png"
 			alt="InfoDisney Logo"
@@ -25,7 +25,7 @@
 			/>
 			<span
 				v-if="emailError"
-				class="error-message"
+				class="error__message"
 				>Please enter a valid email address.</span
 			>
 			<input
@@ -41,7 +41,7 @@
 			/>
 			<span
 				v-if="firstNameError"
-				class="error-message"
+				class="error__message"
 				>Please enter a valid first name.</span
 			>
 			<input
@@ -57,7 +57,7 @@
 			/>
 			<span
 				v-if="lastNameError"
-				class="error-message"
+				class="error__message"
 				>Please enter a valid last name.</span
 			>
 			<textarea
@@ -69,10 +69,10 @@
 				required
 				v-model="formData.message"
 				@input="validateMessage"
-			/>
+			></textarea>
 			<span
 				v-if="messageError"
-				class="error-message"
+				class="error__message"
 				>Message must be at least 20 characters long.</span
 			>
 			<button
@@ -84,7 +84,7 @@
 				SEND
 			</button>
 		</form>
-	</section>
+	</div>
 </template>
 
 <script>
@@ -97,35 +97,43 @@
 					firstName: "",
 					lastName: "",
 					message: ""
-				}
+				},
+				emailError: false,
+				firstNameError: false,
+				lastNameError: false,
+				messageError: false
 			}
 		},
 
 		methods: {
 			checkForm() {
-				alert("Form has been send")
-				console.log("Data", this.formData)
+				if (this.emailError || this.firstNameError || this.lastNameError || this.messageError) {
+					alert("All input fields must contain valid information.")
+				} else {
+					alert("Form has been sent")
+					console.log("Data", this.formData)
 
-				// Logic to send data to the backend
+					// Logic to send data to the backend
 
-				this.formData.email = ""
-				this.formData.firstName = ""
-				this.formData.lastName = ""
-				this.formData.message = ""
+					this.formData.email = ""
+					this.formData.firstName = ""
+					this.formData.lastName = ""
+					this.formData.message = ""
+				}
 			},
 
 			validateEmail() {
-				const emailPattern = "[A-Za-z@.]*"
+				const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$/
 				this.emailError = !emailPattern.test(this.formData.email)
 			},
 
 			validateFirstName() {
-				const namePattern = "[A-Za-zÀ-ÿ\s]{2,}"
+				const namePattern = /^[A-Za-zÀ-ÿ\s]{2,}$/
 				this.firstNameError = !namePattern.test(this.formData.firstName)
 			},
 
 			validateLastName() {
-				const namePattern = "[A-Za-zÀ-ÿ\s]{2,}"
+				const namePattern = /^[A-Za-zÀ-ÿ\s]{2,}$/
 				this.lastNameError = !namePattern.test(this.formData.lastName)
 			},
 
@@ -136,12 +144,12 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.box__contact {
 		display: flex;
 		align-items: center;
-		justify-content: center;
 		flex-direction: column;
+		min-height: 100vh;
 		margin-top: 3vh;
 	}
 
@@ -162,7 +170,7 @@
 		margin-bottom: 1vh;
 		width: 18vw;
 		padding: 0.8rem;
-		color: rgb(0, 0, 0, 40%);
+		color: rgba(0, 0, 0, 0.4);
 		font-family:
 			Inter,
 			-apple-system,
@@ -176,11 +184,6 @@
 			"Droid Sans",
 			"Helvetica Neue",
 			sans-serif;
-	}
-
-	.form__input,
-	.form__textarea,
-	.form__btn {
 		border: 0.1rem solid #ff5757;
 		border-radius: 0.2rem;
 	}
@@ -199,6 +202,8 @@
 		padding: 0.8rem;
 		color: #fff;
 		background-color: #ff5757;
+		border: 0.1rem solid #ff5757;
+		border-radius: 0.2rem;
 		cursor: pointer;
 		transition: background-color 0.3s ease;
 	}
@@ -213,5 +218,12 @@
 
 	.form__btn:active {
 		transform: translateY(1px);
+	}
+
+	.error__message {
+		padding-top: 0;
+		color: red;
+		font-size: 0.8rem;
+		padding-bottom: 1vh;
 	}
 </style>
