@@ -1,9 +1,9 @@
 <template>
-  <div>FAVORITES</div>
+	<div>FAVORITES</div>
 </template>
 
 <script>
-export default {};
+	export default {}
 </script>
 
 <style></style>
