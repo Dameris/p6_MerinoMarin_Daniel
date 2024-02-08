@@ -88,6 +88,10 @@
 		justify-content: space-between;
 	}
 
+	.footer__socialMedia img {
+		width: 0.8rem;
+	}
+
 	.footer__infoBox {
 		display: flex;
 		align-items: center;
@@ -95,10 +99,6 @@
 		justify-content: center;
 		color: #ff5757;
 		text-align: center;
-	}
-
-	h6 {
-		font-weight: 900;
 	}
 
 	.footer__infoContent {

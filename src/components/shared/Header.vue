@@ -66,6 +66,9 @@
 				class="header__searchInput"
 				placeholder="SEARCH"
 				spellcheck
+				v-model="searchQuery"
+				@focus="handleFocus"
+				@blur="handleBlur"
 			/>
 		</div>
 	</header>
@@ -589,6 +592,29 @@
 	#__btnSwitch {
 		display: none;
 	}
-
 	/* End of Button Switch */
+
+	.header__searchInput {
+		width: 15vw;
+		padding: 0.8vh 1vw;
+		margin-right: 0.5vw;
+		border: none;
+		border-radius: 0.3vw;
+		color: #ff5757;
+		background-color: #f5f5f5;
+		box-shadow:
+			0 2px 4px rgba(0, 0, 0, 0.1),
+			background-color 0.3s,
+			box-shadow 0.3s;
+	}
+
+	.header__searchInput::placeholder {
+		color: #ff5757;
+	}
+
+	.header__searchInput:focus {
+		outline: none;
+		background-color: #fff;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
 </style>
