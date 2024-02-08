@@ -1,145 +1,10 @@
 <template>
-	<div style="background-color: blue">
-		HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME
-		PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE
-		HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME
-		PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE
-		HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME
-		PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE
-		HOME PAGE HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE <br />
-		HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME
-		PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE HOME PAGE
+	<div>
+		<img
+			src="../../img/disney100.png"
+			class="home__image"
+			alt="Home image"
+		/>
 	</div>
 </template>
 
@@ -147,4 +12,8 @@
 	export default {}
 </script>
 
-<style></style>
+<style>
+	.home__image {
+		width: 100%;
+	}
+</style>
