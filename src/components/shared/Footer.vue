@@ -1,8 +1,8 @@
 <template>
 	<footer>
 		<!-- Sección superior del pie de página -->
-		<div class="footer__top">
-			<div class="box__logo__social">
+		<div class="footerTop">
+			<div class="footer__logoSocial">
 				<img
 					src="../img/logo_infoDisney.png"
 					alt="InfoDisney Logo"
@@ -10,7 +10,7 @@
 				<p>
 					<br />
 					<a href="mailto:help@info-disney.com">help@info-disney.com</a>
-					<span class="social__media">
+					<span class="footer__socialMedia">
 						<img
 							src="../img/logos/Instagram.png"
 							alt="Instagram Logo"
@@ -30,30 +30,30 @@
 					</span>
 				</p>
 			</div>
-			<div class="info__boxes">
+			<div class="footer__infoBox">
 				<h5>BORING STUFF</h5>
-				<p class="content__info">
+				<p class="footer__infoContent">
 					PRIVACY POLICY <br />
 					TERMS
 				</p>
 			</div>
-			<div class="info__boxes">
+			<div class="footer__infoBox">
 				<h5>WEB SITE</h5>
-				<p class="content__info">
+				<p class="footer__infoContent">
 					ABOUT US <br />
 					HOME
 				</p>
 			</div>
-			<div class="info__boxes">
+			<div class="footer__infoBox">
 				<h5>SUPPORT</h5>
-				<p class="content__info">
+				<p class="footer__infoContent">
 					<router-link to="contact">CONTACT</router-link> <br />
 					FAQ
 				</p>
 			</div>
 		</div>
 		<!-- Sección inferior del pie de página -->
-		<div class="footer__bottom">
+		<div class="footerBottom">
 			<h4>INFO DISNEY</h4>
 		</div>
 	</footer>
@@ -66,7 +66,7 @@
 </script>
 
 <style>
-	.footer__top {
+	.footerTop {
 		display: flex;
 		justify-content: space-between;
 		padding-left: 10vw;
@@ -77,18 +77,18 @@
 		background-color: #fff;
 	}
 
-	.box__logo__social {
+	.footer__logoSocial {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
 	}
 
-	.social__media {
+	.footer__socialMedia {
 		display: flex;
 		justify-content: space-between;
 	}
 
-	.info__boxes {
+	.footer__infoBox {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
@@ -101,7 +101,7 @@
 		font-weight: 900;
 	}
 
-	.content__info {
+	.footer__infoContent {
 		font-size: x-small;
 	}
 
@@ -110,7 +110,7 @@
 		text-decoration: none;
 	}
 
-	.footer__bottom {
+	.footerBottom {
 		display: flex;
 		justify-content: center;
 		color: #fff;

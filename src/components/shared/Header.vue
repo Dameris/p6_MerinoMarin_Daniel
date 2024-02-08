@@ -1,13 +1,13 @@
 <template>
 	<header>
 		<!-- Sección superior del encabezado -->
-		<div class="header__top">
+		<div class="headerTop">
 			<nav>
 				<ul class="header__list">
 					<li>
 						<router-link
 							to="favorites"
-							class="header__links"
+							class="header__link"
 						>
 							FAVORITES
 						</router-link>
@@ -15,7 +15,7 @@
 					<li>
 						<router-link
 							to="about-us"
-							class="header__links"
+							class="header__link"
 						>
 							ABOUT US
 						</router-link>
@@ -34,7 +34,7 @@
 					<li>
 						<router-link
 							to="logIn"
-							class="btn__logIn"
+							class="header__btn--logIn"
 						>
 							LOG IN
 						</router-link>
@@ -42,7 +42,7 @@
 					<li>
 						<router-link
 							to="signUp"
-							class="btn__signUp"
+							class="header__btn--signUp"
 						>
 							SIGN UP
 						</router-link>
@@ -54,16 +54,16 @@
 		<div class="headerBottom">
 			<input
 				type="checkbox"
-				id="__btn__switch"
+				id="__btnSwitch"
 			/>
 			<label
-				for="__btn__switch"
-				class="btn__switch"
+				for="__btnSwitch"
+				class="header__btn--switch"
 			/>
 			<input
 				type="search"
 				name="search"
-				class="search_input"
+				class="header__searchInput"
 				placeholder="SEARCH"
 				spellcheck
 			/>
@@ -78,7 +78,7 @@
 </script>
 
 <style>
-	.header__top,
+	.headerTop,
 	.headerBottom {
 		display: flex;
 		justify-content: space-between;
@@ -86,7 +86,7 @@
 		padding-right: 1vw;
 	}
 
-	.header__top {
+	.headerTop {
 		align-items: center;
 		min-height: 10vh;
 		background-color: #fff;
@@ -97,17 +97,17 @@
 		list-style-type: none;
 	}
 
-	.header__links {
+	.header__link {
 		margin-right: 0.5vw;
 		color: #ff5757;
 		text-decoration: none;
 	}
 
-	.header__links:hover {
+	.header__link:hover {
 		color: #ffafaf;
 	}
 
-	.header__links:focus {
+	.header__link:focus {
 		outline: none;
 	}
 
@@ -503,8 +503,8 @@
 
 	/* Emd pf animation for header logo */
 
-	.btn__logIn,
-	.btn__signUp {
+	.header__btn--logIn,
+	.header__btn--signUp {
 		padding: 1vh 1vw;
 		margin-right: 0.5vw;
 		color: #fff;
@@ -515,30 +515,30 @@
 		transition: background-color 0.3s ease;
 	}
 
-	.btn__logIn {
+	.header__btn--logIn {
 		background-color: #ffafaf;
 	}
 
-	.btn__signUp {
+	.header__btn--signUp {
 		background-color: #ff5757;
 	}
 
-	.btn__logIn:hover {
+	.header__btn--logIn:hover {
 		background-color: #ffcfcf;
 	}
 
-	.btn__signUp:hover {
+	.header__btn--signUp:hover {
 		background-color: #ff7777;
 	}
 
-	.btn__logIn:focus,
-	.btn__signUp:focus {
+	.header__btn--logIn:focus,
+	.header__btn--signUp:focus {
 		outline: none;
 	}
 
-	.btn__logIn:active,
-	.btn__signUp:active,
-	.header__links:active {
+	.header__btn--logIn:active,
+	.header__btn--signUp:active,
+	.header__link:active {
 		transform: translateY(1px);
 	}
 
@@ -549,7 +549,7 @@
 	}
 
 	/* Button Switch for Dark/Light Mode */
-	.btn__switch {
+	.header__btn--switch {
 		display: inline-block;
 		position: relative;
 		width: 55px;
@@ -558,12 +558,12 @@
 		cursor: pointer;
 	}
 
-	#__btn__switch ~ .btn__switch {
+	#__btnSwitch ~ .header__btn--switch {
 		background: #fff;
 		transition: all ease 0.6s;
 	}
 
-	.btn__switch::after {
+	.header__btn--switch::after {
 		position: absolute;
 		width: 22px;
 		height: 22px;
@@ -575,18 +575,18 @@
 		transition: all ease 0.6s;
 	}
 
-	#__btn__switch:checked ~ .btn__switch::after {
+	#__btnSwitch:checked ~ .header__btn--switch::after {
 		left: 28px;
 		background: #fff;
 		transition: all ease 0.6s;
 	}
 
-	#__btn__switch:checked ~ .btn__switch {
+	#__btnSwitch:checked ~ .header__btn--switch {
 		background: #000;
 		transition: all ease 0.6s;
 	}
 
-	#__btn__switch {
+	#__btnSwitch {
 		display: none;
 	}
 
