@@ -39,8 +39,11 @@ header {
   min-width: 100%;
 }
 
+main {
+  min-height: 70vh;
+}
+
 footer {
-  position: absolute;
   min-width: 100%;
   bottom: 0;
 }

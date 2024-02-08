@@ -66,9 +66,6 @@
 				class="header__searchInput"
 				placeholder="SEARCH"
 				spellcheck
-				v-model="searchQuery"
-				@focus="handleFocus"
-				@blur="handleBlur"
 			/>
 		</div>
 	</header>
@@ -80,18 +77,18 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.headerTop,
 	.headerBottom {
 		display: flex;
 		justify-content: space-between;
-		padding-left: 1vw;
-		padding-right: 1vw;
+		padding-left: 1em;
+		padding-right: 1em;
 	}
 
 	.headerTop {
 		align-items: center;
-		min-height: 10vh;
+		min-height: 5em;
 		background-color: #fff;
 	}
 
@@ -101,7 +98,7 @@
 	}
 
 	.header__link {
-		margin-right: 0.5vw;
+		margin-right: 0.5em;
 		color: #ff5757;
 		text-decoration: none;
 	}
@@ -503,16 +500,15 @@
 				0 0 100px rgba(255, 255, 255, 0.1);
 		}
 	}
-
-	/* Emd pf animation for header logo */
+	/* End of animation for header logo */
 
 	.header__btn--logIn,
 	.header__btn--signUp {
-		padding: 1vh 1vw;
-		margin-right: 0.5vw;
+		padding: 0.6em 1em;
+		margin-right: 0.5em;
 		color: #fff;
 		border: none;
-		border-radius: 0.3vw;
+		border-radius: 0.3em;
 		cursor: pointer;
 		text-decoration: none;
 		transition: background-color 0.3s ease;
@@ -542,12 +538,12 @@
 	.header__btn--logIn:active,
 	.header__btn--signUp:active,
 	.header__link:active {
-		transform: translateY(1px);
+		transform: translateY(1em);
 	}
 
 	.headerBottom {
 		align-items: center;
-		min-height: 5vh;
+		min-height: 3em;
 		background-color: #ff5757;
 	}
 
@@ -555,9 +551,9 @@
 	.header__btn--switch {
 		display: inline-block;
 		position: relative;
-		width: 55px;
-		height: 30px;
-		border-radius: 100px;
+		width: 3.5em;
+		height: 1.9em;
+		border-radius: 100em;
 		cursor: pointer;
 	}
 
@@ -568,18 +564,18 @@
 
 	.header__btn--switch::after {
 		position: absolute;
-		width: 22px;
-		height: 22px;
-		top: 4px;
-		left: 5px;
+		width: 1.4em;
+		height: 1.4em;
+		top: 0.25em;
+		left: 0.32em;
 		content: "";
-		border-radius: 100px;
+		border-radius: 100em;
 		background: #000;
 		transition: all ease 0.6s;
 	}
 
 	#__btnSwitch:checked ~ .header__btn--switch::after {
-		left: 28px;
+		left: 1.65em;
 		background: #fff;
 		transition: all ease 0.6s;
 	}
@@ -595,15 +591,15 @@
 	/* End of Button Switch */
 
 	.header__searchInput {
-		width: 15vw;
-		padding: 0.8vh 1vw;
-		margin-right: 0.5vw;
+		width: 22em;
+		padding: 0.6em 1em;
+		margin-right: 0.5em;
 		border: none;
-		border-radius: 0.3vw;
+		border-radius: 0.3em;
 		color: #ff5757;
 		background-color: #f5f5f5;
 		box-shadow:
-			0 2px 4px rgba(0, 0, 0, 0.1),
+			0 2em 4em rgba(0, 0, 0, 0.1),
 			background-color 0.3s,
 			box-shadow 0.3s;
 	}
@@ -615,6 +611,6 @@
 	.header__searchInput:focus {
 		outline: none;
 		background-color: #fff;
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		box-shadow: 0 4em 8em rgba(0, 0, 0, 0.1);
 	}
 </style>

@@ -65,7 +65,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.footerTop {
 		display: flex;
 		justify-content: space-between;

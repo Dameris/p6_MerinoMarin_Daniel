@@ -5,6 +5,48 @@
 			class="home__image"
 			alt="Home image"
 		/>
+		<section class="home__section">
+			<nav class="home__sectionDisney">
+				<caption>
+					<img
+						src="../../img/disney_logo_bg 1.png"
+						class="homeSection__titleImage"
+						alt="Section image"
+					/>
+				</caption>
+				<ul class="home__section_ul">
+					<li>
+						<img
+							src="../../img/33631_mickey_mouse_character_disney.png"
+							class="homeSection__image"
+							alt="Section image"
+						/>
+						<span class="homeSection__text"></span>
+					</li>
+					<li>
+						<img
+							src="../../img/33631_mickey_mouse_character_disney.png"
+							class="homeSection__image"
+							alt="Section image"
+						/>
+					</li>
+					<li>
+						<img
+							src="../../img/33631_mickey_mouse_character_disney.png"
+							class="homeSection__image"
+							alt="Section image"
+						/>
+					</li>
+					<li>
+						<img
+							src="../../img/33631_mickey_mouse_character_disney.png"
+							class="homeSection__image"
+							alt="Section image"
+						/>
+					</li>
+				</ul>
+			</nav>
+		</section>
 	</div>
 </template>
 
@@ -15,5 +57,28 @@
 <style>
 	.home__image {
 		width: 100%;
+	}
+
+	.home__sectionDisney {
+		background-color: #20286d;
+		text-align: center;
+	}
+
+	.homeSection__titleImage {
+		padding: 1vh;
+	}
+
+	.home__section_ul {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		margin-bottom: 30vh;
+		color: #fff;
+		list-style: none;
+	}
+
+	.homeSection__text {
+		display: block;
+		margin-top: 0.5rem;
 	}
 </style>
