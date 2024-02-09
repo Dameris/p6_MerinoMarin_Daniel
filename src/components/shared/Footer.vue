@@ -117,7 +117,7 @@
 	}
 
 	/* Media query */
-	@media (max-width: 400px) {
+	@media (max-width: 550px) {
 		.footerTop {
 			flex-direction: column;
 			padding-top: 1em;
@@ -144,6 +144,5 @@
 			font-size: small;
 		}
 	}
-
-	/*@media (max-width: 570px)*/
+	/* End of media query */
 </style>
