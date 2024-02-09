@@ -8,7 +8,6 @@
 					alt="InfoDisney Logo"
 				/>
 				<p>
-					<br />
 					<a href="mailto:help@info-disney.com">help@info-disney.com</a>
 					<span class="footer__socialMedia">
 						<img
@@ -116,4 +115,35 @@
 		color: #fff;
 		background-color: #ff5757;
 	}
+
+	/* Media query */
+	@media (max-width: 400px) {
+		.footerTop {
+			flex-direction: column;
+			padding-top: 1em;
+		}
+
+		.footer__logoSocial img {
+			width: 10em;
+		}
+
+		.footer__socialMedia {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.footer__socialMedia img {
+			width: 0.8rem;
+		}
+
+		.footer__infoBox {
+			margin-top: 1em;
+		}
+
+		.footerBottom {
+			font-size: small;
+		}
+	}
+
+	/*@media (max-width: 570px)*/
 </style>

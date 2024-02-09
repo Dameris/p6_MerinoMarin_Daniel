@@ -752,4 +752,5 @@
 			width: 15em;
 		}
 	}
+	/* End of media query */
 </style>
