@@ -8,3 +8,88 @@
   min-width: 100%;
   font-weight: normal;
 }
+
+/*& Form style */
+.formBox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-top: 3vh;
+}
+
+.formBox__title {
+  padding-top: 2vh;
+  padding-bottom: 1vh;
+  text-align: center;
+  color: #ff5757;
+}
+
+.formBox-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formBox-form__input,
+.form__textarea {
+  margin-bottom: 1vh;
+  width: 18vw;
+  padding: 0.8rem;
+  color: rgba(0, 0, 0, 0.4);
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
+  border: 0.1rem solid #ff5757;
+  border-radius: 0.2rem;
+}
+
+.formBox-form__input:focus,
+.form__textarea:focus {
+  border: 0.2rem solid #ff5757;
+  outline: none;
+}
+
+.form__textarea {
+  min-height: 20vh;
+}
+
+.formBox-form__btn {
+  padding: 0.8rem;
+  color: #fff;
+  background-color: #ff5757;
+  border: 0.1rem solid #ff5757;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formBox-form__btn:hover {
+  background-color: #ff7777;
+}
+
+.formBox-form__btn:focus {
+  outline: none;
+}
+
+.formBox-form__btn:active {
+  transform: translateY(1px);
+}
+
+.formBox-form--errorMessage {
+  padding-top: 0;
+  color: red;
+  font-size: 0.8rem;
+  padding-bottom: 1vh;
+}
+
+/*& End of form style */

@@ -38,7 +38,8 @@ const routes = [
 			{
 				path: "/contact",
 				component: () => import("../infoDisney/pages/ContactPage.vue")
-			}
+			},
+			{ path: "/:catchAll(.*)", component: () => import("../shared/error404.vue") }
 		]
 	},
 	{

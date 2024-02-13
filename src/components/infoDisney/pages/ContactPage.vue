@@ -1,21 +1,21 @@
 <template>
-	<div class="contactBox">
+	<div class="formBox">
 		<img
 			src="../../img/logo_infoDisney.png"
 			alt="InfoDisney Logo"
 		/>
-		<p class="contactBox__title">
+		<p class="formBox__title">
 			CONTACT WITH <br />
 			<strong>INFO DISNEY</strong>
 		</p>
 		<!-- Formulario de contacto -->
 		<form
-			class="contactBox-form"
+			class="formBox-form"
 			id="formContact"
 			@submit.prevent="checkForm"
 		>
 			<input
-				class="contactBox-form__input"
+				class="formBox-form__input"
 				type="email"
 				title="email"
 				name="email"
@@ -26,11 +26,11 @@
 			/>
 			<span
 				v-if="emailError"
-				class="contactBox-form--errorMessage"
+				class="formBox-form--errorMessage"
 				>Please enter a valid email address.</span
 			>
 			<input
-				class="contactBox-form__input"
+				class="formBox-form__input"
 				type="text"
 				title="first_name"
 				name="first_name"
@@ -42,11 +42,11 @@
 			/>
 			<span
 				v-if="firstNameError"
-				class="contactBox-form--errorMessage"
+				class="formBox-form--errorMessage"
 				>Please enter a valid first name.</span
 			>
 			<input
-				class="contactBox-form__input"
+				class="formBox-form__input"
 				type="text"
 				title="last_name"
 				name="last_name"
@@ -58,7 +58,7 @@
 			/>
 			<span
 				v-if="lastNameError"
-				class="contactBox-form--errorMessage"
+				class="formBox-form--errorMessage"
 				>Please enter a valid last name.</span
 			>
 			<textarea
@@ -73,11 +73,11 @@
 			></textarea>
 			<span
 				v-if="messageError"
-				class="contactBox-form--errorMessage"
+				class="formBox-form--errorMessage"
 				>Message must be at least 20 characters long.</span
 			>
 			<button
-				class="contactBox-form__btn"
+				class="formBox-form__btn"
 				type="submit"
 				title="send"
 				name="send"
@@ -152,86 +152,6 @@
 	}
 </script>
 
-<style scoped>
-	.contactBox {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		min-height: 100vh;
-		margin-top: 3vh;
-	}
-
-	.contactBox__title {
-		padding-top: 2vh;
-		padding-bottom: 1vh;
-		text-align: center;
-		color: #ff5757;
-	}
-
-	.contactBox-form {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.contactBox-form__input,
-	.form__textarea {
-		margin-bottom: 1vh;
-		width: 18vw;
-		padding: 0.8rem;
-		color: rgba(0, 0, 0, 0.4);
-		font-family:
-			Inter,
-			-apple-system,
-			BlinkMacSystemFont,
-			"Segoe UI",
-			Roboto,
-			Oxygen,
-			Ubuntu,
-			Cantarell,
-			"Fira Sans",
-			"Droid Sans",
-			"Helvetica Neue",
-			sans-serif;
-		border: 0.1rem solid #ff5757;
-		border-radius: 0.2rem;
-	}
-
-	.contactBox-form__input:focus,
-	.form__textarea:focus {
-		border: 0.2rem solid #ff5757;
-		outline: none;
-	}
-
-	.form__textarea {
-		min-height: 20vh;
-	}
-
-	.contactBox-form__btn {
-		padding: 0.8rem;
-		color: #fff;
-		background-color: #ff5757;
-		border: 0.1rem solid #ff5757;
-		border-radius: 0.2rem;
-		cursor: pointer;
-		transition: background-color 0.3s ease;
-	}
-
-	.contactBox-form__btn:hover {
-		background-color: #ff7777;
-	}
-
-	.contactBox-form__btn:focus {
-		outline: none;
-	}
-
-	.contactBox-form__btn:active {
-		transform: translateY(1px);
-	}
-
-	.contactBox-form--errorMessage {
-		padding-top: 0;
-		color: red;
-		font-size: 0.8rem;
-		padding-bottom: 1vh;
-	}
+<style>
+	@import "../../../assets/css/main.css";
 </style>
