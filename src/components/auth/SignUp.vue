@@ -84,8 +84,8 @@
 			>
 				<option
 					v-for="country in countries"
-					:key="country"
-					:value="country"
+					:key="country.code"
+					:value="country.name"
 				>
 					{{ country.name }}
 				</option>
@@ -163,9 +163,7 @@
 				const hasUpperCase = upperCaseRegex.test(this.formData.password)
 				const hasSpecialChar = specialCharRegex.test(this.formData.password)
 
-				if (!hasLength || !hasUpperCase || !hasSpecialChar) {
-					this.passwordError
-				}
+				this.passwordError = !hasLength || !hasUpperCase || !hasSpecialChar
 			},
 
 			// Método para validar el formato del nombre
@@ -190,6 +188,9 @@
 				.then((response) => response.json())
 				.then((data) => {
 					this.countries = data
+					if (this.countries.length > 0) {
+						this.selectedCountry = this.countries[0]
+					}
 				})
 		}
 	}
