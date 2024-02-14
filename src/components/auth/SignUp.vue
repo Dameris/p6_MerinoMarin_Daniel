@@ -40,7 +40,7 @@
 				@input="validatePassword"
 			/>
 			<span
-				v-if="lastNameError"
+				v-if="passwordError"
 				class="formBox-form--errorMessage"
 				>Please enter a valid password.</span
 			>
@@ -77,7 +77,7 @@
 				>Please enter a valid last name.</span
 			>
 			<select
-				class="formBox-form__input"
+				class="formBox-form__input signUp__select"
 				title="country"
 				name="country"
 				v-model="selectedCountry"
@@ -90,6 +90,26 @@
 					{{ country.name }}
 				</option>
 			</select>
+			<article class="signUp__genderSelection">
+				<button
+					class="formBox-form__input signUp__genderSelection-btn"
+					type="button"
+					title="male"
+					name="gender"
+					required
+				>
+					MALE
+				</button>
+				<button
+					class="formBox-form__input signUp__genderSelection-btn"
+					type="button"
+					title="female"
+					name="gender"
+					required
+				>
+					FEMALE
+				</button>
+			</article>
 			<button
 				class="formBox-form__btn"
 				type="submit"
@@ -128,10 +148,14 @@
 			}
 		},
 
+		mounted() {
+			this.fetchCountries()
+		},
+
 		methods: {
 			// Método para validar el formulario antes de enviarlo
 			checkForm() {
-				if (this.emailError || this.password || this.firstNameError || this.lastNameError || this.messageError) {
+				if (this.emailError || this.passwordError || this.firstNameError || this.lastNameError || this.messageError) {
 					alert("All input fields must contain valid information.")
 				} else {
 					alert("Form has been sent")
@@ -181,21 +205,38 @@
 			// Método para validar la longitud del mensaje
 			validateMessage() {
 				this.messageError = this.formData.message.length < 20
+			},
+
+			// Método para hacer el fetch de "countries.json"
+			fetchCountries() {
+				fetch("../../../countries.json")
+					.then((response) => response.json())
+					.then((data) => {
+						this.countries = data.countries
+					})
+					.catch((error) => {
+						console.error("Error fetching countries:", error)
+					})
 			}
-		},
-		mounted() {
-			fetch("../../../countries.json")
-				.then((response) => response.json())
-				.then((data) => {
-					this.countries = data
-					if (this.countries.length > 0) {
-						this.selectedCountry = this.countries[0]
-					}
-				})
 		}
 	}
 </script>
 
-<style>
+<style scoped>
 	@import "../../assets/css/main.css";
+
+	.signUp__select {
+		text-transform: uppercase;
+		color: rgba(0, 0, 0, 0.7);
+	}
+
+	.signUp__genderSelection {
+		display: flex;
+		flex-direction: row;
+		width: 90%;
+	}
+
+	.signUp__genderSelection-btn {
+		margin-left: 1em;
+	}
 </style>
