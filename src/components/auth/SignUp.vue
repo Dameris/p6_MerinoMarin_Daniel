@@ -95,8 +95,12 @@
 					class="formBox-form__input signUp__genderSelection-btn"
 					type="button"
 					title="male"
+					id="male"
 					name="gender"
 					required
+					value="male"
+					:class="{ selected: updateSelectedGender === 'male' }"
+					@click="updateSelectedGender('male')"
 				>
 					MALE
 				</button>
@@ -106,6 +110,9 @@
 					title="female"
 					name="gender"
 					required
+					value="female"
+					:class="{ selected: updateSelectedGender === 'female' }"
+					@click="updateSelectedGender('female')"
 				>
 					FEMALE
 				</button>
@@ -133,7 +140,7 @@
 					password: "",
 					firstName: "",
 					lastName: "",
-					message: ""
+					gender: ""
 				},
 				// Variables para controlar los errores de validación de los campos del formulario
 				emailError: false,
@@ -155,7 +162,7 @@
 		methods: {
 			// Método para validar el formulario antes de enviarlo
 			checkForm() {
-				if (this.emailError || this.passwordError || this.firstNameError || this.lastNameError || this.messageError) {
+				if (this.emailError || this.passwordError || this.firstNameError || this.lastNameError) {
 					alert("All input fields must contain valid information.")
 				} else {
 					alert("Form has been sent")
@@ -167,7 +174,7 @@
 					this.formData.password = ""
 					this.formData.firstName = ""
 					this.formData.lastName = ""
-					this.formData.message = ""
+					this.selectedCountry = null
 				}
 			},
 
@@ -217,6 +224,10 @@
 					.catch((error) => {
 						console.error("Error fetching countries:", error)
 					})
+			},
+
+			updateSelectedGender(gender) {
+				this.formData.gender = gender
 			}
 		}
 	}
@@ -232,11 +243,29 @@
 
 	.signUp__genderSelection {
 		display: flex;
+		justify-content: space-between;
 		flex-direction: row;
-		width: 90%;
+		width: 100%;
 	}
 
 	.signUp__genderSelection-btn {
+		width: 100%;
 		margin-left: 1em;
+		color: rgba(0, 0, 0, 0.7);
+		background-color: #fff;
+		cursor: pointer;
+	}
+
+	#male {
+		margin-left: 0;
+	}
+
+	.signUp__genderSelection-btn:hover {
+		background-color: rgb(255, 87, 87, 20%);
+	}
+
+	.selected {
+		background-color: #007bff;
+		color: #fff;
 	}
 </style>
