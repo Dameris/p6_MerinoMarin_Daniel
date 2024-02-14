@@ -8,7 +8,7 @@
 			WELCOME TO <br />
 			<strong>INFO DISNEY</strong>
 		</p>
-		<!-- Formulario de contacto -->
+		<!-- Formulario sign up -->
 		<form
 			class="formBox-form"
 			id="formContact"
@@ -80,7 +80,7 @@
 				class="formBox-form__input signUp__select"
 				title="country"
 				name="country"
-				v-model="selectedCountry"
+				v-model="formData.country"
 			>
 				<option
 					v-for="country in countries"
@@ -117,15 +117,33 @@
 					FEMALE
 				</button>
 			</article>
+			<article class="signUp__privacy-terms">
+				<input
+					class="signUp__privacy-terms-checkbox"
+					type="checkbox"
+					title="privacy-terms"
+					name="privacy-terms"
+					required
+				/>
+				<label for="privacy-terms">I agree to InfoDisney's Privacy Policy and Terms of Use.</label>
+			</article>
 			<button
 				class="formBox-form__btn"
 				type="submit"
-				title="send"
-				name="send"
+				title="sign_up"
+				name="sign_up"
 			>
-				SEND
+				SIGN UP
 			</button>
 		</form>
+		<p class="signUp__link-logIn">
+			Already a Member?
+			<router-link
+				to="login"
+				id="link"
+				>LOG IN</router-link
+			>
+		</p>
 	</div>
 </template>
 
@@ -133,13 +151,14 @@
 	export default {
 		data() {
 			return {
-				pageTitle: "Contact Info Disney",
+				pageTitle: "Sign Up Info Disney",
 				// Objeto para almacenar los datos del formulario
 				formData: {
 					email: "",
 					password: "",
 					firstName: "",
 					lastName: "",
+					country: "",
 					gender: ""
 				},
 				// Variables para controlar los errores de validación de los campos del formulario
@@ -147,7 +166,6 @@
 				passwordError: false,
 				firstNameError: false,
 				lastNameError: false,
-				messageError: false,
 
 				// Variables para almacenar la lista de países
 				countries: [],
@@ -174,7 +192,8 @@
 					this.formData.password = ""
 					this.formData.firstName = ""
 					this.formData.lastName = ""
-					this.selectedCountry = null
+					this.formData.country = null
+					this.formData.gender = ""
 				}
 			},
 
@@ -267,5 +286,51 @@
 	.selected {
 		background-color: #007bff;
 		color: #fff;
+	}
+
+	.signUp__privacy-terms {
+		display: flex;
+		justify-content: center;
+		font-size: x-small;
+		padding-bottom: 0.7em;
+		color: rgb(0, 0, 0, 0.7);
+	}
+
+	.signUp__privacy-terms-checkbox {
+		display: none;
+	}
+
+	.signUp__privacy-terms label {
+		margin-left: 0.5em;
+		cursor: pointer;
+	}
+
+	.signUp__privacy-terms-checkbox + label:before {
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		vertical-align: middle;
+		margin-right: 5px;
+		content: "";
+		border: 0.1rem solid #ff5757;
+		border-radius: 0.2em;
+		background-color: #fff;
+	}
+	.signUp__privacy-terms-checkbox:checked + label:before {
+		background-color: #ff5757;
+	}
+
+	.signUp__privacy-terms-checkbox:hover + label:before {
+		border-color: #ff5757;
+	}
+
+	.signUp__link-logIn {
+		margin-top: 1em;
+		font-size: small;
+		color: rgb(0, 0, 0, 0.7);
+	}
+
+	.signUp__link-logIn #link {
+		color: #ff5757;
 	}
 </style>

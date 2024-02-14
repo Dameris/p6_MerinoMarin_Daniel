@@ -1,21 +1,21 @@
 <template>
-	<div class="logInBox">
+	<div class="formBox">
 		<img
 			src="../img/logo_infoDisney.png"
 			alt="InfoDisney Logo"
 		/>
-		<p class="logInBox__title">
-			CONTACT WITH <br />
+		<p class="formBox__title">
+			WELCOME BACK TO <br />
 			<strong>INFO DISNEY</strong>
 		</p>
-		<!-- Formulario de contacto -->
+		<!-- Formulario log in -->
 		<form
-			class="logInBox-form"
+			class="formBox-form"
 			id="formContact"
 			@submit.prevent="checkForm"
 		>
 			<input
-				class="logInBox-form__input"
+				class="formBox-form__input"
 				type="email"
 				title="email"
 				name="email"
@@ -26,65 +26,41 @@
 			/>
 			<span
 				v-if="emailError"
-				class="logInBox-form--errorMessage"
+				class="formBox-form--errorMessage"
 				>Please enter a valid email address.</span
 			>
 			<input
-				class="logInBox-form__input"
-				type="text"
-				title="first_name"
-				name="first_name"
-				placeholder="FIRST NAME"
-				spellcheck="true"
+				class="formBox-form__input"
+				type="password"
+				title="password"
+				name="password"
+				placeholder="PASSWORD"
 				required
-				v-model="formData.firstName"
-				@input="validateFirstName"
+				v-model="formData.password"
+				@input="validatePassword"
 			/>
 			<span
-				v-if="firstNameError"
-				class="logInBox-form--errorMessage"
-				>Please enter a valid first name.</span
-			>
-			<input
-				class="logInBox-form__input"
-				type="text"
-				title="last_name"
-				name="last_name"
-				placeholder="LAST NAME"
-				spellcheck="true"
-				required
-				v-model="formData.lastName"
-				@input="validateLastName"
-			/>
-			<span
-				v-if="lastNameError"
-				class="logInBox-form--errorMessage"
-				>Please enter a valid last name.</span
-			>
-			<textarea
-				class="form__textarea"
-				title="message"
-				name="message"
-				placeholder="YOUR MESSAGE"
-				spellcheck="true"
-				required
-				v-model="formData.message"
-				@input="validateMessage"
-			></textarea>
-			<span
-				v-if="messageError"
-				class="logInBox-form--errorMessage"
-				>Message must be at least 20 characters long.</span
+				v-if="passwordError"
+				class="formBox-form--errorMessage"
+				>Please enter a valid password.</span
 			>
 			<button
-				class="logInBox-form__btn"
+				class="formBox-form__btn"
 				type="submit"
-				title="send"
-				name="send"
+				title="log_in"
+				name="log_in"
 			>
-				SEND
+				LOG IN
 			</button>
 		</form>
+		<p class="logIn__link-signUp">
+			Not a Member?
+			<router-link
+				to="signup"
+				id="link"
+				>SIGN UP</router-link
+			>
+		</p>
 	</div>
 </template>
 
@@ -92,26 +68,23 @@
 	export default {
 		data() {
 			return {
-				pageTitle: "Contact Info Disney",
+				pageTitle: "Log In Info Disney",
 				// Objeto para almacenar los datos del formulario
 				formData: {
 					email: "",
-					firstName: "",
-					lastName: "",
-					message: ""
+					password: ""
 				},
+
 				// Variables para controlar los errores de validación de los campos del formulario
 				emailError: false,
-				firstNameError: false,
-				lastNameError: false,
-				messageError: false
+				passwordError: false
 			}
 		},
 
 		methods: {
 			// Método para validar el formulario antes de enviarlo
 			checkForm() {
-				if (this.emailError || this.firstNameError || this.lastNameError || this.messageError) {
+				if (this.emailError || this.passwordError) {
 					alert("All input fields must contain valid information.")
 				} else {
 					alert("Form has been sent")
@@ -120,9 +93,7 @@
 					// Lógica para enviar los datos al backend
 
 					this.formData.email = ""
-					this.formData.firstName = ""
-					this.formData.lastName = ""
-					this.formData.message = ""
+					this.formData.password = ""
 				}
 			},
 
@@ -132,26 +103,32 @@
 				this.emailError = !emailPattern.test(this.formData.email)
 			},
 
-			// Método para validar el formato del nombre
-			validateFirstName() {
-				const namePattern = /^[A-Za-zÀ-ÿ\s]{2,}$/
-				this.firstNameError = !namePattern.test(this.formData.firstName)
-			},
+			// Método para validar el formato de la contraseña
+			validatePassword() {
+				const lengthRegex = /.{8,}/
+				const upperCaseRegex = /[A-Z]/
+				const specialCharRegex = /[*, +, -, ., @, #, %, &, _, ~, ^, /, <, >]/
 
-			// Método para validar el formato del apellido
-			validateLastName() {
-				const namePattern = /^[A-Za-zÀ-ÿ\s]{2,}$/
-				this.lastNameError = !namePattern.test(this.formData.lastName)
-			},
+				const hasLength = lengthRegex.test(this.formData.password)
+				const hasUpperCase = upperCaseRegex.test(this.formData.password)
+				const hasSpecialChar = specialCharRegex.test(this.formData.password)
 
-			// Método para validar la longitud del mensaje
-			validateMessage() {
-				this.messageError = this.formData.message.length < 20
+				this.passwordError = !hasLength || !hasUpperCase || !hasSpecialChar
 			}
 		}
 	}
 </script>
 
-<style>
+<style scoped>
 	@import "../../assets/css/main.css";
+
+	.logIn__link-signUp {
+		margin-top: 1em;
+		font-size: small;
+		color: rgb(0, 0, 0, 0.7);
+	}
+
+	.logIn__link-signUp #link {
+		color: #ff5757;
+	}
 </style>
