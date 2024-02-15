@@ -99,8 +99,8 @@
 					name="gender"
 					required
 					value="male"
-					:class="{ selected: updateSelectedGender === 'male' }"
-					@click="updateSelectedGender('male')"
+					:class="{ signUp__genderSelection_selected: formData.gender === 'male' }"
+					@click="selectGender('male')"
 				>
 					MALE
 				</button>
@@ -111,8 +111,8 @@
 					name="gender"
 					required
 					value="female"
-					:class="{ selected: updateSelectedGender === 'female' }"
-					@click="updateSelectedGender('female')"
+					:class="{ signUp__genderSelection_selected: formData.gender === 'female' }"
+					@click="selectGender('female')"
 				>
 					FEMALE
 				</button>
@@ -245,8 +245,12 @@
 					})
 			},
 
-			updateSelectedGender(gender) {
-				this.formData.gender = gender
+			selectGender(gender) {
+				if (this.formData.gender !== gender) {
+					this.formData.gender = gender
+				} else {
+					this.formData.gender = ""
+				}
 			}
 		}
 	}
@@ -283,8 +287,8 @@
 		background-color: rgb(255, 87, 87, 20%);
 	}
 
-	.selected {
-		background-color: #007bff;
+	.signUp__genderSelection_selected {
+		background-color: #ff5757;
 		color: #fff;
 	}
 
@@ -296,32 +300,9 @@
 		color: rgb(0, 0, 0, 0.7);
 	}
 
-	.signUp__privacy-terms-checkbox {
-		display: none;
-	}
-
 	.signUp__privacy-terms label {
 		margin-left: 0.5em;
 		cursor: pointer;
-	}
-
-	.signUp__privacy-terms-checkbox + label:before {
-		display: inline-block;
-		width: 1em;
-		height: 1em;
-		vertical-align: middle;
-		margin-right: 5px;
-		content: "";
-		border: 0.1rem solid #ff5757;
-		border-radius: 0.2em;
-		background-color: #fff;
-	}
-	.signUp__privacy-terms-checkbox:checked + label:before {
-		background-color: #ff5757;
-	}
-
-	.signUp__privacy-terms-checkbox:hover + label:before {
-		border-color: #ff5757;
 	}
 
 	.signUp__link-logIn {
