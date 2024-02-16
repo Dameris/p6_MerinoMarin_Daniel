@@ -175,4 +175,56 @@ El componente `Header` representa el encabezado de la aplicación.
 
   * Métodos y propiedades:  
     - `name`: Propiedad que define el nombre del componente Header.  
-    - `router-link`: Componente de Vue Router que permite la navegación a través de enlaces dentro de la aplicación.  
+    - `router-link`: Componente de Vue Router que permite la navegación a través de enlaces dentro de la aplicación.
+
+<br><br>
+
+`Login`  
+El componente `Login` representa el formulario de Log In de la aplicación.  
+
+  * Estructura del componente:  
+    - `Template`: Define un formulario de inicio de sesión que permite a los usuarios ingresar su correo electrónico y contraseña, así como un enlace para dirigirse a la página de registro si aún no son miembros.  
+    - `Script`: Se define el componente de Vue.js que maneja la lógica del formulario, incluyendo la validación de datos antes del envío.  
+    - Estilos: Define los estilos CSS específicos para el Login, incluyendo la apariencia visual y el diseño.  
+
+  * Funcionalidades implementadas:  
+    - Validación de formulario: Se implementa la validación en tiempo real del correo electrónico y la contraseña. Los mensajes de error se muestran si los campos no cumplen con los criterios de validación.  
+    - Envío del formulario: El formulario se envía una vez que todos los campos están validados. Si hay algún error, se muestra una alerta indicando que todos los campos deben contener información válida.  
+    - Enlace a la página de registro: Se proporciona un enlace para permitir a los usuarios registrarse si aún no tienen una cuenta.  
+
+  * Estructuras de datos:  
+    - `pageTitle`: Variable que almacena el título de la página de inicio de sesión.  
+    - `formData`: Objeto que almacena los datos del formulario, incluyendo el correo electrónico y la contraseña.  
+    - `emailError`, `passwordError`: Variables booleanas que indican si hay errores en los campos de correo electrónico y contraseña, respectivamente.  
+
+  * Métodos y propiedades:  
+    - `checkForm`: Método que valida el formulario antes de enviarlo, mostrando una alerta si hay errores.  
+    - `validateEmail`, `validatePassword`: Métodos que validan el formato del correo electrónico y contraseña ingresados por el usuario, respectivamente.
+
+<br><br>
+
+`Signup`  
+El componente `Signup` representa el formulario de Sign Up de la aplicación.  
+
+  * Estructura del componente:  
+    - `Template`: Define un formulario de registro que permite a los usuarios ingresar su correo electrónico, contraseña, nombre, apellido, país, género y aceptar los términos de privacidad y uso.  
+    - `Script`: Se define el componente de Vue.js que maneja la lógica del formulario, incluyendo la validación de datos antes del envío y la recuperación de la lista de países.  
+    - Estilos: Define los estilos CSS específicos para el Signup, incluyendo la apariencia visual y el diseño.  
+
+  * Funcionalidades implementadas:  
+    - Define los estilos CSS específicos para el Signup, incluyendo la apariencia visual y el diseño.  
+    - Envío del formulario: El formulario se envía una vez que todos los campos están validados. Si hay algún error, se muestra una alerta indicando que todos los campos deben contener información válida.  
+    - Selección de género: Los usuarios pueden seleccionar su género haciendo clic en los botones correspondientes.  
+    - Recuperación de países: Se obtiene la lista de países a través de una solicitud HTTP al archivo `countries.json`.  
+
+  * Estructuras de datos:  
+    - `pageTitle`: Variable que almacena el título de la página de registro.  
+    - `formData`: Objeto que almacena los datos del formulario, incluyendo el correo electrónico, contraseña, nombre, apellido, país y género.  
+    - `emailError`, passwordError, firstNameError, lastNameError: Variables booleanas que indican si hay errores en los campos de correo electrónico, contraseña, nombre y apellido, respectivamente.  
+    - `countries`: Arreglo que almacena la lista de países recuperados del archivo countries.json.  
+
+  * Métodos y propiedades:  
+    - `checkForm`: Método que valida el formulario antes de enviarlo, mostrando una alerta si hay errores.  
+    - `validateEmail`, `validatePassword`, `validateFirstName`, `validateLastName`: Métodos que validan el formato de los diferentes campos del formulario.  
+    - `fetchCountries`: Método que realiza una solicitud HTTP para obtener la lista de países desde el archivo `countries.json`.  
+    - `selectGender(gender)`: Método que permite a los usuarios seleccionar su género haciendo clic en los botones correspondientes.  
