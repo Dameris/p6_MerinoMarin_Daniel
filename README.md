@@ -17,6 +17,9 @@ npm run dev
 ```sh
 npm run build
 ```
+
+
+Video prueba aplicación: [Enlace video drive](https://drive.google.com/drive/u/0/folders/1rkZE8oVGp5N4yTBuZYlxD9Sj6riA0gf4)
   
 ## Documentación del progreso hasta el 16/02/2024  
 `App`  
