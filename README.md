@@ -18,7 +18,7 @@ npm run dev
 npm run build
 ```
   
-## Documentación del progreso hasta el 07/02/2024  
+## Documentación del progreso hasta el 16/02/2024  
 `App`  
 El componente `App` sirve como el contenedor principal de la aplicación.
 
