@@ -87,7 +87,6 @@
 				if (this.emailError || this.passwordError) {
 					alert("All input fields must contain valid information.")
 				} else {
-					alert("Form has been sent")
 					console.log("Data", this.formData)
 
 					// Lógica para enviar los datos al backend
@@ -131,4 +130,21 @@
 	.logIn__link-signUp #link {
 		color: #ff5757;
 	}
+
+	/* Media query */
+	@media (max-width: 768px) {
+		.formBox__title {
+			font-size: 1.5rem; /* Tamaño de fuente más pequeño para el título */
+		}
+
+		.formBox-form__input {
+			width: 100%; /* Ancho completo para los campos de entrada */
+			margin-bottom: 1rem; /* Espacio entre los campos de entrada */
+		}
+
+		.logIn__link-signUp {
+			text-align: center; /* Centra el texto */
+		}
+	}
+	/* End of media query */
 </style>

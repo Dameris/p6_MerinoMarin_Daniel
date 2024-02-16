@@ -31,20 +31,40 @@
 				<ul class="header__list">
 					<li>
 						<router-link
-							to="logIn"
 							class="header__btn--logIn"
+							to="logIn"
 						>
 							LOG IN
 						</router-link>
 					</li>
 					<li>
 						<router-link
-							to="signUp"
 							class="header__btn--signUp"
+							to="signUp"
 						>
 							SIGN UP
 						</router-link>
 					</li>
+					<!-- <li>
+						<button
+							v-if="$store.auth.isAuthenticated"
+							@click="logout"
+						>
+							Logout
+						</button>
+					</li>
+					<li>
+						<router-link
+							v-if="$store.auth.isAuthenticated"
+							to="/profile"
+						>
+							<img
+								v-if="$store.auth.user && $store.auth.user.avatar"
+								:src="$store.auth.user.avatar"
+								alt="Profile"
+							/>
+						</router-link>
+					</li> -->
 				</ul>
 			</nav>
 		</div>
@@ -70,8 +90,14 @@
 </template>
 
 <script>
+	// import { useAuthStore } from "../auth/authStore.js"
+
 	export default {
-		name: "Header"
+		// methods: {
+		// 	logout() {
+		// 		useAuthStore().logout()
+		// 	}
+		// }
 	}
 </script>
 
@@ -616,21 +642,13 @@
 	@media (max-width: 400px) {
 		.headerTop,
 		.headerBottom {
-			display: flex;
-			justify-content: space-between;
-		}
-
-		.headerTop {
-			align-items: center;
-			min-height: 5em;
-			max-width: 25em;
-			background-color: #fff;
+			padding-left: 0.5em;
+			padding-right: 0.5em;
 		}
 
 		.header__list {
 			flex-direction: column;
 			align-items: center;
-			font-size: small;
 		}
 
 		.header__list li {
@@ -639,114 +657,34 @@
 		}
 
 		.header__logo {
-			max-width: 10em;
+			max-width: 8em; /* Reducir el tamaño del logo para pantallas pequeñas */
 		}
-
-		.headerBottom {
-			align-items: center;
-			min-height: 3em;
-			max-width: 25em;
-			background-color: #ff5757;
-		}
-
-		/* Button Switch for Dark/Light Mode */
-		.header__btn--switch {
-			display: inline-block;
-			position: relative;
-			width: 2.5em;
-			height: 1.5em;
-			border-radius: 100em;
-			cursor: pointer;
-		}
-
-		.header__btn--switch::after {
-			position: absolute;
-			width: 1em;
-			height: 1em;
-			top: 0.25em;
-			left: 0.2em;
-			content: "";
-			border-radius: 100em;
-			background: #000;
-			transition: all ease 0.6s;
-		}
-
-		#__btnSwitch:checked ~ .header__btn--switch::after {
-			left: 1.2em;
-			background: #fff;
-			transition: all ease 0.6s;
-		}
-		/* End of Button Switch */
 
 		.header__searchInput {
-			width: 15em;
+			width: 12em; /* Ajustar el ancho del campo de búsqueda */
 		}
 	}
 
 	@media (max-width: 570px) {
 		.headerTop,
 		.headerBottom {
-			display: flex;
-			justify-content: space-between;
-		}
-
-		.headerTop {
-			align-items: center;
-			min-height: 5em;
-			max-width: 35.6em;
-			background-color: #fff;
+			padding-left: 1em;
+			padding-right: 1em;
 		}
 
 		.header__list {
 			flex-direction: column;
 			align-items: center;
-			font-size: small;
 		}
 
 		.header__list li {
-			margin-top: 0.5em;
-			margin-bottom: 0.3em;
+			margin-top: 0.8em;
+			margin-bottom: 0.8em;
 		}
 
 		.header__logo {
 			max-width: 10em;
 		}
-
-		.headerBottom {
-			align-items: center;
-			min-height: 3em;
-			max-width: 35.6em;
-			background-color: #ff5757;
-		}
-
-		/* Button Switch for Dark/Light Mode */
-		.header__btn--switch {
-			display: inline-block;
-			position: relative;
-			width: 2.5em;
-			height: 1.5em;
-			border-radius: 100em;
-			cursor: pointer;
-		}
-
-		.header__btn--switch::after {
-			position: absolute;
-			width: 1em;
-			height: 1em;
-			top: 0.25em;
-			left: 0.2em;
-			content: "";
-			border-radius: 100em;
-			background: #000;
-			transition: all ease 0.6s;
-		}
-
-		#__btnSwitch:checked ~ .header__btn--switch::after {
-			left: 1.2em;
-			background: #fff;
-			transition: all ease 0.6s;
-		}
-		/* End of Button Switch */
 
 		.header__searchInput {
 			width: 15em;

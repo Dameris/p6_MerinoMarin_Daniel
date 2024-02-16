@@ -183,7 +183,6 @@
 				if (this.emailError || this.passwordError || this.firstNameError || this.lastNameError) {
 					alert("All input fields must contain valid information.")
 				} else {
-					alert("Form has been sent")
 					console.log("Data", this.formData)
 
 					// Lógica para enviar los datos al backend
@@ -314,4 +313,36 @@
 	.signUp__link-logIn #link {
 		color: #ff5757;
 	}
+
+	/* Media query */
+	@media (max-width: 768px) {
+		.formBox__title {
+			font-size: 1.5rem;
+		}
+
+		.formBox-form__input {
+			width: 100%;
+			margin-bottom: 1rem;
+		}
+
+		.signUp__genderSelection {
+			flex-direction: column;
+		}
+
+		.signUp__genderSelection-btn {
+			width: auto;
+			margin-left: 0;
+			margin-bottom: 1rem;
+		}
+
+		.signUp__privacy-terms {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.signUp__link-logIn {
+			text-align: center;
+		}
+	}
+	/* End of media query */
 </style>

@@ -21,22 +21,22 @@ const routes = [
 		component: LayoutPublic,
 		children: [
 			{ path: "", component: HomePage },
-			{ path: "/logIn", component: () => import("../auth/LogIn.vue") },
-			{ path: "/signUp", component: () => import("../auth/SignUp.vue") },
-			{ path: "/disneyPage", component: DisneyPage },
-			{ path: "/disneyCharacter", component: DisneyCharacter },
-			{ path: "/pixarPage", component: PixarPage },
-			{ path: "/pixarCharacter", component: PixarCharacter },
-			{ path: "/star-warsPage", component: StarWarsPage },
-			{ path: "/star-warsCharacter", component: StarWarsCharacter },
-			{ path: "/marvelPage", component: MarvelPage },
-			{ path: "/marvelCharacter", component: MarvelCharacter },
+			{ path: "logIn", component: () => import("../auth/LogIn.vue") },
+			{ path: "signUp", component: () => import("../auth/SignUp.vue") },
+			{ path: "disneyPage", component: DisneyPage },
+			{ path: "disneyCharacter", component: DisneyCharacter },
+			{ path: "pixarPage", component: PixarPage },
+			{ path: "pixarCharacter", component: PixarCharacter },
+			{ path: "star-warsPage", component: StarWarsPage },
+			{ path: "star-warsCharacter", component: StarWarsCharacter },
+			{ path: "marvelPage", component: MarvelPage },
+			{ path: "marvelCharacter", component: MarvelCharacter },
 			{
-				path: "/about-us",
+				path: "about-us",
 				component: () => import("../infoDisney/pages/AboutPage.vue")
 			},
 			{
-				path: "/contact",
+				path: "contact",
 				component: () => import("../infoDisney/pages/ContactPage.vue")
 			},
 			{ path: "/:catchAll(.*)", component: () => import("../shared/error404.vue") }
@@ -47,8 +47,25 @@ const routes = [
 		component: LayoutPrivate,
 		children: [
 			{ path: "", component: HomePage },
-			{ path: "/userProfile", component: UserProfile },
-			{ path: "/favorites", component: FavoritesPage }
+			{ path: "userProfile", component: UserProfile },
+			{ path: "favorites", component: FavoritesPage },
+			{ path: "disneyPage", component: DisneyPage },
+			{ path: "disneyCharacter", component: DisneyCharacter },
+			{ path: "pixarPage", component: PixarPage },
+			{ path: "pixarCharacter", component: PixarCharacter },
+			{ path: "star-warsPage", component: StarWarsPage },
+			{ path: "star-warsCharacter", component: StarWarsCharacter },
+			{ path: "marvelPage", component: MarvelPage },
+			{ path: "marvelCharacter", component: MarvelCharacter },
+			{
+				path: "about-us",
+				component: () => import("../infoDisney/pages/AboutPage.vue")
+			},
+			{
+				path: "contact",
+				component: () => import("../infoDisney/pages/ContactPage.vue")
+			},
+			{ path: "/:catchAll(.*)", component: () => import("../shared/error404.vue") }
 		]
 	}
 ]

@@ -8,17 +8,26 @@
 			:src="character['img-bg']"
 			alt="Mickey Mouse Background"
 		/>
-		<div
-			v-for="image in images"
-			:key="image"
-		>
-			<img
-				v-if="imageIndex === images.indexOf(image)"
-				:src="character[image]"
-				:alt="image"
-			/>
-		</div>
-		<button @click="changeImage">Next Image</button>
+		<section class="disneyCharacter__content">
+			<button
+				@click="changeImage"
+				class="disneyCharacter__btn"
+			>
+				Next Image
+			</button>
+			<div
+				v-for="image in images"
+				:key="image"
+			>
+				<img
+					class="disneyCharacter__content-img"
+					v-if="imageIndex === images.indexOf(image)"
+					:src="character[image]"
+					:alt="image"
+				/>
+			</div>
+			<p class="disneyCharacter__context--bio">{{ character.bio }}</p>
+		</section>
 	</section>
 </template>
 
@@ -28,6 +37,7 @@
 			return {
 				character: {},
 				images: ["img1", "img2", "img3", "img4", "img5", "img6"],
+				bio: {},
 				imageIndex: 0
 			}
 		},
@@ -58,6 +68,7 @@
 <style scoped>
 	.disneyCharacter {
 		position: relative;
+		background-color: #20286d;
 	}
 
 	.disneyCharacter__header {
@@ -72,4 +83,46 @@
 	.disneyCharacter__img {
 		width: 100%;
 	}
+
+	.disneyCharacter__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		padding-top: 1em;
+		padding-bottom: 1em;
+	}
+
+	.disneyCharacter__btn {
+		margin-bottom: 1em;
+	}
+
+	.disneyCharacter__context--bio {
+		color: #fff;
+		text-align: center;
+		padding: 0 1em;
+	}
+
+	/* Media query */
+	@media (max-width: 400px) {
+		.disneyCharacter__context--bio {
+			margin-left: 0;
+		}
+	}
+
+	@media (max-width: 570px) {
+		.disneyCharacter__header {
+			font-size: 18px;
+		}
+
+		.disneyCharacter__content {
+			padding-top: 1em;
+			padding-bottom: 1em;
+		}
+
+		.disneyCharacter__content-img {
+			max-width: 20em;
+		}
+	}
+	/* End of media query */
 </style>
