@@ -7,13 +7,11 @@
 		/>
 		<section class="home__section">
 			<nav class="home__sectionDisney">
-				<caption>
-					<img
-						src="../../img/disney_logo_bg 1.png"
-						class="homeSection__titleImage"
-						alt="Section image"
-					/>
-				</caption>
+				<img
+					src="../../img/disney_logo_bg 1.png"
+					class="homeSection__titleImage"
+					alt="Section image"
+				/>
 				<ul class="home__section_ul">
 					<li>
 						<img
@@ -21,7 +19,13 @@
 							class="homeSection__image"
 							alt="Section image"
 						/>
-						<span class="homeSection__text"></span>
+						<span class="homeSection__text"
+							><router-link
+								to="disneyCharacter"
+								class="homeSection__link"
+								>Mickey Mouse</router-link
+							></span
+						>
 					</li>
 					<li>
 						<img
@@ -62,6 +66,8 @@
 	.home__sectionDisney {
 		background-color: #20286d;
 		text-align: center;
+		padding-right: 1em;
+		padding-left: 1em;
 	}
 
 	.homeSection__titleImage {
@@ -80,5 +86,9 @@
 	.homeSection__text {
 		display: block;
 		margin-top: 0.5rem;
+	}
+
+	.homeSection__link {
+		color: #fff;
 	}
 </style>
