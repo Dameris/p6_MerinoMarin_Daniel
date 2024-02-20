@@ -25,7 +25,7 @@
 				@click="changeImage"
 				class="disneyCharacter__btn roll-in-left"
 			>
-				Next Image
+				NEXT IMAGE
 			</button>
 		</section>
 	</section>
@@ -75,10 +75,10 @@
 	.disneyCharacter__header {
 		display: inline-block;
 		position: absolute;
-		padding: 10px;
+		padding: 5em;
 		top: 0;
 		left: 0;
-		background-color: rgba(255, 255, 255, 0.7);
+		font-size: 3em;
 	}
 
 	.disneyCharacter__img {
@@ -94,10 +94,11 @@
 	}
 
 	.disneyCharacter__btn {
-		margin-right: 20em;
-		padding: 10em;
-		border-radius: 5px;
+		margin-right: 5em;
+		padding: 1em;
+		border-radius: 1em;
 		cursor: pointer;
+		font-size: 2em;
 		transition: background-color 0.3s ease;
 	}
 
