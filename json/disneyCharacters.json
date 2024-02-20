@@ -2,13 +2,52 @@
 	{
 		"id": 1,
 		"name": "Mickey Mouse",
-		"img-bg": "/src/components/img/json_img/mickey-mouse/mickey_mouse_bg.png",
-		"img1": "/src/components/img/json_img/mickey-mouse/Mickey-mouse-1.png",
-		"img2": "/src/components/img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
-		"img3": "/src/components/img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
-		"img4": "/src/components/img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
-		"img5": "/src/components/img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
-		"img6": "/src/components/img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png",
+		"img-bg": "/src/components/img/json_img/y_mouse_bg.png",
+		"img1": "/src/components/img/json_img/",
+		"img2": "/src/components/img/json_img/alt_disney_mickey.png",
+		"img3": "/src/components/img/json_img/rer_Mickey_sparkling.png",
+		"img4": "/src/components/img/json_img/om-Hearts-HD.png",
+		"img5": "/src/components/img/json_img/y_mouse_mosquetero.png",
+		"img6": "/src/components/img/json_img/y_mouse-castle_of_illusion.png",
 		"bio": "Mickey Mouse is an animated cartoon character created by Walt Disney and Ub Iwerks. A cheerful and plucky anthropomorphic mouse, Mickey made his first public appearance in Steamboat Willie, on November 18, 1928. Estimated as standing 2' 3\" (68.58 centimeters) and weighing 23 pounds (10.43 kilograms), Mickey is easily identified by his round ears, red shorts, white gloves, and yellow shoes. He speaks in a falsetto voice, and his speech is typically infused with 1930s slang like 'swell' and 'gee'. The essence of Mickey's character is that of an underdog who, despite being small and vulnerable, overcomes larger-than-life adversity through quick wit and a can-do spirit."
+	},
+
+	{
+		"id": 2,
+		"name": "",
+		"img-bg": "/src/components/img/json_img",
+		"img1": "/src/components/img/json_img",
+		"img2": "/src/components/img/json_img",
+		"img3": "/src/components/img/json_img",
+		"img4": "/src/components/img/json_img",
+		"img5": "/src/components/img/json_img",
+		"img6": "/src/components/img/json_img",
+		"bio": ""
+	},
+
+	{
+		"id": 3,
+		"name": "",
+		"img-bg": "/src/components/img/json_img",
+		"img1": "/src/components/img/json_img",
+		"img2": "/src/components/img/json_img",
+		"img3": "/src/components/img/json_img",
+		"img4": "/src/components/img/json_img",
+		"img5": "/src/components/img/json_img",
+		"img6": "/src/components/img/json_img",
+		"bio": ""
+	},
+
+	{
+		"id": 4,
+		"name": "",
+		"img-bg": "/src/components/img/json_img",
+		"img1": "/src/components/img/json_img",
+		"img2": "/src/components/img/json_img",
+		"img3": "/src/components/img/json_img",
+		"img4": "/src/components/img/json_img",
+		"img5": "/src/components/img/json_img",
+		"img6": "/src/components/img/json_img",
+		"bio": ""
 	}
 ]
