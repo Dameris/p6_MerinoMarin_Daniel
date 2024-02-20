@@ -10,7 +10,7 @@ import router from "./components/router/router.js"
 // Se agrega el enrutador a la instancia de la aplicación mediante el uso del método use
 // Se monta la aplicación en el elemento con el id "app" en el DOM
 const app = createApp(App)
-const pinia  = createPinia()
+const pinia = createPinia()
 
 app.use(router)
 app.use(pinia)

@@ -16,7 +16,7 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
@@ -32,7 +32,7 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
@@ -48,7 +48,7 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
@@ -64,7 +64,7 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
@@ -90,7 +90,7 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
@@ -106,7 +106,7 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
@@ -122,7 +122,7 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
@@ -138,7 +138,7 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
@@ -164,7 +164,7 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
@@ -180,7 +180,7 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
@@ -196,7 +196,7 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
@@ -212,7 +212,7 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
@@ -238,7 +238,7 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
@@ -254,7 +254,7 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
@@ -270,7 +270,7 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
@@ -286,7 +286,7 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>

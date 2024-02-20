@@ -9,12 +9,6 @@
 			alt="Mickey Mouse Background"
 		/>
 		<section class="disneyCharacter__content">
-			<button
-				@click="changeImage"
-				class="disneyCharacter__btn"
-			>
-				Next Image
-			</button>
 			<div
 				v-for="image in images"
 				:key="image"
@@ -26,7 +20,13 @@
 					:alt="image"
 				/>
 			</div>
-			<p class="disneyCharacter__context--bio">{{ character.bio }}</p>
+			<p class="disneyCharacter__context--bio">{{ character.bioFirst + "\n\n" + character.bioSecond }}</p>
+			<button
+				@click="changeImage"
+				class="disneyCharacter__btn roll-in-left"
+			>
+				Next Image
+			</button>
 		</section>
 	</section>
 </template>
@@ -36,8 +36,9 @@
 		data() {
 			return {
 				character: {},
-				images: ["img1", "img2", "img3", "img4", "img5", "img6"],
-				bio: {},
+				images: ["img-pf", "img1", "img2", "img3", "img4", "img5", "img6"],
+				bioFirst: "",
+				bioSecond: "",
 				imageIndex: 0
 			}
 		},
@@ -48,7 +49,7 @@
 
 		methods: {
 			fetchCharacters() {
-				fetch("../../../../../json/disneyCharacters.json")
+				fetch("/src/json/disneyCharacters.json")
 					.then((response) => response.json())
 					.then((data) => {
 						this.character = data[0]
@@ -86,7 +87,6 @@
 
 	.disneyCharacter__content {
 		display: flex;
-		flex-direction: column;
 		align-items: center;
 		position: relative;
 		padding-top: 1em;
@@ -94,13 +94,58 @@
 	}
 
 	.disneyCharacter__btn {
-		margin-bottom: 1em;
+		margin-right: 20em;
+		padding: 10em;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+	}
+
+	.disneyCharacter__btn:hover {
+		background-color: #ffca28;
+	}
+
+	.roll-in-left {
+		-webkit-animation: roll-in-left 0.8s ease-out both;
+		animation: roll-in-left 0.8s ease-out both;
+	}
+
+	@-webkit-keyframes roll-in-left {
+		0% {
+			-webkit-transform: translateX(-800px) rotate(-540deg);
+			transform: translateX(-800px) rotate(-540deg);
+			opacity: 0;
+		}
+		100% {
+			-webkit-transform: translateX(0) rotate(0deg);
+			transform: translateX(0) rotate(0deg);
+			opacity: 1;
+		}
+	}
+
+	@keyframes roll-in-left {
+		0% {
+			-webkit-transform: translateX(-800px) rotate(-540deg);
+			transform: translateX(-800px) rotate(-540deg);
+			opacity: 0;
+		}
+		100% {
+			-webkit-transform: translateX(0) rotate(0deg);
+			transform: translateX(0) rotate(0deg);
+			opacity: 1;
+		}
 	}
 
 	.disneyCharacter__context--bio {
-		color: #fff;
-		text-align: center;
+		margin-right: 20em;
 		padding: 0 1em;
+		color: #fff;
+		white-space: pre-line;
+	}
+
+	.disneyCharacter__content-img {
+		margin-left: 2em;
+		width: 20em;
 	}
 
 	/* Media query */
