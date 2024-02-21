@@ -26,7 +26,7 @@ const routes = [
 			{ path: "signUp", component: () => import("../auth/SignUp.vue") },
 			{ path: "favorites", component: FavoritesPage, meta: { requiresAuth: true } },
 			{ path: "disneyPage", component: DisneyPage },
-			{ path: "disneyCharacter/:id", component: DisneyCharacter, props: true },
+			{ path: "disneyCharacter/:id", name: "disneyCharacter", component: DisneyCharacter, props: true },
 			{ path: "pixarPage", component: PixarPage },
 			{ path: "pixarCharacter", component: PixarCharacter },
 			{ path: "star-warsPage", component: StarWarsPage },

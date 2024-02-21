@@ -9,15 +9,12 @@
 			alt="Mickey Mouse Background"
 		/>
 		<section class="disneyCharacter__content">
-			<div
-				v-for="image in images"
-				:key="image"
-			>
+			<div v-if="character.images">
 				<img
 					class="disneyCharacter__content-img"
-					v-if="imageIndex === images.indexOf(image)"
-					:src="character[image]"
-					:alt="image"
+					:v-if="character.images['img' + (imageIndex + 1)]"
+					:src="character.images['img' + (imageIndex + 1)]"
+					:alt="'Image ' + (imageIndex + 1)"
 				/>
 			</div>
 			<p class="disneyCharacter__context--bio">{{ character.bioFirst + "\n\n" + character.bioSecond }}</p>
@@ -36,9 +33,6 @@
 		data() {
 			return {
 				character: {},
-				images: ["img-pf", "img1", "img2", "img3", "img4", "img5", "img6"],
-				bioFirst: "",
-				bioSecond: "",
 				imageIndex: 0
 			}
 		},
@@ -52,7 +46,8 @@
 				fetch("/src/json/disneyCharacters.json")
 					.then((response) => response.json())
 					.then((data) => {
-						this.character = data[0]
+						const id = parseInt(this.$route.params.id)
+						this.character = data.find((character) => character.id === id)
 					})
 					.catch((error) => {
 						console.error("Error fetching characters:", error)
@@ -60,7 +55,9 @@
 			},
 
 			changeImage() {
-				this.imageIndex = (this.imageIndex + 1) % this.images.length
+				if (this.character.images) {
+					this.imageIndex = (this.imageIndex + 1) % Object.keys(this.character.images).length
+				}
 			}
 		}
 	}
