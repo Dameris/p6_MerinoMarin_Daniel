@@ -13,26 +13,28 @@
 					alt="Disney Logo"
 				/>
 				<ul class="characterPage__section--ul">
-					<li
-						v-for="character in characters"
-						:key="character.id"
-					>
-						<nav class="characterPage__section--li">
-							<img
-								:src="character.images['img1']"
-								class="characterPageSection__image"
-								alt="Section image"
-							/>
-							<span class="characterPageSection__text">
-								<router-link
-									:to="'disneyCharacter/' + character.id"
-									class="characterPageSection__link"
-								>
-									{{ character.name }}
-								</router-link>
-							</span>
-						</nav>
-					</li>
+					<p>
+						<li
+							v-for="character in characters"
+							:key="character.id"
+						>
+							<nav class="characterPage__section--li">
+								<img
+									:src="character.images['img1']"
+									class="characterPageSection__image"
+									alt="Section image"
+								/>
+								<span class="characterPageSection__text">
+									<router-link
+										:to="'disneyCharacter/' + character.id"
+										class="characterPageSection__link"
+									>
+										{{ character.name }}
+									</router-link>
+								</span>
+							</nav>
+						</li>
+					</p>
 				</ul>
 			</nav>
 		</section>
