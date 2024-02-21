@@ -4,19 +4,19 @@ export const useAuthStore = defineStore({
 	id: "auth",
 
 	state: () => ({
-		isAuthenticated: false,
-		user: null
+		isAuthenticated: false
+		// user: null
 	}),
 
 	actions: {
 		login(credentials) {
 			this.isAuthenticated = true
-			this.user = ""
+			// this.user = ""
 		},
-        
+
 		logout() {
 			this.isAuthenticated = false
-			this.user = null
+			// this.user = null
 		}
 	}
 })

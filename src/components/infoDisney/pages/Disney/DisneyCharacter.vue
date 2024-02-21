@@ -88,22 +88,35 @@
 	.disneyCharacter__content {
 		display: flex;
 		align-items: center;
-		position: relative;
 		padding-top: 1em;
 		padding-bottom: 1em;
+	}
+
+	.disneyCharacter__context--bio {
+		margin-right: 2em;
+		margin-left: 2em;
+		padding: 0 1em;
+		color: #fff;
+		white-space: pre-line;
+	}
+
+	.disneyCharacter__content-img {
+		margin-left: 2em;
+		width: 30em;
 	}
 
 	.disneyCharacter__btn {
 		margin-right: 5em;
 		padding: 1em;
-		border-radius: 1em;
+		border-radius: 0.5em;
 		cursor: pointer;
 		font-size: 2em;
+		background-color: #ff5757;
 		transition: background-color 0.3s ease;
 	}
 
 	.disneyCharacter__btn:hover {
-		background-color: #ffca28;
+		background-color: rgb(255, 87, 87, 0.8);
 	}
 
 	.roll-in-left {
@@ -111,6 +124,7 @@
 		animation: roll-in-left 0.8s ease-out both;
 	}
 
+	/* Animation for btn */
 	@-webkit-keyframes roll-in-left {
 		0% {
 			-webkit-transform: translateX(-800px) rotate(-540deg);
@@ -136,18 +150,7 @@
 			opacity: 1;
 		}
 	}
-
-	.disneyCharacter__context--bio {
-		margin-right: 20em;
-		padding: 0 1em;
-		color: #fff;
-		white-space: pre-line;
-	}
-
-	.disneyCharacter__content-img {
-		margin-left: 2em;
-		width: 20em;
-	}
+	/* End of animation for btn */
 
 	/* Media query */
 	@media (max-width: 400px) {

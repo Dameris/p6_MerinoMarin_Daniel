@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router"
+import { useAuthStore } from "@/stores/authStore"
 
 import DisneyCharacter from "../infoDisney/pages/Disney/DisneyCharacter.vue"
 import DisneyPage from "../infoDisney/pages/Disney/DisneyPage.vue"
@@ -23,8 +24,9 @@ const routes = [
 			{ path: "", component: HomePage },
 			{ path: "logIn", component: () => import("../auth/LogIn.vue") },
 			{ path: "signUp", component: () => import("../auth/SignUp.vue") },
+			{ path: "favorites", component: FavoritesPage, meta: { requiresAuth: true } },
 			{ path: "disneyPage", component: DisneyPage },
-			{ path: "disneyCharacter", component: DisneyCharacter },
+			{ path: "disneyCharacter/:id", component: DisneyCharacter, props: true },
 			{ path: "pixarPage", component: PixarPage },
 			{ path: "pixarCharacter", component: PixarCharacter },
 			{ path: "star-warsPage", component: StarWarsPage },
@@ -74,6 +76,16 @@ const routes = [
 const router = createRouter({
 	history: createWebHashHistory(),
 	routes
+})
+
+router.beforeEach((to, from, next) => {
+	const isAuthenticated = useAuthStore().isAuthenticated
+
+	if (to.meta.requiresAuth && !isAuthenticated) {
+		next("/login")
+	} else {
+		next()
+	}
 })
 
 export default router

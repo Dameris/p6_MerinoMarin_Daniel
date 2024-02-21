@@ -78,6 +78,11 @@
 						</nav>
 					</li>
 				</ul>
+				<router-link
+					to="disneyPage"
+					class="homeSection__link"
+					>MORE</router-link
+				>
 			</nav>
 
 			<nav class="home__sectionPixar">
@@ -348,7 +353,7 @@
 		display: flex;
 		justify-content: space-between;
 		flex-direction: row;
-		margin-bottom: 30vh;
+		padding-bottom: 2em;
 		color: #fff;
 		list-style: none;
 	}
@@ -363,6 +368,7 @@
 	}
 
 	.homeSection__link {
+		padding-bottom: 10em;
 		color: #fff;
 	}
 </style>
