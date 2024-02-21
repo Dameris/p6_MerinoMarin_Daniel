@@ -40,10 +40,10 @@ const routes = [
 			{
 				path: "contact",
 				component: () => import("../infoDisney/pages/ContactPage.vue")
-			},
-			{ path: "/:catchAll(.*)", component: () => import("../shared/error404.vue") }
+			}
 		]
 	},
+
 	{
 		path: "/private",
 		component: LayoutPrivate,
@@ -66,15 +66,19 @@ const routes = [
 			{
 				path: "contact",
 				component: () => import("../infoDisney/pages/ContactPage.vue")
-			},
-			{ path: "/:catchAll(.*)", component: () => import("../shared/error404.vue") }
+			}
 		]
-	}
+	},
+
+	{ path: "/:catchAll(.*)", component: () => import("../shared/error404.vue") }
 ]
 
 // Crea el enrutador de la aplicación con la configuración de rutas y el historial de navegación
 const router = createRouter({
 	history: createWebHashHistory(),
+	scrollBehavior(to, from, savedPosition) {
+		return { x: 0, y: 0 }
+	},
 	routes
 })
 

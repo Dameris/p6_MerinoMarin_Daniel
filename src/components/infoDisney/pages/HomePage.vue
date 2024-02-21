@@ -157,6 +157,11 @@
 						</nav>
 					</li>
 				</ul>
+				<router-link
+					to="pixarPage"
+					class="homeSection__link"
+					>MORE</router-link
+				>
 			</nav>
 
 			<nav class="home__sectionStarWars">
@@ -231,6 +236,11 @@
 						</nav>
 					</li>
 				</ul>
+				<router-link
+					to="star-warsPage"
+					class="homeSection__link"
+					>MORE</router-link
+				>
 			</nav>
 
 			<nav class="home__sectionMarvel">
@@ -305,6 +315,11 @@
 						</nav>
 					</li>
 				</ul>
+				<router-link
+					to="marvelPage"
+					class="homeSection__link"
+					>MORE</router-link
+				>
 			</nav>
 		</section>
 	</div>
@@ -368,7 +383,6 @@
 	}
 
 	.homeSection__link {
-		padding-bottom: 10em;
 		color: #fff;
 	}
 </style>
