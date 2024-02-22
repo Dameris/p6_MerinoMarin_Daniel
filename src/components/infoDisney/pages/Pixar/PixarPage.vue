@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<img
-			src="../../../img/disney_pixar.png"
+			src="../../../img/pixar_wp.png"
 			class="characterPage__image"
 			alt="Home image"
 		/>
