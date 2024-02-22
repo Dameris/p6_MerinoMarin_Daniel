@@ -3,6 +3,45 @@
 		<!-- Sección superior del encabezado -->
 		<div>
 			<nav class="headerTop">
+				<Slide
+					class="header__slideMenu"
+					:closeOnNavigation="true"
+				>
+					<ul class="header__list--slide">
+						<li>
+							<router-link
+								class="header__btn--logIn"
+								to="logIn"
+							>
+								LOG IN
+							</router-link>
+						</li>
+						<li>
+							<router-link
+								class="header__btn--signUp"
+								to="signUp"
+							>
+								SIGN UP
+							</router-link>
+						</li>
+						<li>
+							<router-link
+								to="favorites"
+								class="header__link"
+							>
+								FAVORITES
+							</router-link>
+						</li>
+						<li>
+							<router-link
+								to="about-us"
+								class="header__link"
+							>
+								ABOUT US
+							</router-link>
+						</li>
+					</ul>
+				</Slide>
 				<ul class="header__list">
 					<li>
 						<router-link
@@ -91,8 +130,12 @@
 
 <script>
 	// import { useAuthStore } from "../auth/authStore.js"
+	import { Slide } from "vue3-burger-menu"
 
 	export default {
+		components: {
+			Slide
+		}
 		// methods: {
 		// 	logout() {
 		// 		useAuthStore().logout()
@@ -116,9 +159,18 @@
 		background-color: #fff;
 	}
 
-	.header__list {
+	.header__slideMenu {
+		display: none;
+	}
+
+	.header__list,
+	.header__list--slide {
 		display: flex;
 		list-style-type: none;
+	}
+
+	.header__list--slide li {
+		padding-top: 1em;
 	}
 
 	.header__link {
@@ -646,12 +698,14 @@
 			padding-right: 0.5em;
 		}
 
-		.header__list {
+		.header__list,
+		.header__list--slide {
 			flex-direction: column;
 			align-items: center;
 		}
 
-		.header__list li {
+		.header__list li,
+		.header__list--slide li {
 			margin-top: 0.5em;
 			margin-bottom: 0.3em;
 		}
@@ -672,7 +726,8 @@
 			padding-right: 1em;
 		}
 
-		.header__list {
+		.header__list,
+		.header__list--slide {
 			flex-direction: column;
 			align-items: center;
 		}
@@ -680,6 +735,28 @@
 		.header__list li {
 			margin-top: 0.8em;
 			margin-bottom: 0.8em;
+		}
+
+		.header__logo {
+			max-width: 10em;
+		}
+
+		.header__searchInput {
+			width: 15em;
+		}
+	}
+
+	@media (max-width: 700px) {
+		.headerTop {
+			align-items: center;
+		}
+
+		.header__list {
+			display: none;
+		}
+
+		.header__slideMenu {
+			display: inline-block;
 		}
 
 		.header__logo {

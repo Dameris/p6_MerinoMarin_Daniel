@@ -14,6 +14,7 @@
   "dependencies": {
     "pinia": "^2.1.7",
     "vue": "^3.4.15",
+    "vue-burger-menu": "^2.0.5",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
@@ -24,6 +25,7 @@
     "eslint-plugin-vue": "^9.21.1",
     "prettier": "3.2.5",
     "stylelint-config-prettier": "^9.0.5",
-    "vite": "^5.0.11"
+    "vite": "^5.0.11",
+    "vue3-burger-menu": "^1.1.1"
   }
 }
