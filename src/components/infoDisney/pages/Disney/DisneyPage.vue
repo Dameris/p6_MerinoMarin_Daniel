@@ -6,36 +6,40 @@
 			alt="Home image"
 		/>
 		<section class="characterPage__section">
-			<nav class="characterPage__sectionDisney">
+			<nav class="characterPage__section--nav">
 				<img
 					src="../../../img/disney_logo_bg.png"
 					class="characterPageSection__titleImage"
 					alt="Disney Logo"
 				/>
 				<ul class="characterPage__section--ul">
-					<p>
-						<li
-							v-for="character in characters"
-							:key="character.id"
-						>
-							<nav class="characterPage__section--li">
-								<img
-									:src="character.images['img1']"
-									class="characterPageSection__image"
-									alt="Section image"
-								/>
-								<span class="characterPageSection__text">
-									<router-link
-										:to="'disneyCharacter/' + character.id"
-										class="characterPageSection__link"
-									>
-										{{ character.name }}
-									</router-link>
-								</span>
-							</nav>
-						</li>
-					</p>
+					<li
+						v-for="character in characters"
+						:key="character.id"
+					>
+						<nav class="characterPage__section--li">
+							<img
+								:src="character.images['img1']"
+								class="characterPageSection__image"
+								:alt="'Image ' + character.name"
+							/>
+							<span class="characterPageSection__text">
+								<router-link
+									:to="'/disneyCharacter/' + character.id"
+									class="characterPageSection__link"
+								>
+									{{ character.name }}
+								</router-link>
+							</span>
+						</nav>
+					</li>
 				</ul>
+				<router-link
+					to="/"
+					class="characterPage__linkBack"
+				>
+					BACK
+				</router-link>
 			</nav>
 		</section>
 	</div>
@@ -69,42 +73,9 @@
 </script>
 
 <style scoped>
-	.characterPage__image {
-		width: 100%;
-	}
+	@import "../../../../assets/css/main.css";
 
-	.characterPage__sectionDisney {
-		min-height: 50vh;
-		padding-right: 5em;
-		padding-left: 5em;
-		text-align: center;
+	.characterPage__section--nav {
 		background-color: #20286d;
-	}
-
-	.characterPageSection__titleImage {
-		padding: 1vh;
-	}
-
-	.characterPage__section--ul {
-		display: flex;
-		justify-content: space-between;
-		flex-direction: row;
-		padding-bottom: 2em;
-		color: #fff;
-		list-style: none;
-	}
-
-	.characterPage__section--li {
-		margin-bottom: 2em;
-		text-align: center;
-	}
-
-	.characterPageSection__text {
-		display: block;
-		margin-top: 0.5rem;
-	}
-
-	.characterPageSection__link {
-		color: #fff;
 	}
 </style>

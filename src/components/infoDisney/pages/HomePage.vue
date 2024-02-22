@@ -22,7 +22,7 @@
 							/>
 							<span class="homeSection__text"
 								><router-link
-									to="disneyCharacter"
+									to="/disneyCharacter/1"
 									class="homeSection__link"
 									>MICKEY MOUSE</router-link
 								></span
@@ -38,7 +38,7 @@
 							/>
 							<span class="homeSection__text"
 								><router-link
-									to="disneyCharacter"
+									to="/disneyCharacter/2"
 									class="homeSection__link"
 									>MINNIE MOUSE</router-link
 								></span
@@ -54,7 +54,7 @@
 							/>
 							<span class="homeSection__text"
 								><router-link
-									to="disneyCharacter"
+									to="/disneyCharacter/3"
 									class="homeSection__link"
 									>ELSA</router-link
 								></span
@@ -70,7 +70,7 @@
 							/>
 							<span class="homeSection__text"
 								><router-link
-									to="disneyCharacter"
+									to="/disneyCharacter/4"
 									class="homeSection__link"
 									>STICH</router-link
 								></span

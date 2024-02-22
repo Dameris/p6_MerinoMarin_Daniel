@@ -25,6 +25,12 @@
 				NEXT IMAGE
 			</button>
 		</section>
+		<router-link
+			to="/disneyPage"
+			class="disneyCharacter__linkBack"
+		>
+			BACK
+		</router-link>
 	</section>
 </template>
 
@@ -148,6 +154,13 @@
 		}
 	}
 	/* End of animation for btn */
+
+	.disneyCharacter__linkBack {
+		display: flex;
+		justify-content: center;
+		padding-bottom: 1em;
+		color: #fff;
+	}
 
 	/* Media query */
 	@media (max-width: 400px) {
