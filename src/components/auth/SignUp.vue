@@ -83,6 +83,13 @@
 				v-model="formData.country"
 			>
 				<option
+					disabled
+					selected
+					value=""
+				>
+					COUNTRY
+				</option>
+				<option
 					v-for="country in countries"
 					:key="country.code"
 					:value="country.name"
@@ -169,7 +176,7 @@
 
 				// Variables para almacenar la lista de países
 				countries: [],
-				selectedCountry: null
+				selectedCountry: ""
 			}
 		},
 
@@ -191,7 +198,7 @@
 					this.formData.password = ""
 					this.formData.firstName = ""
 					this.formData.lastName = ""
-					this.formData.country = null
+					this.formData.country = ""
 					this.formData.gender = ""
 				}
 			},
@@ -234,7 +241,7 @@
 
 			// Método para hacer el fetch de "countries.json"
 			fetchCountries() {
-				fetch("../../../json/countries.json")
+				fetch("/src/json/countries.json")
 					.then((response) => response.json())
 					.then((data) => {
 						this.countries = data.countries
@@ -315,33 +322,42 @@
 	}
 
 	/* Media query */
-	@media (max-width: 768px) {
-		.formBox__title {
-			font-size: 1.5rem;
+	@media (max-width: 500px) {
+		.formBox {
+			padding: 0 2em;
 		}
 
-		.formBox-form__input {
+		.formBox__title {
+			font-size: 1.5em;
+		}
+
+		.formBox-form__input,
+		.form__textarea,
+		.formBox-form__btn,
+		.signUp__genderSelection {
 			width: 100%;
-			margin-bottom: 1rem;
+			margin-bottom: 1em;
+		}
+	}
+
+	@media (max-width: 700px) {
+		.formBox {
+			padding: 0 2em;
+		}
+
+		.formBox__title {
+			font-size: 1.5em;
+		}
+
+		.formBox-form__input,
+		.form__textarea,
+		.formBox-form__btn {
+			width: 30em;
+			margin-bottom: 1em;
 		}
 
 		.signUp__genderSelection {
-			flex-direction: column;
-		}
-
-		.signUp__genderSelection-btn {
-			width: auto;
-			margin-left: 0;
-			margin-bottom: 1rem;
-		}
-
-		.signUp__privacy-terms {
-			flex-direction: column;
-			align-items: center;
-		}
-
-		.signUp__link-logIn {
-			text-align: center;
+			width: 25em;
 		}
 	}
 	/* End of media query */

@@ -59,7 +59,7 @@
 
 		methods: {
 			fetchCharacters() {
-				fetch("/src/json/disneyCharacters.json")
+				fetch("/src/json/pixarCharacters.json")
 					.then((response) => response.json())
 					.then((data) => {
 						this.characters = data

@@ -132,18 +132,37 @@
 	}
 
 	/* Media query */
-	@media (max-width: 768px) {
+	@media (max-width: 500px) {
+		.formBox {
+			padding: 0 2em;
+		}
+
 		.formBox__title {
-			font-size: 1.5rem; /* Tamaño de fuente más pequeño para el título */
+			font-size: 1.5em;
 		}
 
-		.formBox-form__input {
-			width: 100%; /* Ancho completo para los campos de entrada */
-			margin-bottom: 1rem; /* Espacio entre los campos de entrada */
+		.formBox-form__input,
+		.form__textarea,
+		.formBox-form__btn {
+			width: 100%;
+			margin-bottom: 1em;
+		}
+	}
+
+	@media (max-width: 700px) {
+		.formBox {
+			padding: 0 2em;
 		}
 
-		.logIn__link-signUp {
-			text-align: center; /* Centra el texto */
+		.formBox__title {
+			font-size: 1.5em;
+		}
+
+		.formBox-form__input,
+		.form__textarea,
+		.formBox-form__btn {
+			width: 30em;
+			margin-bottom: 1em;
 		}
 	}
 	/* End of media query */

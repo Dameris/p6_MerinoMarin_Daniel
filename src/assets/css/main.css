@@ -91,11 +91,9 @@
   font-size: 0.8rem;
   padding-bottom: 1vh;
 }
-
 /*& End of form style */
 
 /*& Characters page style */
-
 .characterPage__image {
   width: 100%;
 }
@@ -148,5 +146,4 @@
   padding-bottom: 1em;
   color: #fff;
 }
-
 /*& End of characters page style */
