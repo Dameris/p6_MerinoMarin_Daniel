@@ -2,31 +2,31 @@
 	<div>
 		<img
 			src="../../../img/disney_castle.png"
-			class="characterPage__image"
+			class="characterListPage__image"
 			alt="Home image"
 		/>
-		<section class="characterPage__section">
-			<nav class="characterPage__section--nav">
+		<section class="characterListPage__section">
+			<nav class="characterListPage__section--nav">
 				<img
 					src="../../../img/disney_logo_bg.png"
-					class="characterPageSection__titleImage"
+					class="characterListPageSection__titleImage"
 					alt="Disney Logo"
 				/>
-				<ul class="characterPage__section--ul">
+				<ul class="characterListPage__section--ul">
 					<li
 						v-for="character in characters"
 						:key="character.id"
 					>
-						<nav class="characterPage__section--li">
+						<nav class="characterListPage__section--li">
 							<img
 								:src="character.images['img1']"
-								class="characterPageSection__image"
+								class="characterListPageSection__image"
 								:alt="'Image ' + character.name"
 							/>
-							<span class="characterPageSection__text">
+							<span class="characterListPageSection__text">
 								<router-link
 									:to="'/disneyCharacter/' + character.id"
-									class="characterPageSection__link"
+									class="characterListPageSection__link"
 								>
 									{{ character.name }}
 								</router-link>
@@ -36,7 +36,7 @@
 				</ul>
 				<router-link
 					to="/"
-					class="characterPage__linkBack"
+					class="characterListPage__linkBack"
 				>
 					BACK
 				</router-link>
@@ -75,7 +75,7 @@
 <style scoped>
 	@import "../../../../assets/css/main.css";
 
-	.characterPage__section--nav {
+	.characterListPage__section--nav {
 		background-color: #20286d;
 	}
 </style>

@@ -91,29 +91,30 @@
   font-size: 0.8rem;
   padding-bottom: 1vh;
 }
+
 /*& End of form style */
 
-/*& Characters page style */
-.characterPage__image {
+/*& Characters list page style */
+.characterListPage__image {
   width: 100%;
 }
 
-.characterPage__section {
+.characterListPage__section {
   text-align: center;
 }
 
-.characterPage__section--nav {
+.characterListPage__section--nav {
   min-height: 50vh;
   padding-right: 5em;
   padding-left: 5em;
   background-color: #20286d;
 }
 
-.characterPageSection__titleImage {
+.characterListPageSection__titleImage {
   padding: 1vh;
 }
 
-.characterPage__section--ul {
+.characterListPage__section--ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -124,7 +125,7 @@
   list-style: none;
 }
 
-.characterPage__section--li {
+.characterListPage__section--li {
   position: relative;
   width: calc(25% - 1em);
   margin-right: 0.5em;
@@ -132,12 +133,74 @@
   margin-bottom: 2em;
 }
 
-.characterPageSection__text {
+.characterListPageSection__text {
   display: block;
 }
 
-.characterPageSection__link {
+.characterListPageSection__link {
   color: #fff;
+}
+
+.characterListPage__linkBack {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1em;
+  color: #fff;
+}
+
+/*& End of characters list page style */
+
+/*& Characters page style */
+.characterPage {
+  position: relative;
+  background-color: #20286d;
+}
+
+.characterPage__header {
+  display: inline-block;
+  position: absolute;
+  padding: 5em;
+  top: 0;
+  left: 0;
+  font-size: 3em;
+}
+
+.characterPage__img {
+  width: 100%;
+}
+
+.characterPage__content {
+  display: flex;
+  align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.characterPage__context--bio {
+  margin-right: 2em;
+  margin-left: 2em;
+  padding: 0 1em;
+  color: #fff;
+  white-space: pre-line;
+}
+
+.characterPage__content-img {
+  margin-left: 2em;
+  width: 30em;
+}
+
+.characterPage__btn {
+  margin-right: 5em;
+  padding: 1em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-size: 2em;
+  background-color: #ff5757;
+  transition: background-color 0.3s ease;
+}
+
+.characterPage__btn:hover {
+  background-color: rgb(255, 87, 87, 0.8);
 }
 
 .characterPage__linkBack {
@@ -146,4 +209,5 @@
   padding-bottom: 1em;
   color: #fff;
 }
-/*& End of characters page style */
+
+/*& End of character page style */

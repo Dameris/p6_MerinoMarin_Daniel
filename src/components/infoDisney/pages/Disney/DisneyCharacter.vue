@@ -1,33 +1,33 @@
 <template>
-	<section class="disneyCharacter">
-		<div class="disneyCharacter__header">
+	<section class="characterPage">
+		<div class="characterPage__header">
 			<h2>{{ character.name }}</h2>
 		</div>
 		<img
-			class="disneyCharacter__img"
+			class="characterPage__img"
 			:src="character['img-bg']"
 			alt="Mickey Mouse Background"
 		/>
-		<section class="disneyCharacter__content">
+		<section class="characterPage__content">
 			<div v-if="character.images">
 				<img
-					class="disneyCharacter__content-img"
+					class="characterPage__content-img"
 					:v-if="character.images['img' + (imageIndex + 1)]"
 					:src="character.images['img' + (imageIndex + 1)]"
 					:alt="'Image ' + (imageIndex + 1)"
 				/>
 			</div>
-			<p class="disneyCharacter__context--bio">{{ character.bioFirst + "\n\n" + character.bioSecond }}</p>
+			<p class="characterPage__context--bio">{{ character.bioFirst + "\n\n" + character.bioSecond }}</p>
 			<button
 				@click="changeImage"
-				class="disneyCharacter__btn roll-in-left"
+				class="characterPage__btn roll-in-left"
 			>
 				NEXT IMAGE
 			</button>
 		</section>
 		<router-link
 			to="/disneyPage"
-			class="disneyCharacter__linkBack"
+			class="characterPage__linkBack"
 		>
 			BACK
 		</router-link>
@@ -70,88 +70,26 @@
 </script>
 
 <style scoped>
-	.disneyCharacter {
-		position: relative;
-		background-color: #20286d;
-	}
-
-	.disneyCharacter__header {
-		display: inline-block;
-		position: absolute;
-		padding: 5em;
-		top: 0;
-		left: 0;
-		font-size: 3em;
-	}
-
-	.disneyCharacter__img {
-		width: 100%;
-	}
-
-	.disneyCharacter__content {
-		display: flex;
-		align-items: center;
-		padding-top: 1em;
-		padding-bottom: 1em;
-	}
-
-	.disneyCharacter__context--bio {
-		margin-right: 2em;
-		margin-left: 2em;
-		padding: 0 1em;
-		color: #fff;
-		white-space: pre-line;
-	}
-
-	.disneyCharacter__content-img {
-		margin-left: 2em;
-		width: 30em;
-	}
-
-	.disneyCharacter__btn {
-		margin-right: 5em;
-		padding: 1em;
-		border-radius: 0.5em;
-		cursor: pointer;
-		font-size: 2em;
-		background-color: #ff5757;
-		transition: background-color 0.3s ease;
-	}
-
-	.disneyCharacter__btn:hover {
-		background-color: rgb(255, 87, 87, 0.8);
-	}
-
-	.roll-in-left {
-		-webkit-animation: roll-in-left 0.8s ease-out both;
-		animation: roll-in-left 0.8s ease-out both;
-	}
-
-	.disneyCharacter__linkBack {
-		display: flex;
-		justify-content: center;
-		padding-bottom: 1em;
-		color: #fff;
-	}
+	@import "/src/assets/css/main.css";
 
 	/* Media query */
 	@media (max-width: 400px) {
-		.disneyCharacter__context--bio {
+		.characterPage__context--bio {
 			margin-left: 0;
 		}
 	}
 
 	@media (max-width: 570px) {
-		.disneyCharacter__header {
+		.characterPage__header {
 			font-size: 18px;
 		}
 
-		.disneyCharacter__content {
+		.characterPage__content {
 			padding-top: 1em;
 			padding-bottom: 1em;
 		}
 
-		.disneyCharacter__content-img {
+		.characterPage__content-img {
 			max-width: 20em;
 		}
 	}
