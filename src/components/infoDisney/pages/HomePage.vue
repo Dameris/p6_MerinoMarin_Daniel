@@ -24,7 +24,7 @@
 								><router-link
 									to="/disneyCharacter/1"
 									class="homeSection__link"
-									>MICKEY MOUSE</router-link
+									>MICKEY MOUSE</router-link
 								></span
 							>
 						</nav>
@@ -40,7 +40,7 @@
 								><router-link
 									to="/disneyCharacter/2"
 									class="homeSection__link"
-									>MINNIE MOUSE</router-link
+									>MINNIE MOUSE</router-link
 								></span
 							>
 						</nav>
@@ -101,9 +101,9 @@
 							/>
 							<span class="homeSection__text"
 								><router-link
-									to="disneyCharacter"
+									to="/disneyCharacter/1"
 									class="homeSection__link"
-									>MICKEY MOUSE</router-link
+									>MICKEY MOUSE</router-link
 								></span
 							>
 						</nav>
@@ -117,9 +117,9 @@
 							/>
 							<span class="homeSection__text"
 								><router-link
-									to="disneyCharacter"
+									to="/disneyCharacter/2"
 									class="homeSection__link"
-									>MINNIE MOUSE</router-link
+									>MINNIE MOUSE</router-link
 								></span
 							>
 						</nav>
@@ -180,9 +180,9 @@
 							/>
 							<span class="homeSection__text"
 								><router-link
-									to="disneyCharacter"
+									to="/disneyCharacter/1"
 									class="homeSection__link"
-									>MICKEY MOUSE</router-link
+									>MICKEY MOUSE</router-link
 								></span
 							>
 						</nav>
@@ -196,9 +196,9 @@
 							/>
 							<span class="homeSection__text"
 								><router-link
-									to="disneyCharacter"
+									to="/disneyCharacter/2"
 									class="homeSection__link"
-									>MINNIE MOUSE</router-link
+									>MINNIE MOUSE</router-link
 								></span
 							>
 						</nav>
@@ -259,9 +259,9 @@
 							/>
 							<span class="homeSection__text"
 								><router-link
-									to="disneyCharacter"
+									to="/disneyCharacter/1"
 									class="homeSection__link"
-									>MICKEY MOUSE</router-link
+									>MICKEY MOUSE</router-link
 								></span
 							>
 						</nav>
@@ -275,9 +275,9 @@
 							/>
 							<span class="homeSection__text"
 								><router-link
-									to="disneyCharacter"
+									to="/disneyCharacter/2"
 									class="homeSection__link"
-									>MINNIE MOUSE</router-link
+									>MINNIE MOUSE</router-link
 								></span
 							>
 						</nav>
@@ -384,5 +384,33 @@
 
 	.homeSection__link {
 		color: #fff;
+	}
+
+	@media (max-width: 700px) {
+		.home__section--ul {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.home__section--li {
+			margin-bottom: 2em;
+		}
+	}
+
+	@media (max-width: 1200px) {
+		.home__section--ul {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.home__section--li {
+			width: 50%;
+			padding: 0 4em;
+			box-sizing: border-box;
+		}
+
+		.homeSection__text {
+			padding-bottom: 2em;
+		}
 	}
 </style>

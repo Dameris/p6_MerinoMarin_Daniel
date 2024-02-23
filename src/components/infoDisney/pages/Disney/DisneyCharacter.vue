@@ -127,34 +127,6 @@
 		animation: roll-in-left 0.8s ease-out both;
 	}
 
-	/* Animation for btn */
-	@-webkit-keyframes roll-in-left {
-		0% {
-			-webkit-transform: translateX(-800px) rotate(-540deg);
-			transform: translateX(-800px) rotate(-540deg);
-			opacity: 0;
-		}
-		100% {
-			-webkit-transform: translateX(0) rotate(0deg);
-			transform: translateX(0) rotate(0deg);
-			opacity: 1;
-		}
-	}
-
-	@keyframes roll-in-left {
-		0% {
-			-webkit-transform: translateX(-800px) rotate(-540deg);
-			transform: translateX(-800px) rotate(-540deg);
-			opacity: 0;
-		}
-		100% {
-			-webkit-transform: translateX(0) rotate(0deg);
-			transform: translateX(0) rotate(0deg);
-			opacity: 1;
-		}
-	}
-	/* End of animation for btn */
-
 	.disneyCharacter__linkBack {
 		display: flex;
 		justify-content: center;
