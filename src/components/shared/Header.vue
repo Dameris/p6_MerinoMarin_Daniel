@@ -123,7 +123,16 @@
 				class="header__searchInput"
 				placeholder="SEARCH"
 				spellcheck
+				v-model="searchQuery"
 			/>
+			<ul v-if="searchResults.length > 0">
+				<li
+					v-for="result in searchResults"
+					:key="result.id"
+				>
+					{{ result.name }}
+				</li>
+			</ul>
 		</div>
 	</header>
 </template>
@@ -133,14 +142,47 @@
 	import { Slide } from "vue3-burger-menu"
 
 	export default {
-		components: {
-			Slide
+		data() {
+			return {
+				searchQuery: "",
+				searchData: [],
+				searchResults: []
+			}
+		},
+		mounted() {
+			this.loadData()
+		},
+		methods: {
+			async loadData() {
+				try {
+					// Cargar los datos de los 4 archivos JSON
+					const responses = await Promise.all([
+						fetch("/src/json/disneyCharacters.json"),
+						fetch("/src/json/pixarCharacters.json"),
+						fetch("/src/json/starwarsCharacters.json"),
+						fetch("/src/json/marvelCharacters.json")
+					])
+
+					// Procesar las respuestas JSON
+					const data = await Promise.all(responses.map((response) => response.json()))
+					this.searchData = data.flat()
+				} catch (error) {
+					console.error("Error fetching characters:", error)
+				}
+			},
+			search() {
+				if (this.searchQuery.trim() === "") {
+					this.searchResults = []
+					return
+				}
+				console.log(this.searchQuery)
+
+				// Realizar la búsqueda en los datos
+				this.searchResults = this.searchData.filter((item) =>
+					item.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+				)
+			}
 		}
-		// methods: {
-		// 	logout() {
-		// 		useAuthStore().logout()
-		// 	}
-		// }
 	}
 </script>
 
