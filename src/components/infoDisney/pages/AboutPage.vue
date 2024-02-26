@@ -1,9 +1,38 @@
 <template>
-  <div>ABOUT PAGE</div>
+	<section class="aboutPage">
+		<img
+			src="../../img/mickey.png"
+			class="aboutPage__img"
+		/>
+		<p class="aboutPage__info">
+			<strong>ABOUT US</strong> <br />
+			At <mark>InfoDisney</mark>, we are passionate about sharing the magic and fun of the Disney universe with people of all ages
+			and from all corners of the world. Our mission is to provide our visitors with a unique experience filled with
+			information, entertainment, and nostalgia. We believe in the magic of dreams and in the importance of keeping
+			imagination alive. Join our community and embark on the wonderful adventure that is the world of Disney.
+		</p>
+	</section>
 </template>
 
 <script>
-export default {}
+	export default {}
 </script>
 
-<style></style>
+<style scoped>
+	.aboutPage {
+		text-align: center;
+	}
+
+	.aboutPage__img {
+		width: 100%;
+	}
+
+	.aboutPage__info {
+		margin-left: 25em;
+		margin-right: 25em;
+	}
+
+	.aboutPage__info strong {
+		font-size: 4em;
+	}
+</style>
