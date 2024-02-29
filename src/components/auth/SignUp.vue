@@ -155,6 +155,8 @@
 </template>
 
 <script>
+	import { useFormDataStore } from "@/stores/usersStore"
+
 	export default {
 		data() {
 			return {
@@ -257,6 +259,58 @@
 				} else {
 					this.formData.gender = ""
 				}
+			}
+		},
+
+		checkForm() {
+			if (this.emailError || this.passwordError || this.firstNameError || this.lastNameError) {
+				alert("All input fields must contain valid information.")
+			} else {
+				console.log("Data", this.formData)
+
+				// Guardar los datos en localStorage
+				localStorage.setItem("formData", JSON.stringify(this.formData))
+
+				// Guardar los datos en un archivo JSON
+				this.saveDataToJSON()
+
+				// Restablecer los datos del formulario
+				this.formData.email = ""
+				this.formData.password = ""
+				this.formData.firstName = ""
+				this.formData.lastName = ""
+				this.formData.country = ""
+				this.formData.gender = ""
+			}
+		},
+		
+		saveDataToJSON() {
+			const formData = JSON.parse(localStorage.getItem("formData"))
+
+			if (formData) {
+				const dataToSave = {
+					users: []
+				}
+
+				dataToSave.users.push(formData)
+
+				// Convertir el objeto a JSON
+				const jsonData = JSON.stringify(dataToSave)
+
+				// Crear un Blob con el JSON y descargarlo
+				const blob = new Blob([jsonData], { type: "application/json" })
+				const url = URL.createObjectURL(blob)
+
+				// Crear un enlace para la descarga
+				const a = document.createElement("a")
+				a.href = url
+				a.download = "formData.json"
+				document.body.appendChild(a)
+				a.click()
+				document.body.removeChild(a)
+				URL.revokeObjectURL(url)
+			} else {
+				console.error("No form data found in localStorage")
 			}
 		}
 	}

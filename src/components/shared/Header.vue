@@ -859,6 +859,7 @@
 			background-color: #1c1c1c;
 			padding: 2rem;
 			box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+			z-index: 1;
 		}
 
 		.header__slideMenu.visible {

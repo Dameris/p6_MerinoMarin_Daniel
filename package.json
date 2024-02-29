@@ -12,6 +12,7 @@
     "stylelint-check": "stylelint-config-prettier-check"
   },
   "dependencies": {
+    "firebase": "^10.8.1",
     "pinia": "^2.1.7",
     "vue": "^3.4.15",
     "vue-burger-menu": "^2.0.5",
