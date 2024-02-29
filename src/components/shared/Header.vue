@@ -3,10 +3,25 @@
 		<!-- Sección superior del encabezado -->
 		<div>
 			<nav class="headerTop">
-				<Slide
-					class="header__slideMenu"
-					:closeOnNavigation="true"
+				<button
+					class="btn__open--slideMenu"
+					id="btn__open--slideMenu"
+					@click="openSlide"
 				>
+					OPEN
+				</button>
+				<nav
+					class="header__slideMenu"
+					id="header__slideMenu"
+					:class="{ visible: isOpen }"
+				>
+					<button
+						class="btn__close--slideMenu"
+						id="btn__close--slideMenu"
+						@click="closeSlide"
+					>
+						CLOSE
+					</button>
 					<ul class="header__list--slide">
 						<li>
 							<router-link
@@ -41,7 +56,7 @@
 							</router-link>
 						</li>
 					</ul>
-				</Slide>
+				</nav>
 				<ul class="header__list">
 					<li>
 						<router-link
@@ -139,14 +154,16 @@
 
 <script>
 	// import { useAuthStore } from "../auth/authStore.js"
-	import { Slide } from "vue3-burger-menu"
+	// import { Slide } from "vue3-burger-menu"
 
 	export default {
 		data() {
 			return {
 				searchQuery: "",
 				searchData: [],
-				searchResults: []
+				searchResults: [],
+
+				isOpen: false
 			}
 		},
 		mounted() {
@@ -170,6 +187,7 @@
 					console.error("Error fetching characters:", error)
 				}
 			},
+
 			search() {
 				if (this.searchQuery.trim() === "") {
 					this.searchResults = []
@@ -181,6 +199,14 @@
 				this.searchResults = this.searchData.filter((item) =>
 					item.name.toLowerCase().includes(this.searchQuery.toLowerCase())
 				)
+			},
+
+			openSlide() {
+				this.isOpen = true
+			},
+
+			closeSlide() {
+				this.isOpen = false
 			}
 		}
 	}
@@ -199,6 +225,11 @@
 		align-items: center;
 		min-height: 5em;
 		background-color: #fff;
+	}
+
+	.btn__open--slideMenu,
+	.btn__close--slideMenu {
+		display: none;
 	}
 
 	.header__slideMenu {
@@ -797,8 +828,47 @@
 			display: none;
 		}
 
+		.btn__open--slideMenu,
+		.btn__close--slideMenu {
+			display: block;
+			border: 0;
+			font-size: 1em;
+			background-color: transparent;
+			cursor: pointer;
+		}
+
+		.btn__open--slideMenu {
+			color: #ff5757;
+		}
+
+		.btn__close--slideMenu {
+			color: #ff5757;
+		}
+
 		.header__slideMenu {
-			display: inline-block;
+			opacity: 0;
+			visibility: hidden;
+			display: flex;
+			flex-direction: column;
+			align-items: end;
+			gap: 1rem;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			background-color: #1c1c1c;
+			padding: 2rem;
+			box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+		}
+
+		.header__slideMenu.visible {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.header__list--slide {
+			flex-direction: column;
+			align-items: center;
 		}
 
 		.header__logo {
