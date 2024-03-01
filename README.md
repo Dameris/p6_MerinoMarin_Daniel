@@ -21,7 +21,7 @@ npm run build
   
 Video prueba aplicación: [Enlace video drive](https://drive.google.com/drive/u/0/folders/1rkZE8oVGp5N4yTBuZYlxD9Sj6riA0gf4)  
   
-## Documentación del progreso hasta el 16/02/2024  
+## Documentación del progreso hasta el 01/03/2024  
 `App`  
 El componente `App` sirve como el contenedor principal de la aplicación.
 
@@ -231,3 +231,63 @@ El componente `Signup` representa el formulario de Sign Up de la aplicación.
     - `validateEmail`, `validatePassword`, `validateFirstName`, `validateLastName`: Métodos que validan el formato de los diferentes campos del formulario.  
     - `fetchCountries`: Método que realiza una solicitud HTTP para obtener la lista de países desde el archivo `countries.json`.  
     - `selectGender(gender)`: Método que permite a los usuarios seleccionar su género haciendo clic en los botones correspondientes.  
+
+<br><br>
+
+`CharactersListPage`  
+El componente `CharactersListPage` muestra una lista de personajes de las franquicias en una página específica de la aplicación.  
+
+  * Estructura del componente:  
+    - `Template`: Define una estructura HTML que muestra una imagen de fondo, el logotipo de Disney y una lista de personajes con enlaces para ver más detalles.  
+    - `Script`: Se encarga de manejar la lógica del componente, incluyendo la recuperación de datos de los personajes y su presentación en la página.
+    - `Estilos`: Define estilos CSS específicos para el componente, incluyendo el diseño y la apariencia visual.  
+
+  * Funcionalidades implementadas:  
+    - Utiliza una solicitud HTTP para obtener la lista de personajes desde el archivo `xCharacters.json`.  
+    - Muestra una lista de personajes de Disney con imágenes y enlaces para ver más detalles.  
+    - Aplica estilos visuales específicos, incluyendo el color de fondo del contenedor de la lista de personajes.  
+
+  * Estructuras de datos:  
+    - `characters`: Array que almacena la lista de personajes recuperados del archivo `xCharacters.json`.  
+
+  * Métodos y propiedades:  
+    - `fetchCharacters`: Método que realiza una solicitud HTTP para obtener la lista de personajes desde el archivo `xCharacters.json`.  
+    - `mounted`: Hook de ciclo de vida de Vue.js que se ejecuta después de que el componente se ha montado en el DOM y se encarga de llamar al método fetchCharacters() para cargar los datos de los personajes.  
+    - `data`: Función que devuelve un objeto con las propiedades de datos del componente, en este caso, inicializa la propiedad characters como un array vacío para almacenar los personajes.  
+
+<br><br>
+
+`CharactersPage`  
+El componente `CharactersPage` muestra información detallada sobre wl peresonaje seleccionado.  
+
+  * Estructura del componente:  
+    - `Template`: Define la estructura HTML que muestra el nombre del personaje, una imagen de fondo, la imagen del personaje, su biografía y un botón para cambiar la imagen.  
+    - `Script`: Se encarga de manejar la lógica del componente, incluyendo la recuperación de datos del personaje y la lógica para cambiar la imagen.
+    - `Estilos`: Define estilos CSS específicos para el componente, incluyendo el diseño y la apariencia visual.  
+
+  * Funcionalidades implementadas:  
+    - Utiliza una solicitud HTTP para obtener los datos del personaje desde el archivo `xCharacters.json` según el ID proporcionado en la ruta.  
+    - Muestra el nombre del personaje, una imagen de fondo, la imagen del personaje, su biografía y un botón para cambiar la imagen.  
+    - Permite al usuario cambiar la imagen del personaje haciendo clic en el botón "NEXT IMAGE".  
+
+  * Estructuras de datos:  
+    - `characters`: Objeto que almacena los datos del personaje recuperados del archivo `xCharacters.json`.
+    - `imageIndex`: Índice que indica qué imagen del personaje se está mostrando actualmente.  
+
+  * Métodos y propiedades:  
+    - `fetchCharacters`: Método que realiza una solicitud HTTP para obtener los datos del personaje desde el archivo `xCharacters.json` según el ID proporcionado en la ruta.  
+    - `changeImage`: Método que cambia la imagen del personaje mostrada en la página cuando se hace clic en el botón "NEXT IMAGE".  
+
+<br><br>
+
+`HomePage`  
+El componente `HomePage`  muestra una página principal que incluye secciones para diferentes franquicias de Disney, Pixar, Star Wars y Marvel.  
+
+  * Estructura del componente:  
+    - `Template`: Define la estructura HTML que muestra imágenes y enlaces a las diferentes secciones de personajes de Disney, Pixar, Star Wars y Marvel.  
+    - `Estilos`: Define estilos CSS específicos para el componente, incluyendo el diseño y la apariencia visual de las diferentes secciones.  
+
+  * Funcionalidades implementadas:  
+    - Muestra secciones para las franquicias de Disney, Pixar, Star Wars y Marvel.  
+    - Proporciona enlaces a las páginas de detalles de los personajes de cada franquicia.  
+ 
