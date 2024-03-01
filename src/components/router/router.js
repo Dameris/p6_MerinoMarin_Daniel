@@ -28,11 +28,11 @@ const routes = [
 			{ path: "disneyPage", component: DisneyPage },
 			{ path: "disneyCharacter/:id", name: "disneyCharacter", component: DisneyCharacter, props: true },
 			{ path: "pixarPage", component: PixarPage },
-			{ path: "pixarCharacter", component: PixarCharacter },
+			{ path: "pixarCharacter/:id", name: "pixarCharacter", component: PixarCharacter, props: true },
 			{ path: "star-warsPage", component: StarWarsPage },
-			{ path: "star-warsCharacter", component: StarWarsCharacter },
+			{ path: "star-warsCharacter/:id", name: "star-warsCharacter", component: StarWarsCharacter, props: true },
 			{ path: "marvelPage", component: MarvelPage },
-			{ path: "marvelCharacter", component: MarvelCharacter },
+			{ path: "marvelCharacter/:id", name: "marvelCharacter", component: MarvelCharacter, props: true },
 			{
 				path: "about-us",
 				component: () => import("../infoDisney/pages/AboutPage.vue")

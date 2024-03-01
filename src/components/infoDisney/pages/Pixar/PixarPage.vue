@@ -25,7 +25,7 @@
 							/>
 							<span class="characterListPageSection__text">
 								<router-link
-									:to="'/disneyCharacter/' + character.id"
+									:to="'/pixarCharacter/' + character.id"
 									class="characterListPageSection__link"
 								>
 									{{ character.name }}
