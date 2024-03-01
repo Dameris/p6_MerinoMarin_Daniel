@@ -1,6 +1,5 @@
 import Vuex from "vuex"
 
-// Create Vuex store
 const store = new Vuex.Store({
 	state: {
 		isAuthenticated: false,
@@ -10,21 +9,25 @@ const store = new Vuex.Store({
 		login(state, user) {
 			state.isAuthenticated = true
 			state.user = user
+			// Guardar los datos del usuario en el localStorage
+			localStorage.setItem("user", JSON.stringify(user))
+			localStorage.setItem("isAuthenticated", "true")
 		},
 		logout(state) {
 			state.isAuthenticated = false
 			state.user = null
+			// Eliminar los datos del usuario del localStorage al cerrar sesión
+			localStorage.removeItem("user")
+			localStorage.removeItem("isAuthenticated")
 		}
 	},
 	actions: {
 		login({ commit }, user) {
-			// Perform login operation (e.g., API call)
-			// Upon successful login, commit the mutation to update state
+			// Realizar operación de inicio de sesión
 			commit("login", user)
 		},
 		logout({ commit }) {
-			// Perform logout operation (e.g., clear session, API call)
-			// Upon successful logout, commit the mutation to update state
+			// Realizar operación de cierre de sesión
 			commit("logout")
 		}
 	}
