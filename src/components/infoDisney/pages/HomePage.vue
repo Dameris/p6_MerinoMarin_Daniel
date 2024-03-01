@@ -32,7 +32,7 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/minnie-mouse/33631_minnie_mouse_character_disney.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
@@ -48,7 +48,7 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/elsa/33631_elsa_character_disney.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
@@ -64,7 +64,7 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/stitch/33631_stitch_character_disney.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
@@ -95,15 +95,15 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/woody/33631_woody_character_pixar.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
 							<span class="homeSection__text"
 								><router-link
-									to="/disneyCharacter/1"
+									to="/pixarCharacter/1"
 									class="homeSection__link"
-									>MICKEY MOUSE</router-link
+									>WOODY</router-link
 								></span
 							>
 						</nav>
@@ -111,15 +111,15 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/buzz/33631_buzz_lightyear_character_pixar.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
 							<span class="homeSection__text"
 								><router-link
-									to="/disneyCharacter/2"
+									to="/pixarCharacter/2"
 									class="homeSection__link"
-									>MINNIE MOUSE</router-link
+									>BUZZ LIGHTYEAR</router-link
 								></span
 							>
 						</nav>
@@ -127,15 +127,15 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/wall-e/36814_wall-e_pixar.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
 							<span class="homeSection__text"
 								><router-link
-									to="disneyCharacter"
+									to="/pixarCharacter/3"
 									class="homeSection__link"
-									>ELSA</router-link
+									>WALL-E</router-link
 								></span
 							>
 						</nav>
@@ -143,15 +143,15 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/rayo/33631_lightning_mcqueen_character_pixar.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
 							<span class="homeSection__text"
 								><router-link
-									to="disneyCharacter"
+									to="/pixarCharacter/4"
 									class="homeSection__link"
-									>STICH</router-link
+									>LIGHTNING MCQUEEN</router-link
 								></span
 							>
 						</nav>
@@ -174,15 +174,15 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/r2d2/33631_r2-d2_character_starwars.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
 							<span class="homeSection__text"
 								><router-link
-									to="/disneyCharacter/1"
+									to="/star-warsCharacter/1"
 									class="homeSection__link"
-									>MICKEY MOUSE</router-link
+									>R2-D2</router-link
 								></span
 							>
 						</nav>
@@ -190,15 +190,15 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/darth/33631_darth_vader_character_starwars.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
 							<span class="homeSection__text"
 								><router-link
-									to="/disneyCharacter/2"
+									to="/star-warsCharacter/2"
 									class="homeSection__link"
-									>MINNIE MOUSE</router-link
+									>DARTH VADER</router-link
 								></span
 							>
 						</nav>
@@ -206,15 +206,15 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/han/36814_han-solo_character_starwars.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
 							<span class="homeSection__text"
 								><router-link
-									to="disneyCharacter"
+									to="/star-warsCharacter/3"
 									class="homeSection__link"
-									>ELSA</router-link
+									>HAN SOLO</router-link
 								></span
 							>
 						</nav>
@@ -222,15 +222,15 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/grogu/33631_the_child_character_starwars.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
 							<span class="homeSection__text"
 								><router-link
-									to="disneyCharacter"
+									to="/star-warsCharacter/4"
 									class="homeSection__link"
-									>STICH</router-link
+									>GROGU</router-link
 								></span
 							>
 						</nav>
@@ -253,15 +253,15 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/spiderman/33631_spider-man_character_marvel.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
 							<span class="homeSection__text"
 								><router-link
-									to="/disneyCharacter/1"
+									to="/marvelCharacter/1"
 									class="homeSection__link"
-									>MICKEY MOUSE</router-link
+									>SPIDER-MAN</router-link
 								></span
 							>
 						</nav>
@@ -269,15 +269,30 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/hulk/33631_hulk_character_marvel.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
 							<span class="homeSection__text"
 								><router-link
-									to="/disneyCharacter/2"
+									to="/marvelCharacter/2"
 									class="homeSection__link"
-									>MINNIE MOUSE</router-link
+								>HULK</router-link
+							></span>
+						</nav>
+					</li>
+					<li>
+						<nav class="home__section--li">
+							<img
+								src="../../img/json_img/AMERICA/33631_captain_america_character_marvel.png"
+								class="homeSection__image"
+								alt="Section image"
+							/>
+							<span class="homeSection__text"
+								><router-link
+									to="/marvelCharacter/3"
+									class="homeSection__link"
+									>CAPTAIN AMERICA</router-link
 								></span
 							>
 						</nav>
@@ -285,31 +300,15 @@
 					<li>
 						<nav class="home__section--li">
 							<img
-								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
+								src="../../img/json_img/panther/33631_black_panther_character_marvel.png"
 								class="homeSection__image"
 								alt="Section image"
 							/>
 							<span class="homeSection__text"
 								><router-link
-									to="disneyCharacter"
+									to="/marvelCharacter/4"
 									class="homeSection__link"
-									>ELSA</router-link
-								></span
-							>
-						</nav>
-					</li>
-					<li>
-						<nav class="home__section--li">
-							<img
-								src="../../img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
-								class="homeSection__image"
-								alt="Section image"
-							/>
-							<span class="homeSection__text"
-								><router-link
-									to="disneyCharacter"
-									class="homeSection__link"
-									>STICH</router-link
+									>BLACK PANTHER</router-link
 								></span
 							>
 						</nav>

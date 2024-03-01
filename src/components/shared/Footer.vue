@@ -39,8 +39,8 @@
 			<div class="footer__infoBox">
 				<h5>WEB SITE</h5>
 				<p class="footer__infoContent">
-					ABOUT US <br />
-					HOME
+					<router-link to="about-us">ABOUT US</router-link> <br />
+					<router-link to="/">HOME</router-link>
 				</p>
 			</div>
 			<div class="footer__infoBox">

@@ -38,6 +38,9 @@
 	}
 
 	.userProfile__p {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
 		padding: 5em;
 		background-color: #ff5757;
 	}

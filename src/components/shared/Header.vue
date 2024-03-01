@@ -214,6 +214,10 @@
 
 			logout() {
 				store.dispatch("logout")
+			},
+
+			toggleDarkMode() {
+				document.body.classList.toggle("dark-mode")
 			}
 		}
 	}
