@@ -1,5 +1,7 @@
 # p6_MerinoMarin_Daniel
 
+# Aplicación desplegada: [info-disney](https://info-disney.netlify.app)
+
 ## Project Setup
 
 ```sh
