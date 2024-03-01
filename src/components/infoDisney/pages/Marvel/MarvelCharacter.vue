@@ -72,6 +72,10 @@
 <style scoped>
 	@import "/src/assets/css/main.css";
 
+	.characterPage {
+		background-color: #c51d23;
+	}
+
 	/* Media query */
 	@media (max-width: 400px) {
 		.characterPage__context--bio {
