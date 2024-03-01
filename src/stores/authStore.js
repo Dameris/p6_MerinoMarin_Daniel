@@ -4,19 +4,18 @@ export const useAuthStore = defineStore({
 	id: "auth",
 
 	state: () => ({
-		isAuthenticated: false
-		// user: null
+		users: [],
+		currentUser: null
 	}),
 
 	actions: {
-		login(credentials) {
-			this.isAuthenticated = true
-			// this.user = ""
+		// Definir acciones para manipular el estado de los usuarios
+		addUser(newUser) {
+			this.users.push(newUser)
 		},
-
-		logout() {
-			this.isAuthenticated = false
-			// this.user = null
+		setCurrentUser(user) {
+			this.currentUser = user
 		}
+		// Otros métodos de acción según sea necesario
 	}
 })

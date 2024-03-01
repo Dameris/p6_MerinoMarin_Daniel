@@ -41,7 +41,7 @@
 						</li>
 						<li>
 							<router-link
-								to="favorites"
+								:to="isAuthenticated ? '/private/favorites' : 'favorites'"
 								class="header__link"
 							>
 								FAVORITES
@@ -60,7 +60,7 @@
 				<ul class="header__list">
 					<li>
 						<router-link
-							to="favorites"
+							:to="isAuthenticated ? '/private/favorites' : 'favorites'"
 							class="header__link"
 						>
 							FAVORITES
@@ -83,7 +83,7 @@
 					/>
 				</router-link>
 				<ul class="header__list">
-					<li>
+					<li v-if="!isAuthenticated">
 						<router-link
 							class="header__btn--logIn"
 							to="logIn"
@@ -91,7 +91,7 @@
 							LOG IN
 						</router-link>
 					</li>
-					<li>
+					<li v-if="!isAuthenticated">
 						<router-link
 							class="header__btn--signUp"
 							to="signUp"
@@ -99,26 +99,22 @@
 							SIGN UP
 						</router-link>
 					</li>
-					<!-- <li>
-						<button
-							v-if="$store.auth.isAuthenticated"
-							@click="logout"
-						>
-							Logout
-						</button>
-					</li>
-					<li>
+					<li v-if="isAuthenticated">
 						<router-link
-							v-if="$store.auth.isAuthenticated"
-							to="/profile"
+							class="header__btn--logIn"
+							to="/private/userProfile"
 						>
-							<img
-								v-if="$store.auth.user && $store.auth.user.avatar"
-								:src="$store.auth.user.avatar"
-								alt="Profile"
-							/>
+							PROFILE
 						</router-link>
-					</li> -->
+					</li>
+					<li v-if="isAuthenticated">
+						<router-link
+							class="header__btn--signUp"
+							to="/"
+						>
+							LOG OUT
+						</router-link>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -153,8 +149,7 @@
 </template>
 
 <script>
-	// import { useAuthStore } from "../auth/authStore.js"
-	// import { Slide } from "vue3-burger-menu"
+	import store from "@/stores/userStore"
 
 	export default {
 		data() {
@@ -166,9 +161,17 @@
 				isOpen: false
 			}
 		},
+
 		mounted() {
 			this.loadData()
 		},
+
+		computed: {
+			isAuthenticated() {
+				return store.state.isAuthenticated
+			}
+		},
+
 		methods: {
 			async loadData() {
 				try {
@@ -207,6 +210,10 @@
 
 			closeSlide() {
 				this.isOpen = false
+			},
+
+			logout() {
+				store.dispatch("logout")
 			}
 		}
 	}

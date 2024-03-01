@@ -1,6 +1,6 @@
 import "./assets/css/main.css"
 
-import { createApp } from "vue"
+import { createApp, ref } from "vue"
 import { createPinia } from "pinia"
 import App from "./App.vue"
 import router from "./components/router/router.js"
@@ -11,6 +11,21 @@ import router from "./components/router/router.js"
 // Se monta la aplicación en el elemento con el id "app" en el DOM
 const app = createApp(App)
 const pinia = createPinia()
+
+const isLoggedIn = ref(false)
+
+function login() {
+	isLoggedIn.value = true
+}
+
+function logout() {
+	isLoggedIn.value = false
+}
+
+// Exponer el estado y los métodos globales
+app.config.globalProperties.isLoggedIn = isLoggedIn
+app.config.globalProperties.login = login
+app.config.globalProperties.logout = logout
 
 app.use(pinia)
 app.use(router)

@@ -65,6 +65,8 @@
 </template>
 
 <script>
+	import store from "@/stores/userStore"
+
 	export default {
 		data() {
 			return {
@@ -87,12 +89,30 @@
 				if (this.emailError || this.passwordError) {
 					alert("All input fields must contain valid information.")
 				} else {
-					console.log("Data", this.formData)
+					// Obtener usuarios del localStorage
+					let users = JSON.parse(localStorage.getItem("users")) || []
 
-					// Lógica para enviar los datos al backend
+					// Verificar si el usuario existe en el localStorage
+					const user = users.find(
+						(user) => user.email === this.formData.email && user.password === this.formData.password
+					)
 
-					this.formData.email = ""
-					this.formData.password = ""
+					if (user) {
+						// Usuario encontrado, iniciar sesión
+						alert("Login successful!")
+
+						// Restablecer los datos del formulario
+						this.formData.email = ""
+						this.formData.password = ""
+
+						store.dispatch("login", user)
+
+						// Redirigir al usuario a la página principal
+						this.$router.push("/private")
+					} else {
+						// Usuario no encontrado, mostrar mensaje de error
+						alert("Invalid email or password. Please try again.")
+					}
 				}
 			},
 
