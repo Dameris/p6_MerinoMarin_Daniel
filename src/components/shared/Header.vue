@@ -3,6 +3,7 @@
 		<!-- Sección superior del encabezado -->
 		<div>
 			<nav class="headerTop">
+				<!-- Botón para abrir el menú deslizable -->
 				<button
 					class="btn__open--slideMenu"
 					id="btn__open--slideMenu"
@@ -10,11 +11,13 @@
 				>
 					OPEN
 				</button>
+				<!-- Menú deslizable -->
 				<nav
 					class="header__slideMenu"
 					id="header__slideMenu"
 					:class="{ visible: isOpen }"
 				>
+					<!-- Botón para cerrar el menú deslizable -->
 					<button
 						class="btn__close--slideMenu"
 						id="btn__close--slideMenu"
@@ -22,6 +25,7 @@
 					>
 						CLOSE
 					</button>
+					<!-- Lista de elementos del menú deslizable -->
 					<ul class="header__list--slide">
 						<li>
 							<router-link
@@ -40,6 +44,7 @@
 							</router-link>
 						</li>
 						<li>
+							<!-- Enlace a la página de favoritos, dependiendo del estado de autenticación -->
 							<router-link
 								:to="isAuthenticated ? '/private/favorites' : 'favorites'"
 								class="header__link"
@@ -57,8 +62,10 @@
 						</li>
 					</ul>
 				</nav>
+				<!-- Lista de elementos del menú principal -->
 				<ul class="header__list">
 					<li>
+						<!-- Enlace a la página de favoritos, dependiendo del estado de autenticación -->
 						<router-link
 							:to="isAuthenticated ? '/private/favorites' : 'favorites'"
 							class="header__link"
@@ -75,6 +82,7 @@
 						</router-link>
 					</li>
 				</ul>
+				<!-- Enlace al inicio -->
 				<router-link to="/">
 					<img
 						src="../img/logo_infoDisney.png"
@@ -82,6 +90,7 @@
 						class="header__logo"
 					/>
 				</router-link>
+				<!-- Lista de elementos del menú dependiendo del estado de autenticación -->
 				<ul class="header__list">
 					<li v-if="!isAuthenticated">
 						<router-link
@@ -120,6 +129,7 @@
 		</div>
 		<!-- Sección inferior del encabezado -->
 		<div class="headerBottom">
+			<!-- Botón de conmutación para el modo oscuro / claro -->
 			<input
 				type="checkbox"
 				id="__btnSwitch"
@@ -128,6 +138,7 @@
 				for="__btnSwitch"
 				class="header__btn--switch"
 			/>
+			<!-- Campo de búsqueda -->
 			<input
 				type="search"
 				name="search"
@@ -136,6 +147,7 @@
 				spellcheck
 				v-model="searchQuery"
 			/>
+			<!-- Lista de resultados de búsqueda -->
 			<ul v-if="searchResults.length > 0">
 				<li
 					v-for="result in searchResults"

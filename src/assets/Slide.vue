@@ -1,9 +1,11 @@
 <template>
 	<div class="slide">
+		<!-- Imagen del slide -->
 		<img
 			:src="imageSrc"
 			:alt="altText"
 		/>
+		<!-- Leyenda del slide -->
 		<div class="caption">{{ caption }}</div>
 	</div>
 </template>
@@ -11,6 +13,7 @@
 <script>
 	export default {
 		props: {
+			// Propiedades recibidas por el componente
 			imageSrc: {
 				type: String,
 				required: true

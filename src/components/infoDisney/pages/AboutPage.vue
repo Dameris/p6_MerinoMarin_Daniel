@@ -1,5 +1,6 @@
 <template>
 	<section class="aboutPage">
+		<!-- Contenido de la página -->
 		<div class="aboutPage__content">
 			<h2><strong>ABOUT US</strong></h2>
 			<p>
@@ -10,6 +11,7 @@
 				Disney.
 			</p>
 		</div>
+		<!-- Imagen de fondo -->
 		<img
 			src="../../img/mickey.png"
 			class="aboutPage__img"

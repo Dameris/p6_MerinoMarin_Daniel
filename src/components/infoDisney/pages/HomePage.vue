@@ -6,6 +6,7 @@
 			alt="Home image"
 		/>
 		<section class="home__section">
+			<!-- Sección Disney -->
 			<nav class="home__sectionDisney">
 				<img
 					src="../../img/disney_logo_bg.png"
@@ -85,6 +86,7 @@
 				>
 			</nav>
 
+			<!-- Sección Pixar -->
 			<nav class="home__sectionPixar">
 				<img
 					src="../../img/pixar_logo_bg.png"
@@ -164,6 +166,7 @@
 				>
 			</nav>
 
+			<!-- Sección Star Wars -->
 			<nav class="home__sectionStarWars">
 				<img
 					src="../../img/starwars_logo_bg.png"
@@ -243,6 +246,7 @@
 				>
 			</nav>
 
+			<!-- Sección Marvel -->
 			<nav class="home__sectionMarvel">
 				<img
 					src="../../img/marvel_logo_bg.png"

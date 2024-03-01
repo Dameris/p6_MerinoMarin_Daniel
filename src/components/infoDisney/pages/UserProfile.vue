@@ -1,6 +1,7 @@
 <template>
 	<div class="userProfile">
 		<p class="userProfile__p">
+			<!-- Info del usuario -->
 			<img src="/src/components/img/pfp.png" /> <br />
 			<strong class="userProfile__strong"> {{ user.firstName }} </strong> <br />
 			<strong class="userProfile__strong"> {{ user.lastName }} </strong> <br />

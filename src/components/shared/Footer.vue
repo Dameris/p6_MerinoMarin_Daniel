@@ -2,6 +2,7 @@
 	<footer>
 		<!-- Sección superior del pie de página -->
 		<div class="footerTop">
+			<!-- Logotipo y redes sociales -->
 			<div class="footer__logoSocial">
 				<img
 					src="../img/logo_infoDisney.png"
@@ -9,6 +10,7 @@
 				/>
 				<p>
 					<a href="mailto:help@info-disney.com">help@info-disney.com</a>
+					<!-- Iconos de redes sociales -->
 					<span class="footer__socialMedia">
 						<img
 							src="../img/logos/Instagram.png"
@@ -29,6 +31,7 @@
 					</span>
 				</p>
 			</div>
+			<!-- Cuadro de información: "BORING STUFF" -->
 			<div class="footer__infoBox">
 				<h5>BORING STUFF</h5>
 				<p class="footer__infoContent">
@@ -36,6 +39,7 @@
 					TERMS
 				</p>
 			</div>
+			<!-- Cuadro de información: "WEB SITE" -->
 			<div class="footer__infoBox">
 				<h5>WEB SITE</h5>
 				<p class="footer__infoContent">
@@ -43,6 +47,7 @@
 					<router-link to="/">HOME</router-link>
 				</p>
 			</div>
+			<!-- Cuadro de información: "SUPPORT" -->
 			<div class="footer__infoBox">
 				<h5>SUPPORT</h5>
 				<p class="footer__infoContent">
