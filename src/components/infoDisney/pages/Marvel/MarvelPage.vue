@@ -59,7 +59,7 @@
 
 		methods: {
 			fetchCharacters() {
-				fetch("/src/json/marvelCharacters.json")
+				fetch("/marvelCharacters.json")
 					.then((response) => response.json())
 					.then((data) => {
 						this.characters = data

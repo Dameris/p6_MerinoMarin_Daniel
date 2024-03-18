@@ -19,7 +19,7 @@
 					>
 						<nav class="characterListPage__section--li">
 							<img
-								:src="character.images.img1"
+								:src="character.images['img1']"
 								class="characterListPageSection__image"
 								:alt="'Image ' + character.name"
 							/>
@@ -46,8 +46,6 @@
 </template>
 
 <script>
-	import axios from "axios"
-
 	export default {
 		data() {
 			return {
@@ -61,10 +59,10 @@
 
 		methods: {
 			fetchCharacters() {
-				axios
-					.get("http://localhost/api/disneyCharacters")
-					.then((response) => {
-						this.characters = response.data
+				fetch("/disneyCharacters.json")
+					.then((response) => response.json())
+					.then((data) => {
+						this.characters = data
 					})
 					.catch((error) => {
 						console.error("Error fetching characters:", error)

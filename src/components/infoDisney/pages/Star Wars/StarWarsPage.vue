@@ -59,7 +59,7 @@
 
 		methods: {
 			fetchCharacters() {
-				fetch("/src/json/starwarsCharacters.json")
+				fetch("/starwarsCharacters.json")
 					.then((response) => response.json())
 					.then((data) => {
 						this.characters = data
