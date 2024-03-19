@@ -58,7 +58,7 @@
 		methods: {
 			fetchCharacters() {
 				// Función para obtener los datos del personaje desde el archivo JSON
-				fetch("/src/json/pixarCharacters.json")
+				fetch("/pixarCharacters.json")
 					.then((response) => response.json())
 					.then((data) => {
 						const id = parseInt(this.$route.params.id)

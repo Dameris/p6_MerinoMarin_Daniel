@@ -1,9 +1,12 @@
-const fs = require("fs")
-const path = require("path")
+import fs from "fs"
+import path from "path"
+
+// Obtenemos la ruta del directorio actual
+const currentDir = process.cwd()
 
 // Ruta de la carpeta public y dist
-const publicFolder = path.resolve(__dirname, "public")
-const distFolder = path.resolve(__dirname, "dist")
+const publicFolder = path.resolve(currentDir, "public")
+const distFolder = path.resolve(currentDir, "dist")
 
 // Array con los archivos JSON a copiar
 const jsonFiles = [
