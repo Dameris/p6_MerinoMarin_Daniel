@@ -22,17 +22,23 @@ const routes = [
 		component: LayoutPublic,
 		children: [
 			{ path: "", component: HomePage },
-			{ path: "logIn", component: () => import("../auth/LogIn.vue") },
-			{ path: "signUp", component: () => import("../auth/SignUp.vue") },
+			{
+				path: "logIn",
+				component: () => import("../auth/LogIn.vue")
+			},
+			{
+				path: "signUp",
+				component: () => import("../auth/SignUp.vue")
+			},
 			{ path: "favorites", component: FavoritesPage, meta: { requiresAuth: true } },
 			{ path: "disneyPage", component: DisneyPage },
-			{ path: "disneyCharacter/:id", name: "disneyCharacter", component: DisneyCharacter, props: true },
+			{ path: "disneyCharacter/:id", component: DisneyCharacter },
 			{ path: "pixarPage", component: PixarPage },
-			{ path: "pixarCharacter/:id", name: "pixarCharacter", component: PixarCharacter, props: true },
+			{ path: "pixarCharacter/:id", component: PixarCharacter },
 			{ path: "star-warsPage", component: StarWarsPage },
-			{ path: "star-warsCharacter/:id", name: "star-warsCharacter", component: StarWarsCharacter, props: true },
+			{ path: "star-warsCharacter/:id", component: StarWarsCharacter },
 			{ path: "marvelPage", component: MarvelPage },
-			{ path: "marvelCharacter/:id", name: "marvelCharacter", component: MarvelCharacter, props: true },
+			{ path: "marvelCharacter/:id", component: MarvelCharacter },
 			{
 				path: "about-us",
 				component: () => import("../infoDisney/pages/AboutPage.vue")
@@ -52,13 +58,13 @@ const routes = [
 			{ path: "userProfile", component: UserProfile },
 			{ path: "favorites", component: FavoritesPage },
 			{ path: "disneyPage", component: DisneyPage },
-			{ path: "disneyCharacter", component: DisneyCharacter },
+			{ path: "disneyCharacter/:id", component: DisneyCharacter },
 			{ path: "pixarPage", component: PixarPage },
-			{ path: "pixarCharacter", component: PixarCharacter },
+			{ path: "pixarCharacter/:id", component: PixarCharacter },
 			{ path: "star-warsPage", component: StarWarsPage },
-			{ path: "star-warsCharacter", component: StarWarsCharacter },
+			{ path: "star-warsCharacter/:id", component: StarWarsCharacter },
 			{ path: "marvelPage", component: MarvelPage },
-			{ path: "marvelCharacter", component: MarvelCharacter },
+			{ path: "marvelCharacter/:id", component: MarvelCharacter },
 			{
 				path: "about-us",
 				component: () => import("../infoDisney/pages/AboutPage.vue")

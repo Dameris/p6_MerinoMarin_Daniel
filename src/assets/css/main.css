@@ -1,212 +1,253 @@
 @import "./base.css";
 
 #app {
-  display: grid;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  min-width: 100%;
-  font-weight: normal;
+	display: grid;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	min-width: 100%;
+	font-weight: normal;
 }
 
 /*& Form style */
 .formBox {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  min-height: 100vh;
-  margin-top: 3vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	min-height: 100vh;
+	margin-top: 3vh;
 }
 
 .formBox__title {
-  padding-top: 2vh;
-  padding-bottom: 1vh;
-  text-align: center;
-  color: #ff5757;
+	padding-top: 2vh;
+	padding-bottom: 1vh;
+	text-align: center;
+	color: #ff5757;
 }
 
 .formBox-form {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .formBox-form__input,
 .form__textarea {
-  margin-bottom: 1vh;
-  width: 50em;
-  padding: 0.8rem;
-  color: rgba(0, 0, 0, 0.4);
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    "Fira Sans",
-    "Droid Sans",
-    "Helvetica Neue",
-    sans-serif;
-  border: 0.1rem solid #ff5757;
-  border-radius: 0.2rem;
+	margin-bottom: 1vh;
+	width: 50em;
+	padding: 0.8rem;
+	color: rgba(0, 0, 0, 0.4);
+	font-family:
+		Inter,
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto,
+		Oxygen,
+		Ubuntu,
+		Cantarell,
+		"Fira Sans",
+		"Droid Sans",
+		"Helvetica Neue",
+		sans-serif;
+	border: 0.1rem solid #ff5757;
+	border-radius: 0.2rem;
 }
 
 .formBox-form__input:focus,
 .form__textarea:focus {
-  border: 0.2rem solid #ff5757;
-  outline: none;
+	border: 0.2rem solid #ff5757;
+	outline: none;
 }
 
 .form__textarea {
-  min-height: 20vh;
+	min-height: 20vh;
 }
 
 .formBox-form__btn {
-  padding: 0.8rem;
-  color: #fff;
-  background-color: #ff5757;
-  border: 0.1rem solid #ff5757;
-  border-radius: 0.2rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+	padding: 0.8rem;
+	color: #fff;
+	background-color: #ff5757;
+	border: 0.1rem solid #ff5757;
+	border-radius: 0.2rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
 
 .formBox-form__btn:hover {
-  background-color: #ff7777;
+	background-color: #ff7777;
 }
 
 .formBox-form__btn:focus {
-  outline: none;
+	outline: none;
 }
 
 .formBox-form__btn:active {
-  transform: translateY(1px);
+	transform: translateY(1px);
 }
 
 .formBox-form--errorMessage {
-  padding-top: 0;
-  color: red;
-  font-size: 0.8rem;
-  padding-bottom: 1vh;
+	padding-top: 0;
+	color: red;
+	font-size: 0.8rem;
+	padding-bottom: 1vh;
 }
 
 /*& End of form style */
 
 /*& Characters list page style */
 .characterListPage__image {
-  width: 100%;
+	width: 100%;
 }
 
 .characterListPage__section {
-  text-align: center;
+	text-align: center;
 }
 
 .characterListPage__section--nav {
-  min-height: 50vh;
-  padding-right: 5em;
-  padding-left: 5em;
-  background-color: #20286d;
+	min-height: 50vh;
+	padding-right: 5em;
+	padding-left: 5em;
+	background-color: #20286d;
 }
 
 .characterListPageSection__titleImage {
-  padding: 1vh;
+	padding: 1vh;
 }
 
 .characterListPage__section--ul {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: row;
-  margin: 0;
-  padding: 0;
-  color: #fff;
-  list-style: none;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	list-style: none;
 }
 
 .characterListPage__section--li {
-  position: relative;
-  width: calc(25% - 1em);
-  margin-right: 0.5em;
-  margin-left: 0.5em;
-  margin-bottom: 2em;
+	position: relative;
+	width: calc(25% - 1em);
+	margin-right: 0.5em;
+	margin-left: 0.5em;
+	margin-bottom: 2em;
 }
 
 .characterListPageSection__text {
-  display: block;
+	display: block;
 }
 
 .characterListPageSection__link {
-  color: #fff;
+	color: #fff;
 }
 
 .characterListPage__linkBack {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 1em;
-  color: #fff;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 1em;
+	color: #fff;
 }
-
 /*& End of characters list page style */
 
 /*& Characters page style */
 .characterPage {
-  position: relative;
+	position: relative;
 }
 
 .characterPage__header {
-  display: inline-block;
-  position: absolute;
-  padding: 5em;
-  top: 0;
-  left: 0;
-  font-size: 3em;
+	display: inline-block;
+	position: absolute;
+	padding: 5em;
+	top: 0;
+	left: 0;
+	font-size: 3em;
 }
 
 .characterPage__img {
-  width: 100%;
+	width: 100%;
 }
 
 .characterPage__content {
-  display: flex;
-  align-items: center;
-  padding-top: 1em;
-  padding-bottom: 1em;
+	display: flex;
+	align-items: center;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 
 .characterPage__context--bio {
-  margin-right: 2em;
-  margin-left: 2em;
-  padding: 0 1em;
-  color: #fff;
-  white-space: pre-line;
+	margin-right: 2em;
+	margin-left: 2em;
+	padding: 0 1em;
+	color: #fff;
+	white-space: pre-line;
 }
 
 .characterPage__content-img {
-  margin-left: 2em;
-  width: 30em;
+	margin-left: 2em;
+	width: 30em;
 }
 
 .characterPage__btn {
-  margin-right: 5em;
-  padding: 1em;
-  border-radius: 0.5em;
-  cursor: pointer;
-  font-size: 2em;
-  background-color: #ff5757;
-  transition: background-color 0.3s ease;
+	margin-right: 5em;
+	padding: 1em;
+	border-radius: 0.5em;
+	cursor: pointer;
+	font-size: 2em;
+	background-color: #ff5757;
+	transition: background-color 0.3s ease;
 }
 
 .characterPage__btn:hover {
-  background-color: rgb(255, 87, 87, 0.8);
+	background-color: rgb(255, 87, 87, 0.8);
 }
 
 .characterPage__linkBack {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 1em;
-  color: #fff;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 1em;
+	color: #fff;
 }
 
+@media (max-width: 1350px) {
+	.characterPage__header {
+		padding: 2em;
+		font-size: 2em;
+	}
+
+	.characterPage__content {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.characterPage__content-img {
+		margin-left: 0;
+		margin-top: 2em;
+		width: 100%;
+	}
+
+	.characterPage__btn {
+		margin-right: 0;
+		margin-top: 2em;
+		font-size: 1.5em;
+	}
+
+	.characterPage__linkBack {
+		padding-bottom: 2em;
+	}
+}
+
+@media (max-width: 480px) {
+	.characterPage__header {
+		padding: 1em;
+		font-size: 1.5em;
+	}
+
+	.characterPage__content-img {
+		width: 100%;
+	}
+
+	.characterPage__btn {
+		font-size: 1.2em;
+	}
+}
 /*& End of character page style */

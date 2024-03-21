@@ -30,7 +30,7 @@
 						<li>
 							<router-link
 								class="header__btn--logIn"
-								to="logIn"
+								to="/logIn"
 							>
 								LOG IN
 							</router-link>
@@ -38,7 +38,7 @@
 						<li>
 							<router-link
 								class="header__btn--signUp"
-								to="signUp"
+								to="/signUp"
 							>
 								SIGN UP
 							</router-link>
@@ -95,7 +95,7 @@
 					<li v-if="!isAuthenticated">
 						<router-link
 							class="header__btn--logIn"
-							to="logIn"
+							to="/logIn"
 						>
 							LOG IN
 						</router-link>
@@ -103,7 +103,7 @@
 					<li v-if="!isAuthenticated">
 						<router-link
 							class="header__btn--signUp"
-							to="signUp"
+							to="/signUp"
 						>
 							SIGN UP
 						</router-link>
@@ -189,10 +189,10 @@
 				try {
 					// Cargar los datos de los 4 archivos JSON
 					const responses = await Promise.all([
-						fetch("/src/json/disneyCharacters.json"),
-						fetch("/src/json/pixarCharacters.json"),
-						fetch("/src/json/starwarsCharacters.json"),
-						fetch("/src/json/marvelCharacters.json")
+						fetch("/disneyCharacters.json"),
+						fetch("/pixarCharacters.json"),
+						fetch("/starwarsCharacters.json"),
+						fetch("/marvelCharacters.json")
 					])
 
 					// Procesar las respuestas JSON

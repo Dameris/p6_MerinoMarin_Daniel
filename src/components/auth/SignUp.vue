@@ -267,7 +267,7 @@
 
 			// Método para hacer el fetch de "countries.json"
 			fetchCountries() {
-				fetch("/src/json/countries.json")
+				fetch("/countries.json")
 					.then((response) => response.json())
 					.then((data) => {
 						this.countries = data.countries
