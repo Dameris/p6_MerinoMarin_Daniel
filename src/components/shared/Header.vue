@@ -139,23 +139,37 @@
 				class="header__btn--switch"
 			/>
 			<!-- Campo de búsqueda -->
-			<input
-				type="search"
-				name="search"
-				class="header__searchInput"
-				placeholder="SEARCH"
-				spellcheck
-				v-model="searchQuery"
-			/>
-			<!-- Lista de resultados de búsqueda -->
-			<ul v-if="searchResults.length > 0">
-				<li
-					v-for="result in searchResults"
-					:key="result.id"
+			<div class="header__searchContainer">
+				<input
+					type="search"
+					name="search"
+					class="header__searchInput"
+					placeholder="SEARCH"
+					spellcheck
+					v-model="searchQuery"
+					@input="search"
+				/>
+				<!-- Desplegable de resultados de búsqueda -->
+				<ul
+					v-if="searchResults.length > 0"
+					class="header__searchDropdown"
 				>
-					{{ result.name }}
-				</li>
-			</ul>
+					<li
+						v-for="result in searchResults"
+						:key="result.id"
+						@click="selectResult(result)"
+					>
+						<!-- Muestra la imagen si está disponible -->
+						<img
+							v-if="result.images && result.images.img1"
+							:src="result.images.img1"
+							class="header__searchImage"
+						/>
+						<!-- Muestra el nombre del personaje -->
+						<span>{{ result.name }}</span>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</header>
 </template>
@@ -169,7 +183,6 @@
 				searchQuery: "",
 				searchData: [],
 				searchResults: [],
-
 				isOpen: false
 			}
 		},
@@ -208,7 +221,6 @@
 					this.searchResults = []
 					return
 				}
-				console.log(this.searchQuery)
 
 				// Realizar la búsqueda en los datos
 				this.searchResults = this.searchData.filter((item) =>
@@ -762,6 +774,10 @@
 	}
 	/* End of Button Switch */
 
+	.header__searchContainer {
+		position: relative;
+	}
+
 	.header__searchInput {
 		width: 22em;
 		padding: 0.6em 1em;
@@ -785,6 +801,41 @@
 		background-color: #fff;
 		box-shadow: 0 4em 8em rgba(0, 0, 0, 0.1);
 	}
+
+	/* Drop down for search results */
+	.header__searchDropdown {
+		position: absolute;
+		max-height: 15em;
+		width: 100%;
+		padding: 0.2em 0;
+		margin: 0;
+		top: calc(100% + 0.4em);
+		left: 0;
+		border: 0.1em solid #ccc;
+		border-radius: 0.5em;
+		box-shadow: 0 2em 0.5em rgba(0, 0, 0, 0.1);
+		z-index: 1000;
+		overflow-y: auto;
+		color: #fff;
+		background-color: #ffafaf;
+	}
+
+	.header__searchDropdown li {
+		padding: 0.5em;
+		list-style: none;
+		cursor: pointer;
+	}
+
+	.header__searchDropdown li:hover {
+		background-color: #ff5757;
+	}
+
+	.header__searchImage {
+		width: 10em;
+		height: 10em;
+		margin-right: 10em;
+	}
+	/* End of Drop down for search results */
 
 	/* Media query */
 	@media (max-width: 400px) {
