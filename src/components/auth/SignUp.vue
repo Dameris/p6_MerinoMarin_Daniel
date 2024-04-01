@@ -42,7 +42,7 @@
 			<span
 				v-if="passwordError"
 				class="formBox-form--errorMessage"
-				>Please enter a valid password.</span
+				>Please enter a valid password (8+ characters, 1+ uppercase and 1+ special character).</span
 			>
 			<input
 				class="formBox-form__input"
