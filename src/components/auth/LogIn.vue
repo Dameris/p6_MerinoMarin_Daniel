@@ -65,6 +65,7 @@
 </template>
 
 <script>
+	import { openDB } from "idb"
 	import store from "@/stores/userStore"
 
 	export default {
@@ -79,26 +80,40 @@
 
 				// Variables para controlar los errores de validación de los campos del formulario
 				emailError: false,
-				passwordError: false
+				passwordError: false,
+
+				// IndexedDB
+				db: null
 			}
+		},
+
+		async created() {
+			// Inicializa la base de datos cuando el componente se crea
+			this.db = await openDB("myAppDatabase", 1, {
+				upgrade(db) {
+					const userStore = db.createObjectStore("users", { keyPath: "id", autoIncrement: true })
+					userStore.createIndex("email", "email", { unique: true })
+					userStore.createIndex("password", "password", { unique: false })
+					userStore.createIndex("firstName", "firstName", { unique: false })
+					userStore.createIndex("lastName", "lastName", { unique: false })
+					userStore.createIndex("country", "country", { unique: false })
+					userStore.createIndex("gender", "gender", { unique: false })
+
+					const favoritesStore = db.createObjectStore("favorites", { keyPath: "id", autoIncrement: true })
+					favoritesStore.createIndex("userId", "userId")
+				}
+			})
 		},
 
 		methods: {
 			// Método para validar el formulario antes de enviarlo
-			checkForm() {
+			async checkForm() {
 				if (this.emailError || this.passwordError) {
 					alert("All input fields must contain valid information.")
 				} else {
-					// Obtener usuarios del localStorage
-					let users = JSON.parse(localStorage.getItem("users")) || []
-
-					// Verificar si el usuario existe en el localStorage
-					const user = users.find(
-						(user) => user.email === this.formData.email && user.password === this.formData.password
-					)
+					const user = await this.getUserByEmailAndPassword(this.formData.email, this.formData.password)
 
 					if (user) {
-						// Usuario encontrado, iniciar sesión
 						alert("Login successful!")
 
 						// Restablecer los datos del formulario
@@ -106,14 +121,30 @@
 						this.formData.password = ""
 
 						store.dispatch("login", user)
-
-						// Redirigir al usuario a la página principal
 						this.$router.push("/private")
 					} else {
 						// Usuario no encontrado, mostrar mensaje de error
 						alert("Invalid email or password. Please try again.")
 					}
 				}
+			},
+
+			async getUserByEmailAndPassword(email, password) {
+				// Abre una transacción de lectura en el almacén de objetos de usuarios
+				const tx = this.db.transaction("users", "readonly")
+				const userStore = tx.objectStore("users")
+				const index = userStore.index("email")
+
+				// Busca el usuario por su correo electrónico
+				const cursor = await index.openCursor(email)
+				if (cursor) {
+					const user = cursor.value
+					// Verifica la contraseña del usuario
+					if (user.password === password) {
+						return user
+					}
+				}
+				return null
 			},
 
 			// Método para validar el formato del correo electrónico
