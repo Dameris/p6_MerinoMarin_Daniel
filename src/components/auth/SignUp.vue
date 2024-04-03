@@ -155,7 +155,7 @@
 </template>
 
 <script>
-	import { useAuthStore } from "@/stores/authStore"
+	import { openDB } from "idb"
 
 	export default {
 		data() {
@@ -178,41 +178,43 @@
 
 				// Variables para almacenar la lista de países
 				countries: [],
-				selectedCountry: ""
+				selectedCountry: "",
+
+				// IndexedDB
+				db: null
 			}
 		},
 
 		mounted() {
 			this.fetchCountries()
+			this.initDatabase()
 		},
 
 		methods: {
-			checkForm() {
+			async initDatabase() {
+				// Abre la base de datos y crea los almacenes de objetos necesarios
+				this.db = await openDB("myAppDatabase", 1, {
+					upgrade(db) {
+						const userStore = db.createObjectStore("users", { keyPath: "id", autoIncrement: true })
+						userStore.createIndex("email", "email", { unique: true })
+						userStore.createIndex("password", "password", { unique: false })
+						userStore.createIndex("firstName", "firstName", { unique: false })
+						userStore.createIndex("lastName", "lastName", { unique: false })
+						userStore.createIndex("country", "country", { unique: false })
+						userStore.createIndex("gender", "gender", { unique: false })
+
+						const favoritesStore = db.createObjectStore("favorites", { keyPath: "id", autoIncrement: true })
+						favoritesStore.createIndex("userId", "userId")
+					}
+				})
+			},
+
+			async checkForm() {
 				if (this.emailError || this.passwordError || this.firstNameError || this.lastNameError) {
 					alert("All input fields must contain valid information.")
 				} else {
-					// Cargar usuarios existentes del localStorage o inicializar una lista vacía
-					let users = JSON.parse(localStorage.getItem("users")) || []
-
-					// Verificar si el correo electrónico ya está registrado
-					const emailExists = users.some((user) => user.email === this.formData.email)
-					if (emailExists) {
-						alert("Email already exists. Please use a different email address.")
-						return
-					}
-
-					// Agregar el nuevo usuario a la lista
-					users.push({
-						email: this.formData.email,
-						password: this.formData.password,
-						firstName: this.formData.firstName,
-						lastName: this.formData.lastName,
-						country: this.formData.country,
-						gender: this.formData.gender
-					})
-
-					// Actualizar el localStorage con la lista de usuarios actualizada
-					localStorage.setItem("users", JSON.stringify(users))
+					// Añade el usuario a IndexedDB
+					await this.addUserToDB()
 
 					// Restablecer los datos del formulario
 					this.formData.email = ""
@@ -227,6 +229,21 @@
 
 					this.$router.push("/")
 				}
+			},
+
+			async addUserToDB() {
+				// Abre una transacción y almacena el usuario en el almacén de objetos "users"
+				const tx = this.db.transaction("users", "readwrite")
+				const userStore = tx.objectStore("users")
+				await userStore.add({
+					email: this.formData.email,
+					password: this.formData.password,
+					firstName: this.formData.firstName,
+					lastName: this.formData.lastName,
+					country: this.formData.country,
+					gender: this.formData.gender
+				})
+				await tx.done
 			},
 
 			// Método para validar el formato del correo electrónico
