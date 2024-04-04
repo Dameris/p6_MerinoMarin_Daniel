@@ -61,6 +61,15 @@
 				>SIGN UP</router-link
 			>
 		</p>
+
+		<SuccessAlert
+			v-if="showSuccessAlert"
+			:message="successMessage"
+		/>
+		<ErrorAlert
+			v-if="showErrorAlert"
+			:message="errorMessage"
+		/>
 	</div>
 </template>
 
@@ -68,7 +77,15 @@
 	import { openDB } from "idb"
 	import store from "@/stores/userStore"
 
+	import SuccessAlert from "../shared/SuccessAlert.vue"
+	import ErrorAlert from "../shared/ErrorAlert.vue"
+
 	export default {
+		components: {
+			SuccessAlert,
+			ErrorAlert
+		},
+
 		data() {
 			return {
 				pageTitle: "Log In Info Disney",
@@ -81,6 +98,12 @@
 				// Variables para controlar los errores de validación de los campos del formulario
 				emailError: false,
 				passwordError: false,
+
+				// Variables para controlar las alertas
+				showSuccessAlert: false,
+				showErrorAlert: false,
+				successMessage: "",
+				errorMessage: "",
 
 				// IndexedDB
 				db: null
@@ -109,22 +132,39 @@
 			// Método para validar el formulario antes de enviarlo
 			async checkForm() {
 				if (this.emailError || this.passwordError) {
-					alert("All input fields must contain valid information.")
+					this.showErrorAlert = true
+					this.errorMessage = "All input fields must contain valid information."
+
+					// Limpiar el mensaje de error después de 1 segundo
+					setTimeout(() => {
+						this.showErrorAlert = false
+						this.errorMessage = ""
+					}, 1000)
 				} else {
 					const user = await this.getUserByEmailAndPassword(this.formData.email, this.formData.password)
 
 					if (user) {
-						alert("Login successful!")
+						this.showSuccessAlert = true
+						this.successMessage = "Login successful!"
 
 						// Restablecer los datos del formulario
 						this.formData.email = ""
 						this.formData.password = ""
 
-						store.dispatch("login", user)
-						this.$router.push("/private")
+						setTimeout(() => {
+							store.dispatch("login", user)
+							this.$router.push("/private")
+						}, 1000)
 					} else {
 						// Usuario no encontrado, mostrar mensaje de error
-						alert("Invalid email or password. Please try again.")
+						this.showErrorAlert = true
+						this.errorMessage = "Invalid email or password. Please try again."
+
+						// Limpiar el mensaje de error después de 1 segundo
+						setTimeout(() => {
+							this.showErrorAlert = false
+							this.errorMessage = ""
+						}, 1000)
 					}
 				}
 			},
