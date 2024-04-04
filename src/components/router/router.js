@@ -11,6 +11,7 @@ import StarWarsCharacter from "../infoDisney/pages/Star Wars/StarWarsCharacter.v
 import StarWarsPage from "../infoDisney/pages/Star Wars/StarWarsPage.vue"
 import HomePage from "../infoDisney/pages/HomePage.vue"
 import FavoritesPage from "../infoDisney/pages/FavoritesPage.vue"
+import TriviaGame from "../infoDisney/pages/TriviaGame.vue"
 import LayoutPublic from "../infoDisney/layout/LayoutPublic.vue"
 import LayoutPrivate from "../infoDisney/layout/LayoutPrivate.vue"
 import UserProfile from "../infoDisney/pages/UserProfile.vue"
@@ -31,6 +32,7 @@ const routes = [
 				component: () => import("../auth/SignUp.vue")
 			},
 			{ path: "favorites", component: FavoritesPage, meta: { requiresAuth: true } },
+			{ path: "triviaGame", component: TriviaGame },
 			{ path: "disneyPage", component: DisneyPage },
 			{ path: "disneyCharacter/:id", component: DisneyCharacter },
 			{ path: "pixarPage", component: PixarPage },
@@ -57,6 +59,7 @@ const routes = [
 			{ path: "", component: HomePage },
 			{ path: "userProfile", component: UserProfile },
 			{ path: "favorites", component: FavoritesPage },
+			{ path: "triviaGame", component: TriviaGame },
 			{ path: "disneyPage", component: DisneyPage },
 			{ path: "disneyCharacter/:id", component: DisneyCharacter },
 			{ path: "pixarPage", component: PixarPage },
