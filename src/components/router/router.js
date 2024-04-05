@@ -31,8 +31,8 @@ const routes = [
 				path: "signUp",
 				component: () => import("../auth/SignUp.vue")
 			},
-			{ path: "favorites", component: FavoritesPage, meta: { requiresAuth: true } },
-			{ path: "triviaGame", component: TriviaGame },
+			// { path: "favorites", component: FavoritesPage, meta: { requiresAuth: true } },
+			{ path: "triviaGame", component: TriviaGame, meta: { requiresAuth: true } },
 			{ path: "disneyPage", component: DisneyPage },
 			{ path: "disneyCharacter/:id", component: DisneyCharacter },
 			{ path: "pixarPage", component: PixarPage },
@@ -58,7 +58,7 @@ const routes = [
 		children: [
 			{ path: "", component: HomePage },
 			{ path: "userProfile", component: UserProfile },
-			{ path: "favorites", component: FavoritesPage },
+			// { path: "favorites", component: FavoritesPage },
 			{ path: "triviaGame", component: TriviaGame },
 			{ path: "disneyPage", component: DisneyPage },
 			{ path: "disneyCharacter/:id", component: DisneyCharacter },

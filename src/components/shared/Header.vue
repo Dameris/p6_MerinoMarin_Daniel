@@ -46,10 +46,10 @@
 						<li>
 							<!-- Enlace a la página de favoritos, dependiendo del estado de autenticación -->
 							<router-link
-								:to="isAuthenticated ? '/private/favorites' : 'favorites'"
+								:to="isAuthenticated ? '/private/triviaGame' : 'triviaGame'"
 								class="header__link"
 							>
-								FAVORITES
+								TRIVIA
 							</router-link>
 						</li>
 						<li>
@@ -67,10 +67,10 @@
 					<li>
 						<!-- Enlace a la página de favoritos, dependiendo del estado de autenticación -->
 						<router-link
-							:to="isAuthenticated ? '/private/favorites' : 'favorites'"
+							:to="isAuthenticated ? '/private/triviaGame' : 'triviaGame'"
 							class="header__link"
 						>
-							FAVORITES
+							TRIVIA
 						</router-link>
 					</li>
 					<li>

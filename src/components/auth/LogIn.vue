@@ -89,6 +89,7 @@
 		data() {
 			return {
 				pageTitle: "Log In Info Disney",
+				
 				// Objeto para almacenar los datos del formulario
 				formData: {
 					email: "",
