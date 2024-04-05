@@ -14,6 +14,7 @@
 						{{ option }}
 					</li>
 				</ul>
+				<p class="trivia__timeRemaning">{{ timeRemaining }}</p>
 			</template>
 			<div
 				v-else
@@ -644,7 +645,10 @@
 				showResult: false,
 				result: "",
 				userScore: 0,
-				totalQuestions: 0
+				totalQuestions: 0,
+				timer: null,
+				timeRemaining: 10,
+				history: []
 			}
 		},
 
@@ -674,6 +678,8 @@
 				this.result = ""
 				this.userScore = 0
 				this.totalQuestions = this.currentTest.questions.length
+
+				this.startTimer()
 			},
 
 			shuffleArray(array) {
@@ -685,17 +691,39 @@
 				return array
 			},
 
+			startTimer() {
+				this.timer = setInterval(() => {
+					if (this.timeRemaining > 0) {
+						this.timeRemaining--
+					} else {
+						this.nextQuestion()
+						this.checkAnswer("")
+					}
+				}, 1000)
+			},
+
 			checkAnswer(option) {
+				this.timeRemaining = 1000
+
 				if (option === this.currentQuestion.correctAnswer) {
 					this.result = "CORRECT ANSWER!"
 					this.userScore++
-				} else {
+				} else if (option !== this.currentQuestion.correctAnswer || option === "") {
 					this.result = "INCORECT ANSWER! The correct answer is: " + this.currentQuestion.correctAnswer
 				}
 				this.showResult = true
+
+				// Guardar el historial después de cada test
+				this.history.push({
+					test: this.currentTest,
+					score: this.userScore,
+					timestamp: new Date().toISOString()
+				})
 			},
 
 			nextQuestion() {
+				this.timeRemaining = 10
+
 				if (this.currentQuestionIndex < this.currentTest.questions.length - 1) {
 					this.currentQuestionIndex++
 					this.showResult = false
@@ -733,6 +761,12 @@
 
 	.trivia__option:hover {
 		background-color: #ff5757;
+	}
+
+	.trivia__timeRemaning {
+		font-size: 5em;
+		font-weight: bold;
+		color: #ff5757;
 	}
 
 	.trivia__resultContainer {
