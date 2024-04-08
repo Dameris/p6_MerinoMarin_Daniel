@@ -232,18 +232,33 @@
 			},
 
 			async addUserToDB() {
+				// Hash de la contraseña
+				const hashedPassword = await this.hashPassword(this.formData.password)
+
 				// Abre una transacción y almacena el usuario en el almacén de objetos "users"
 				const tx = this.db.transaction("users", "readwrite")
 				const userStore = tx.objectStore("users")
+
 				await userStore.add({
 					email: this.formData.email,
-					password: this.formData.password,
+					password: hashedPassword,
 					firstName: this.formData.firstName,
 					lastName: this.formData.lastName,
 					country: this.formData.country,
 					gender: this.formData.gender
 				})
+
 				await tx.done
+			},
+
+			// Función para calcular el hash de la contraseña
+			async hashPassword(password) {
+				const encoder = new TextEncoder()
+				const data = encoder.encode(password)
+				const hashBuffer = await crypto.subtle.digest("SHA-256", data)
+				const hashArray = Array.from(new Uint8Array(hashBuffer))
+				const hashHex = hashArray.map((byte) => byte.toString(16).padStart(2, "0")).join("")
+				return hashHex
 			},
 
 			// Método para validar el formato del correo electrónico

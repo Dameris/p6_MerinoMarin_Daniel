@@ -89,7 +89,7 @@
 		data() {
 			return {
 				pageTitle: "Log In Info Disney",
-				
+
 				// Objeto para almacenar los datos del formulario
 				formData: {
 					email: "",
@@ -181,11 +181,22 @@
 				if (cursor) {
 					const user = cursor.value
 					// Verifica la contraseña del usuario
-					if (user.password === password) {
+					const hashedPassword = await this.hashPassword(password)
+					if (user.password === hashedPassword) {
 						return user
 					}
 				}
 				return null
+			},
+
+			// Función para calcular el hash de la contraseña
+			async hashPassword(password) {
+				const encoder = new TextEncoder()
+				const data = encoder.encode(password)
+				const hashBuffer = await crypto.subtle.digest("SHA-256", data)
+				const hashArray = Array.from(new Uint8Array(hashBuffer))
+				const hashHex = hashArray.map((byte) => byte.toString(16).padStart(2, "0")).join("")
+				return hashHex
 			},
 
 			// Método para validar el formato del correo electrónico
