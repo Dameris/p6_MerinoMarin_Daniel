@@ -2,15 +2,15 @@
 	{
 		"id": 1,
 		"name": "R2 - D2",
-		"img-bg": "/src/components/img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
 		"images": {
-			"img1": "/src/components/img/json_img/r2d2/33631_r2-d2_character_starwars.png",
-			"img2": "/src/components/img/json_img/mickey-mouse/Mickey-mouse-1.png",
-			"img3": "/src/components/img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
-			"img4": "/src/components/img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
-			"img5": "/src/components/img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
-			"img6": "/src/components/img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
-			"img7": "/src/components/img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
+			"img1": "./img/json_img/r2d2/33631_r2-d2_character_starwars.png",
+			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
+			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
+			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
+			"img5": "./img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
+			"img6": "./img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
+			"img7": "./img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
 		},
 		"bioFirst": "Mickey Mouse is an animated cartoon character created by Walt Disney and Ub Iwerks. A cheerful and plucky anthropomorphic mouse, Mickey made his first public appearance in Steamboat Willie, on November 18, 1928. Estimated as standing 2' 3\" (68.58 centimeters) and weighing 23 pounds (10.43 kilograms), Mickey is easily identified by his round ears, red shorts, white gloves, and yellow shoes. He speaks in a falsetto voice, and his speech is typically infused with 1930s slang like 'swell' and 'gee'. The essence of Mickey's character is that of an underdog who, despite being small and vulnerable, overcomes larger-than-life adversity through quick wit and a can-do spirit.",
 		"bioSecond": "Mickey was popularized by his long-running short film series. His simplistic, 'rubberhose' design allows for both relatable emotion and exaggerated physical gags. Mickey's versatility, meanwhile, enables him to slip into any profession, location, or time period while maintaining his core characteristics. Mickey steadily branched into other mediums over the years, beginning with a comic strip by cartoonist Floyd Gottfredson in 1930. In 1940, Mickey made his feature-length film debut with Fantasia, for which he was given his modern redesign by animator Fred Moore. In the 1950s, Mickey became a television mainstay with the premiere of 1955's The Mickey Mouse Club, as well as an icon for the Disney theme parks with the opening of Disneyland. Mickey has also featured prominently in critically acclaimed video games, such as 1990's Castle of Illusion and the Kingdom Hearts series."
@@ -19,15 +19,15 @@
 	{
 		"id": 2,
 		"name": "Darth Vader",
-		"img-bg": "/src/components/img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
 		"images": {
-			"img1": "/src/components/img/json_img/darth/33631_darth_vader_character_starwars.png",
-			"img2": "/src/components/img/json_img/mickey-mouse/Mickey-mouse-1.png",
-			"img3": "/src/components/img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
-			"img4": "/src/components/img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
-			"img5": "/src/components/img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
-			"img6": "/src/components/img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
-			"img7": "/src/components/img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
+			"img1": "./img/json_img/darth/33631_darth_vader_character_starwars.png",
+			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
+			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
+			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
+			"img5": "./img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
+			"img6": "./img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
+			"img7": "./img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
 		},
 		"bioFirst": "Mickey Mouse is an animated cartoon character created by Walt Disney and Ub Iwerks. A cheerful and plucky anthropomorphic mouse, Mickey made his first public appearance in Steamboat Willie, on November 18, 1928. Estimated as standing 2' 3\" (68.58 centimeters) and weighing 23 pounds (10.43 kilograms), Mickey is easily identified by his round ears, red shorts, white gloves, and yellow shoes. He speaks in a falsetto voice, and his speech is typically infused with 1930s slang like 'swell' and 'gee'. The essence of Mickey's character is that of an underdog who, despite being small and vulnerable, overcomes larger-than-life adversity through quick wit and a can-do spirit.",
 		"bioSecond": "Mickey was popularized by his long-running short film series. His simplistic, 'rubberhose' design allows for both relatable emotion and exaggerated physical gags. Mickey's versatility, meanwhile, enables him to slip into any profession, location, or time period while maintaining his core characteristics. Mickey steadily branched into other mediums over the years, beginning with a comic strip by cartoonist Floyd Gottfredson in 1930. In 1940, Mickey made his feature-length film debut with Fantasia, for which he was given his modern redesign by animator Fred Moore. In the 1950s, Mickey became a television mainstay with the premiere of 1955's The Mickey Mouse Club, as well as an icon for the Disney theme parks with the opening of Disneyland. Mickey has also featured prominently in critically acclaimed video games, such as 1990's Castle of Illusion and the Kingdom Hearts series."
@@ -36,15 +36,15 @@
 	{
 		"id": 3,
 		"name": "Han Solo",
-		"img-bg": "/src/components/img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
 		"images": {
-			"img1": "/src/components/img/json_img/han/36814_han-solo_character_starwars.png",
-			"img2": "/src/components/img/json_img/mickey-mouse/Mickey-mouse-1.png",
-			"img3": "/src/components/img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
-			"img4": "/src/components/img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
-			"img5": "/src/components/img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
-			"img6": "/src/components/img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
-			"img7": "/src/components/img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
+			"img1": "./img/json_img/han/36814_han-solo_character_starwars.png",
+			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
+			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
+			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
+			"img5": "./img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
+			"img6": "./img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
+			"img7": "./img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
 		},
 		"bioFirst": "Mickey Mouse is an animated cartoon character created by Walt Disney and Ub Iwerks. A cheerful and plucky anthropomorphic mouse, Mickey made his first public appearance in Steamboat Willie, on November 18, 1928. Estimated as standing 2' 3\" (68.58 centimeters) and weighing 23 pounds (10.43 kilograms), Mickey is easily identified by his round ears, red shorts, white gloves, and yellow shoes. He speaks in a falsetto voice, and his speech is typically infused with 1930s slang like 'swell' and 'gee'. The essence of Mickey's character is that of an underdog who, despite being small and vulnerable, overcomes larger-than-life adversity through quick wit and a can-do spirit.",
 		"bioSecond": "Mickey was popularized by his long-running short film series. His simplistic, 'rubberhose' design allows for both relatable emotion and exaggerated physical gags. Mickey's versatility, meanwhile, enables him to slip into any profession, location, or time period while maintaining his core characteristics. Mickey steadily branched into other mediums over the years, beginning with a comic strip by cartoonist Floyd Gottfredson in 1930. In 1940, Mickey made his feature-length film debut with Fantasia, for which he was given his modern redesign by animator Fred Moore. In the 1950s, Mickey became a television mainstay with the premiere of 1955's The Mickey Mouse Club, as well as an icon for the Disney theme parks with the opening of Disneyland. Mickey has also featured prominently in critically acclaimed video games, such as 1990's Castle of Illusion and the Kingdom Hearts series."
@@ -53,15 +53,15 @@
 	{
 		"id": 4,
 		"name": "Grogu",
-		"img-bg": "/src/components/img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
 		"images": {
-			"img1": "/src/components/img/json_img/grogu/33631_the_child_character_starwars.png",
-			"img2": "/src/components/img/json_img/mickey-mouse/Mickey-mouse-1.png",
-			"img3": "/src/components/img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
-			"img4": "/src/components/img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
-			"img5": "/src/components/img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
-			"img6": "/src/components/img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
-			"img7": "/src/components/img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
+			"img1": "./img/json_img/grogu/33631_the_child_character_starwars.png",
+			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
+			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
+			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
+			"img5": "./img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
+			"img6": "./img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
+			"img7": "./img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
 		},
 		"bioFirst": "Mickey Mouse is an animated cartoon character created by Walt Disney and Ub Iwerks. A cheerful and plucky anthropomorphic mouse, Mickey made his first public appearance in Steamboat Willie, on November 18, 1928. Estimated as standing 2' 3\" (68.58 centimeters) and weighing 23 pounds (10.43 kilograms), Mickey is easily identified by his round ears, red shorts, white gloves, and yellow shoes. He speaks in a falsetto voice, and his speech is typically infused with 1930s slang like 'swell' and 'gee'. The essence of Mickey's character is that of an underdog who, despite being small and vulnerable, overcomes larger-than-life adversity through quick wit and a can-do spirit.",
 		"bioSecond": "Mickey was popularized by his long-running short film series. His simplistic, 'rubberhose' design allows for both relatable emotion and exaggerated physical gags. Mickey's versatility, meanwhile, enables him to slip into any profession, location, or time period while maintaining his core characteristics. Mickey steadily branched into other mediums over the years, beginning with a comic strip by cartoonist Floyd Gottfredson in 1930. In 1940, Mickey made his feature-length film debut with Fantasia, for which he was given his modern redesign by animator Fred Moore. In the 1950s, Mickey became a television mainstay with the premiere of 1955's The Mickey Mouse Club, as well as an icon for the Disney theme parks with the opening of Disneyland. Mickey has also featured prominently in critically acclaimed video games, such as 1990's Castle of Illusion and the Kingdom Hearts series."
@@ -70,15 +70,15 @@
 	{
 		"id": 5,
 		"name": "R2 - D2",
-		"img-bg": "/src/components/img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
 		"images": {
-			"img1": "/src/components/img/json_img/r2d2/33631_r2-d2_character_starwars.png",
-			"img2": "/src/components/img/json_img/mickey-mouse/Mickey-mouse-1.png",
-			"img3": "/src/components/img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
-			"img4": "/src/components/img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
-			"img5": "/src/components/img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
-			"img6": "/src/components/img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
-			"img7": "/src/components/img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
+			"img1": "./img/json_img/r2d2/33631_r2-d2_character_starwars.png",
+			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
+			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
+			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
+			"img5": "./img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
+			"img6": "./img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
+			"img7": "./img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
 		},
 		"bioFirst": "Mickey Mouse is an animated cartoon character created by Walt Disney and Ub Iwerks. A cheerful and plucky anthropomorphic mouse, Mickey made his first public appearance in Steamboat Willie, on November 18, 1928. Estimated as standing 2' 3\" (68.58 centimeters) and weighing 23 pounds (10.43 kilograms), Mickey is easily identified by his round ears, red shorts, white gloves, and yellow shoes. He speaks in a falsetto voice, and his speech is typically infused with 1930s slang like 'swell' and 'gee'. The essence of Mickey's character is that of an underdog who, despite being small and vulnerable, overcomes larger-than-life adversity through quick wit and a can-do spirit.",
 		"bioSecond": "Mickey was popularized by his long-running short film series. His simplistic, 'rubberhose' design allows for both relatable emotion and exaggerated physical gags. Mickey's versatility, meanwhile, enables him to slip into any profession, location, or time period while maintaining his core characteristics. Mickey steadily branched into other mediums over the years, beginning with a comic strip by cartoonist Floyd Gottfredson in 1930. In 1940, Mickey made his feature-length film debut with Fantasia, for which he was given his modern redesign by animator Fred Moore. In the 1950s, Mickey became a television mainstay with the premiere of 1955's The Mickey Mouse Club, as well as an icon for the Disney theme parks with the opening of Disneyland. Mickey has also featured prominently in critically acclaimed video games, such as 1990's Castle of Illusion and the Kingdom Hearts series."
@@ -87,15 +87,15 @@
 	{
 		"id": 6,
 		"name": "Darth Vader",
-		"img-bg": "/src/components/img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
 		"images": {
-			"img1": "/src/components/img/json_img/darth/33631_darth_vader_character_starwars.png",
-			"img2": "/src/components/img/json_img/mickey-mouse/Mickey-mouse-1.png",
-			"img3": "/src/components/img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
-			"img4": "/src/components/img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
-			"img5": "/src/components/img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
-			"img6": "/src/components/img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
-			"img7": "/src/components/img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
+			"img1": "./img/json_img/darth/33631_darth_vader_character_starwars.png",
+			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
+			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
+			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
+			"img5": "./img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
+			"img6": "./img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
+			"img7": "./img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
 		},
 		"bioFirst": "Mickey Mouse is an animated cartoon character created by Walt Disney and Ub Iwerks. A cheerful and plucky anthropomorphic mouse, Mickey made his first public appearance in Steamboat Willie, on November 18, 1928. Estimated as standing 2' 3\" (68.58 centimeters) and weighing 23 pounds (10.43 kilograms), Mickey is easily identified by his round ears, red shorts, white gloves, and yellow shoes. He speaks in a falsetto voice, and his speech is typically infused with 1930s slang like 'swell' and 'gee'. The essence of Mickey's character is that of an underdog who, despite being small and vulnerable, overcomes larger-than-life adversity through quick wit and a can-do spirit.",
 		"bioSecond": "Mickey was popularized by his long-running short film series. His simplistic, 'rubberhose' design allows for both relatable emotion and exaggerated physical gags. Mickey's versatility, meanwhile, enables him to slip into any profession, location, or time period while maintaining his core characteristics. Mickey steadily branched into other mediums over the years, beginning with a comic strip by cartoonist Floyd Gottfredson in 1930. In 1940, Mickey made his feature-length film debut with Fantasia, for which he was given his modern redesign by animator Fred Moore. In the 1950s, Mickey became a television mainstay with the premiere of 1955's The Mickey Mouse Club, as well as an icon for the Disney theme parks with the opening of Disneyland. Mickey has also featured prominently in critically acclaimed video games, such as 1990's Castle of Illusion and the Kingdom Hearts series."
@@ -104,15 +104,15 @@
 	{
 		"id": 7,
 		"name": "Han Solo",
-		"img-bg": "/src/components/img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
 		"images": {
-			"img1": "/src/components/img/json_img/han/36814_han-solo_character_starwars.png",
-			"img2": "/src/components/img/json_img/mickey-mouse/Mickey-mouse-1.png",
-			"img3": "/src/components/img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
-			"img4": "/src/components/img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
-			"img5": "/src/components/img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
-			"img6": "/src/components/img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
-			"img7": "/src/components/img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
+			"img1": "./img/json_img/han/36814_han-solo_character_starwars.png",
+			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
+			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
+			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
+			"img5": "./img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
+			"img6": "./img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
+			"img7": "./img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
 		},
 		"bioFirst": "Mickey Mouse is an animated cartoon character created by Walt Disney and Ub Iwerks. A cheerful and plucky anthropomorphic mouse, Mickey made his first public appearance in Steamboat Willie, on November 18, 1928. Estimated as standing 2' 3\" (68.58 centimeters) and weighing 23 pounds (10.43 kilograms), Mickey is easily identified by his round ears, red shorts, white gloves, and yellow shoes. He speaks in a falsetto voice, and his speech is typically infused with 1930s slang like 'swell' and 'gee'. The essence of Mickey's character is that of an underdog who, despite being small and vulnerable, overcomes larger-than-life adversity through quick wit and a can-do spirit.",
 		"bioSecond": "Mickey was popularized by his long-running short film series. His simplistic, 'rubberhose' design allows for both relatable emotion and exaggerated physical gags. Mickey's versatility, meanwhile, enables him to slip into any profession, location, or time period while maintaining his core characteristics. Mickey steadily branched into other mediums over the years, beginning with a comic strip by cartoonist Floyd Gottfredson in 1930. In 1940, Mickey made his feature-length film debut with Fantasia, for which he was given his modern redesign by animator Fred Moore. In the 1950s, Mickey became a television mainstay with the premiere of 1955's The Mickey Mouse Club, as well as an icon for the Disney theme parks with the opening of Disneyland. Mickey has also featured prominently in critically acclaimed video games, such as 1990's Castle of Illusion and the Kingdom Hearts series."
@@ -121,15 +121,15 @@
 	{
 		"id": 8,
 		"name": "Grogu",
-		"img-bg": "/src/components/img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
 		"images": {
-			"img1": "/src/components/img/json_img/grogu/33631_the_child_character_starwars.png",
-			"img2": "/src/components/img/json_img/mickey-mouse/Mickey-mouse-1.png",
-			"img3": "/src/components/img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
-			"img4": "/src/components/img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
-			"img5": "/src/components/img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
-			"img6": "/src/components/img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
-			"img7": "/src/components/img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
+			"img1": "./img/json_img/grogu/33631_the_child_character_starwars.png",
+			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
+			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
+			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
+			"img5": "./img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
+			"img6": "./img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
+			"img7": "./img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
 		},
 		"bioFirst": "Mickey Mouse is an animated cartoon character created by Walt Disney and Ub Iwerks. A cheerful and plucky anthropomorphic mouse, Mickey made his first public appearance in Steamboat Willie, on November 18, 1928. Estimated as standing 2' 3\" (68.58 centimeters) and weighing 23 pounds (10.43 kilograms), Mickey is easily identified by his round ears, red shorts, white gloves, and yellow shoes. He speaks in a falsetto voice, and his speech is typically infused with 1930s slang like 'swell' and 'gee'. The essence of Mickey's character is that of an underdog who, despite being small and vulnerable, overcomes larger-than-life adversity through quick wit and a can-do spirit.",
 		"bioSecond": "Mickey was popularized by his long-running short film series. His simplistic, 'rubberhose' design allows for both relatable emotion and exaggerated physical gags. Mickey's versatility, meanwhile, enables him to slip into any profession, location, or time period while maintaining his core characteristics. Mickey steadily branched into other mediums over the years, beginning with a comic strip by cartoonist Floyd Gottfredson in 1930. In 1940, Mickey made his feature-length film debut with Fantasia, for which he was given his modern redesign by animator Fred Moore. In the 1950s, Mickey became a television mainstay with the premiere of 1955's The Mickey Mouse Club, as well as an icon for the Disney theme parks with the opening of Disneyland. Mickey has also featured prominently in critically acclaimed video games, such as 1990's Castle of Illusion and the Kingdom Hearts series."
@@ -138,15 +138,15 @@
 	{
 		"id": 9,
 		"name": "R2 - D2",
-		"img-bg": "/src/components/img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
 		"images": {
-			"img1": "/src/components/img/json_img/r2d2/33631_r2-d2_character_starwars.png",
-			"img2": "/src/components/img/json_img/mickey-mouse/Mickey-mouse-1.png",
-			"img3": "/src/components/img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
-			"img4": "/src/components/img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
-			"img5": "/src/components/img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
-			"img6": "/src/components/img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
-			"img7": "/src/components/img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
+			"img1": "./img/json_img/r2d2/33631_r2-d2_character_starwars.png",
+			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
+			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
+			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
+			"img5": "./img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
+			"img6": "./img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
+			"img7": "./img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
 		},
 		"bioFirst": "Mickey Mouse is an animated cartoon character created by Walt Disney and Ub Iwerks. A cheerful and plucky anthropomorphic mouse, Mickey made his first public appearance in Steamboat Willie, on November 18, 1928. Estimated as standing 2' 3\" (68.58 centimeters) and weighing 23 pounds (10.43 kilograms), Mickey is easily identified by his round ears, red shorts, white gloves, and yellow shoes. He speaks in a falsetto voice, and his speech is typically infused with 1930s slang like 'swell' and 'gee'. The essence of Mickey's character is that of an underdog who, despite being small and vulnerable, overcomes larger-than-life adversity through quick wit and a can-do spirit.",
 		"bioSecond": "Mickey was popularized by his long-running short film series. His simplistic, 'rubberhose' design allows for both relatable emotion and exaggerated physical gags. Mickey's versatility, meanwhile, enables him to slip into any profession, location, or time period while maintaining his core characteristics. Mickey steadily branched into other mediums over the years, beginning with a comic strip by cartoonist Floyd Gottfredson in 1930. In 1940, Mickey made his feature-length film debut with Fantasia, for which he was given his modern redesign by animator Fred Moore. In the 1950s, Mickey became a television mainstay with the premiere of 1955's The Mickey Mouse Club, as well as an icon for the Disney theme parks with the opening of Disneyland. Mickey has also featured prominently in critically acclaimed video games, such as 1990's Castle of Illusion and the Kingdom Hearts series."
@@ -155,15 +155,15 @@
 	{
 		"id": 10,
 		"name": "Darth Vader",
-		"img-bg": "/src/components/img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
 		"images": {
-			"img1": "/src/components/img/json_img/darth/33631_darth_vader_character_starwars.png",
-			"img2": "/src/components/img/json_img/mickey-mouse/Mickey-mouse-1.png",
-			"img3": "/src/components/img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
-			"img4": "/src/components/img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
-			"img5": "/src/components/img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
-			"img6": "/src/components/img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
-			"img7": "/src/components/img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
+			"img1": "./img/json_img/darth/33631_darth_vader_character_starwars.png",
+			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
+			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
+			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
+			"img5": "./img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
+			"img6": "./img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
+			"img7": "./img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
 		},
 		"bioFirst": "Mickey Mouse is an animated cartoon character created by Walt Disney and Ub Iwerks. A cheerful and plucky anthropomorphic mouse, Mickey made his first public appearance in Steamboat Willie, on November 18, 1928. Estimated as standing 2' 3\" (68.58 centimeters) and weighing 23 pounds (10.43 kilograms), Mickey is easily identified by his round ears, red shorts, white gloves, and yellow shoes. He speaks in a falsetto voice, and his speech is typically infused with 1930s slang like 'swell' and 'gee'. The essence of Mickey's character is that of an underdog who, despite being small and vulnerable, overcomes larger-than-life adversity through quick wit and a can-do spirit.",
 		"bioSecond": "Mickey was popularized by his long-running short film series. His simplistic, 'rubberhose' design allows for both relatable emotion and exaggerated physical gags. Mickey's versatility, meanwhile, enables him to slip into any profession, location, or time period while maintaining his core characteristics. Mickey steadily branched into other mediums over the years, beginning with a comic strip by cartoonist Floyd Gottfredson in 1930. In 1940, Mickey made his feature-length film debut with Fantasia, for which he was given his modern redesign by animator Fred Moore. In the 1950s, Mickey became a television mainstay with the premiere of 1955's The Mickey Mouse Club, as well as an icon for the Disney theme parks with the opening of Disneyland. Mickey has also featured prominently in critically acclaimed video games, such as 1990's Castle of Illusion and the Kingdom Hearts series."
@@ -172,15 +172,15 @@
 	{
 		"id": 11,
 		"name": "Han Solo",
-		"img-bg": "/src/components/img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
 		"images": {
-			"img1": "/src/components/img/json_img/han/36814_han-solo_character_starwars.png",
-			"img2": "/src/components/img/json_img/mickey-mouse/Mickey-mouse-1.png",
-			"img3": "/src/components/img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
-			"img4": "/src/components/img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
-			"img5": "/src/components/img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
-			"img6": "/src/components/img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
-			"img7": "/src/components/img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
+			"img1": "./img/json_img/han/36814_han-solo_character_starwars.png",
+			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
+			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
+			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
+			"img5": "./img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
+			"img6": "./img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
+			"img7": "./img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
 		},
 		"bioFirst": "Mickey Mouse is an animated cartoon character created by Walt Disney and Ub Iwerks. A cheerful and plucky anthropomorphic mouse, Mickey made his first public appearance in Steamboat Willie, on November 18, 1928. Estimated as standing 2' 3\" (68.58 centimeters) and weighing 23 pounds (10.43 kilograms), Mickey is easily identified by his round ears, red shorts, white gloves, and yellow shoes. He speaks in a falsetto voice, and his speech is typically infused with 1930s slang like 'swell' and 'gee'. The essence of Mickey's character is that of an underdog who, despite being small and vulnerable, overcomes larger-than-life adversity through quick wit and a can-do spirit.",
 		"bioSecond": "Mickey was popularized by his long-running short film series. His simplistic, 'rubberhose' design allows for both relatable emotion and exaggerated physical gags. Mickey's versatility, meanwhile, enables him to slip into any profession, location, or time period while maintaining his core characteristics. Mickey steadily branched into other mediums over the years, beginning with a comic strip by cartoonist Floyd Gottfredson in 1930. In 1940, Mickey made his feature-length film debut with Fantasia, for which he was given his modern redesign by animator Fred Moore. In the 1950s, Mickey became a television mainstay with the premiere of 1955's The Mickey Mouse Club, as well as an icon for the Disney theme parks with the opening of Disneyland. Mickey has also featured prominently in critically acclaimed video games, such as 1990's Castle of Illusion and the Kingdom Hearts series."
@@ -189,15 +189,15 @@
 	{
 		"id": 12,
 		"name": "Grogu",
-		"img-bg": "/src/components/img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
 		"images": {
-			"img1": "/src/components/img/json_img/grogu/33631_the_child_character_starwars.png",
-			"img2": "/src/components/img/json_img/mickey-mouse/Mickey-mouse-1.png",
-			"img3": "/src/components/img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
-			"img4": "/src/components/img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
-			"img5": "/src/components/img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
-			"img6": "/src/components/img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
-			"img7": "/src/components/img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
+			"img1": "./img/json_img/grogu/33631_the_child_character_starwars.png",
+			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
+			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
+			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
+			"img5": "./img/json_img/mickey-mouse/Kingdom-Hearts-HD.png",
+			"img6": "./img/json_img/mickey-mouse/mickey_mouse_mosquetero.png",
+			"img7": "./img/json_img/mickey-mouse/Mickey_mouse-castle_of_illusion.png"
 		},
 		"bioFirst": "Mickey Mouse is an animated cartoon character created by Walt Disney and Ub Iwerks. A cheerful and plucky anthropomorphic mouse, Mickey made his first public appearance in Steamboat Willie, on November 18, 1928. Estimated as standing 2' 3\" (68.58 centimeters) and weighing 23 pounds (10.43 kilograms), Mickey is easily identified by his round ears, red shorts, white gloves, and yellow shoes. He speaks in a falsetto voice, and his speech is typically infused with 1930s slang like 'swell' and 'gee'. The essence of Mickey's character is that of an underdog who, despite being small and vulnerable, overcomes larger-than-life adversity through quick wit and a can-do spirit.",
 		"bioSecond": "Mickey was popularized by his long-running short film series. His simplistic, 'rubberhose' design allows for both relatable emotion and exaggerated physical gags. Mickey's versatility, meanwhile, enables him to slip into any profession, location, or time period while maintaining his core characteristics. Mickey steadily branched into other mediums over the years, beginning with a comic strip by cartoonist Floyd Gottfredson in 1930. In 1940, Mickey made his feature-length film debut with Fantasia, for which he was given his modern redesign by animator Fred Moore. In the 1950s, Mickey became a television mainstay with the premiere of 1955's The Mickey Mouse Club, as well as an icon for the Disney theme parks with the opening of Disneyland. Mickey has also featured prominently in critically acclaimed video games, such as 1990's Castle of Illusion and the Kingdom Hearts series."
