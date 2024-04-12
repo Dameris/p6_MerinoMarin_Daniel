@@ -1,0 +1,577 @@
+[
+	{
+		"name": "MICKEY MOUSE",
+		"questions": [
+			{
+				"question": "What was Mickey's name originally going to be?",
+				"options": ["Matthew", "Maurice", "Mark", "Mortimer"],
+				"correctAnswer": "Mortimer"
+			},
+			{
+				"question": "What is the name of Mickey's dog?",
+				"options": ["Jupiter", "Pluto", "Goofy", "Benji"],
+				"correctAnswer": "Pluto"
+			},
+			{
+				"question": "What is the name of Mickey's girlfriend?",
+				"options": ["Mavis", "Maureen", "Mandy", "Minnie"],
+				"correctAnswer": "Minnie"
+			},
+			{
+				"question": "Mickey Mouse was the first cartoon character to earn a star on the Hollywood Walk of Fame. True or false?",
+				"options": ["True", "False"],
+				"correctAnswer": "True"
+			},
+			{
+				"question": "What was the name of the 1928 animated short in which Mickey Mouse made his debut?",
+				"options": ["Tugboat Billy", "Streamboat Willie", "Lifeboat Lilly", "Motorboat Millie"],
+				"correctAnswer": "Streamboat Willie"
+			},
+			{
+				"question": "Who was the first person to provide the voice for Mickey Mouse?",
+				"options": ["Mickey Rooney", "Mickey Dolenz", "Walt Disney", "Walt Whitman"],
+				"correctAnswer": "Walt Disney"
+			},
+			{
+				"question": "Mickey made his video game debut in which Nintendo game?",
+				"options": [
+					"Mickey's Racing Adventure",
+					"Castle of Illusion Starring Mickey Mouse",
+					"Mickey Mousecapde",
+					"Disney's Magical Quest"
+				],
+				"correctAnswer": "Mickey Mousecapde"
+			},
+			{
+				"question": "In which Disney movie did Mickey play the 'Sorcerer's Apprentice'?",
+				"options": ["Cinderella", "Bambi", "Fantasia", "Treasure Planet"],
+				"correctAnswer": "Fantasia"
+			}
+		]
+	},
+	{
+		"name": "WOODY (TOY STORY)",
+		"questions": [
+			{
+				"question": "What is Woody's last name?",
+				"options": ["Jenson", "Pride", "Wood", "Harris"],
+				"correctAnswer": "Pride"
+			},
+			{
+				"question": "Who was Woody donated to when Andy left for college?",
+				"options": ["Bonnie", "Hannah", "Molly", "Penny"],
+				"correctAnswer": "Bonnie"
+			},
+			{
+				"question": "How tall is Woody without his hat?",
+				"options": ["14.18 in", "14.93 in", "15.18 in", "15.93 in"],
+				"correctAnswer": "15.18 in"
+			},
+			{
+				"question": "Which actor voiced Woody?",
+				"options": ["Tom Hardy", "Tom Hanks", "Tim Allen", "Robin Williams"],
+				"correctAnswer": "Tom Hanks"
+			},
+			{
+				"question": "Which of the following is NOT one of Woody's phrases?",
+				"options": [
+					"This town ain't big enough for the two of us.",
+					"Someone's poisoned the water hole!",
+					"This is no time to panic.",
+					"Reach for the sky!"
+				],
+				"correctAnswer": "This is no time to panic."
+			},
+			{
+				"question": " What is the name of the 1950s show that Woody starred in?",
+				"options": ["Woody's Cowboys", "Woody's Roundup", "Woody's Riders", "Cowboy Roundup"],
+				"correctAnswer": "Woody's Roundup"
+			},
+			{
+				"question": "Who did Woody save from getting sold at The Yard Sale?",
+				"options": ["Wheezy", "Slinky Dog", "Rex", "Hamm"],
+				"correctAnswer": "Wheezy"
+			},
+			{
+				"question": "What is the name of Woody's horse?",
+				"options": ["Billy", "Buster", "Scout", "Bullseye"],
+				"correctAnswer": ""
+			},
+			{
+				"question": "Where was woody getting ready to go at the beginning of Toy Story 2?",
+				"options": ["Statue Of Liberty", "Grand Canyon", "Cowboy Camp", "Space Camp"],
+				"correctAnswer": "Cowboy Camp"
+			},
+			{
+				"question": "What country did Al want to send Woody to?",
+				"options": ["Japan", "France", "China", "Germany"],
+				"correctAnswer": "Japan"
+			}
+		]
+	},
+	{
+		"name": "SIMBA (THE LION KING)",
+		"questions": [
+			{
+				"question": "What is Simba's father's name?",
+				"options": ["Mufasa", "Scar", "Timon", "Rafiki"],
+				"correctAnswer": "Mufasa"
+			},
+			{
+				"question": "Who convinces Simba to return to the Pride Lands to reclaim his kingdom?",
+				"options": ["Nala", "Zazu", "Rafiki", "Timon"],
+				"correctAnswer": "Nala"
+			},
+			{
+				"question": "What phrase does Simba's father teach him about the circle of life?",
+				"options": ["Hakuna Matata", "Asante sana", "Maji moto", "Remember who you are"],
+				"correctAnswer": "Remember who you are"
+			},
+			{
+				"question": "Which actor provided the voice for adult Simba in the original Lion King movie?",
+				"options": ["Matthew Broderick", "Jonathan Taylor Thomas", "Jeremy Irons", "James Earl Jones"],
+				"correctAnswer": "Matthew Broderick"
+			},
+			{
+				"question": "What is the name of Simba's mother?",
+				"options": ["Sarabi", "Sarafina", "Kiara", "Nala"],
+				"correctAnswer": "Sarabi"
+			},
+			{
+				"question": "Who does Simba confront at the end of the first Lion King movie?",
+				"options": ["Zazu", "Rafiki", "Scar", "Timon"],
+				"correctAnswer": "Scar"
+			},
+			{
+				"question": "What type of animal is Simba's loyal friend, Timon?",
+				"options": ["Meerkat", "Warthog", "Lion", "Mongoose"],
+				"correctAnswer": "Meerkat"
+			},
+			{
+				"question": "What is the name of Simba's daughter in The Lion King II: Simba's Pride?",
+				"options": ["Kiara", "Nala", "Sarabi", "Sarafina"],
+				"correctAnswer": "Kiara"
+			},
+			{
+				"question": "What is the name of the song Simba sings as he grows from a cub to an adult lion?",
+				"options": ["Circle of Life", "Hakuna Matata", "I Just Can't Wait to Be King", "Be Prepared"],
+				"correctAnswer": "I Just Can't Wait to Be King"
+			},
+			{
+				"question": "What does Simba say to Scar before defeating him?",
+				"options": ["Long live the king", "Hakuna Matata", "I'm sorry, Scar", "You're not my brother"],
+				"correctAnswer": "You're not my brother"
+			}
+		]
+	},
+	{
+		"name": "ARIEL (THE LITTLE MERMAID)",
+		"questions": [
+			{
+				"question": "What color is Ariel's hair?",
+				"options": ["Blonde", "Black", "Brown", "Red"],
+				"correctAnswer": "Red"
+			},
+			{
+				"question": "What is the name of Ariel's best friend, a fish?",
+				"options": ["Flounder", "Sebastian", "Scuttle", "Ursula"],
+				"correctAnswer": "Flounder"
+			},
+			{
+				"question": "What does Ariel trade her voice for?",
+				"options": ["Legs", "Love", "Treasure", "Magic powers"],
+				"correctAnswer": "Legs"
+			},
+			{
+				"question": "Who is Ariel's father?",
+				"options": ["King Triton", "King Neptune", "Poseidon", "King Arthur"],
+				"correctAnswer": "King Triton"
+			},
+			{
+				"question": "Where does Ariel keep her collection of human objects?",
+				"options": ["Under her bed", "In a cave", "In a sunken ship", "In a secret grotto"],
+				"correctAnswer": "In a secret grotto"
+			},
+			{
+				"question": "What is the name of the sea witch who tricks Ariel?",
+				"options": ["Ursula", "Morgana", "Melody", "Vanessa"],
+				"correctAnswer": "Ursula"
+			},
+			{
+				"question": "What does Ariel use to comb her hair?",
+				"options": ["A fork", "A brush", "A shell", "Seaweed"],
+				"correctAnswer": "A fork"
+			},
+			{
+				"question": "What does Ariel wear to cover her legs when she becomes human?",
+				"options": ["A skirt", "A dress", "Pants", "A towel"],
+				"correctAnswer": "A dress"
+			},
+			{
+				"question": "Who helps Ariel defeat Ursula in the end?",
+				"options": ["Flounder", "Sebastian", "King Triton", "Prince Eric"],
+				"correctAnswer": "Prince Eric"
+			},
+			{
+				"question": "What does Ariel become at the end of The Little Mermaid?",
+				"options": ["A human", "A mermaid", "A princess", "A queen"],
+				"correctAnswer": "A human"
+			}
+		]
+	},
+	{
+		"name": "ELSA (FROZEN)",
+		"questions": [
+			{
+				"question": "What is Elsa's magical power?",
+				"options": ["Control over fire", "Telekinesis", "Ice and snow manipulation", "Invisibility"],
+				"correctAnswer": "Ice and snow manipulation"
+			},
+			{
+				"question": "What is the name of Elsa's sister?",
+				"options": ["Anna", "Aurora", "Elena", "Elsie"],
+				"correctAnswer": "Anna"
+			},
+			{
+				"question": "What kingdom do Elsa and Anna rule over?",
+				"options": ["Arendelle", "Corona", "Atlantica", "Avalor"],
+				"correctAnswer": "Arendelle"
+			},
+			{
+				"question": "What song does Elsa sing while building her ice palace?",
+				"options": [
+					"Let It Go",
+					"Do You Want to Build a Snowman?",
+					"For the First Time in Forever",
+					"Into the Unknown"
+				],
+				"correctAnswer": "Let It Go"
+			},
+			{
+				"question": "Who is the first character to discover Elsa's powers?",
+				"options": ["Anna", "Kristoff", "Olaf", "Hans"],
+				"correctAnswer": "Anna"
+			},
+			{
+				"question": "What is the name of Elsa's snowman friend?",
+				"options": ["Sven", "Marshmallow", "Olaf", "Frosty"],
+				"correctAnswer": "Olaf"
+			},
+			{
+				"question": "What event triggers Elsa's powers to become uncontrollable?",
+				"options": ["Her coronation ceremony", "Anna's wedding", "Her birthday party", "A winter festival"],
+				"correctAnswer": "Her coronation ceremony"
+			},
+			{
+				"question": "Who does Elsa accidentally injure with her powers as a child?",
+				"options": ["Anna", "Olaf", "Kristoff", "Hans"],
+				"correctAnswer": "Anna"
+			},
+			{
+				"question": "What does Elsa create for Anna during the song 'Do You Want to Build a Snowman?'",
+				"options": ["A snowman", "A snow fort", "A snowflake necklace", "A snow slide"],
+				"correctAnswer": "A snowman"
+			},
+			{
+				"question": "What does Elsa use to control her powers?",
+				"options": ["Gloves", "A crown", "A wand", "A crystal"],
+				"correctAnswer": "Gloves"
+			}
+		]
+	},
+	{
+		"name": "BUZZ LIGHTYEAR (TOY STORY)",
+		"questions": [
+			{
+				"question": "What is Buzz Lightyear's catchphrase?",
+				"options": [
+					"To infinity and beyond!",
+					"Reach for the sky!",
+					"To the stars, and beyond!",
+					"Space Ranger, away!"
+				],
+				"correctAnswer": "To infinity and beyond!"
+			},
+			{
+				"question": "What is Buzz Lightyear's mission according to his toy backstory?",
+				"options": [
+					"To defeat Emperor Zurg",
+					"To explore the galaxy",
+					"To save the universe",
+					"To protect Andy's room"
+				],
+				"correctAnswer": "To defeat Emperor Zurg"
+			},
+			{
+				"question": "What does Buzz initially believe he is when he first arrives at Andy's house?",
+				"options": ["A superhero", "A space ranger", "A toy", "A human"],
+				"correctAnswer": "A space ranger"
+			},
+			{
+				"question": "Who does Buzz form a close friendship with in the Toy Story series?",
+				"options": ["Woody", "Slinky Dog", "Rex", "Mr. Potato Head"],
+				"correctAnswer": "Woody"
+			},
+			{
+				"question": "What is the name of Buzz Lightyear's arch-nemesis?",
+				"options": ["Emperor Zurg", "Zordon", "Galacticus", "Dark Matter"],
+				"correctAnswer": "Emperor Zurg"
+			},
+			{
+				"question": "What does Buzz initially think Mr. Potato Head's parts are?",
+				"options": ["Alien life forms", "Extra weapons", "Gadgets", "Toy accessories"],
+				"correctAnswer": "Extra weapons"
+			},
+			{
+				"question": "What feature does Buzz have that Woody does not, which initially makes Woody jealous?",
+				"options": ["Laser beam", "Jetpack", "Voice recorder", "Karate chop action"],
+				"correctAnswer": "Laser beam"
+			},
+			{
+				"question": "What does Buzz do to prove to himself that he can fly in the first Toy Story movie?",
+				"options": ["Jumps off the bed", "Leaps off the stairs", "Jumps off a desk", "Jumps off a dresser"],
+				"correctAnswer": "Jumps off the stairs"
+			},
+			{
+				"question": "What is the name of Buzz Lightyear's space cruiser?",
+				"options": ["Star Command", "Galactic Explorer", "Starship Voyager", "Infinity Falcon"],
+				"correctAnswer": "Star Command"
+			},
+			{
+				"question": "What is the name of Buzz Lightyear's TV show in the Toy Story universe?",
+				"options": [
+					"Buzz Lightyear: Space Ranger",
+					"Buzz Lightyear of Star Command",
+					"Buzz Lightyear: Galactic Hero",
+					"Buzz Lightyear: Universe Defender"
+				],
+				"correctAnswer": "Buzz Lightyear of Star Command"
+			}
+		]
+	},
+	{
+		"name": "CINDERELLA",
+		"questions": [
+			{
+				"question": "What is Cinderella's real name?",
+				"options": ["Ella", "Isabella", "Anastasia", "Amelia"],
+				"correctAnswer": "Ella"
+			},
+			{
+				"question": "What kind of animal are Cinderella's loyal friends, Jaq and Gus?",
+				"options": ["Mice", "Birds", "Cats", "Dogs"],
+				"correctAnswer": "Mice"
+			},
+			{
+				"question": "What does Cinderella lose at the ball?",
+				"options": ["Her glass slipper", "Her necklace", "Her tiara", "Her glove"],
+				"correctAnswer": "Her glass slipper"
+			},
+			{
+				"question": "Who transforms Cinderella's rags into a beautiful gown for the ball?",
+				"options": ["Fairy Godmother", "Evil Stepmother", "Prince Charming", "Jaq and Gus"],
+				"correctAnswer": "Fairy Godmother"
+			},
+			{
+				"question": "What does Cinderella's Fairy Godmother turn into a carriage to take her to the ball?",
+				"options": ["Pumpkin", "Mouse", "Horse", "Goose"],
+				"correctAnswer": "Pumpkin"
+			},
+			{
+				"question": "What color is Cinderella's ball gown?",
+				"options": ["Blue", "Pink", "Yellow", "Purple"],
+				"correctAnswer": "Blue"
+			},
+			{
+				"question": "What does Cinderella leave behind at the ball, prompting Prince Charming's search for her?",
+				"options": ["Glass slipper", "Her glove", "Her necklace", "A love letter"],
+				"correctAnswer": "Glass slipper"
+			},
+			{
+				"question": "What does Cinderella's stepmother do to prevent her from trying on the glass slipper?",
+				"options": ["Locks her in the attic", "Breaks the slipper", "Hides the slipper", "Sends her away"],
+				"correctAnswer": "Locks her in the attic"
+			},
+			{
+				"question": "What does Cinderella's stepfamily call her?",
+				"options": ["Cindy", "Ella", "Cinders", "Ash"],
+				"correctAnswer": "Cinders"
+			},
+			{
+				"question": "What does Cinderella do for her stepfamily before going to the ball?",
+				"options": ["Sew new dresses", "Cook dinner", "Clean the house", "Sing a song"],
+				"correctAnswer": "Clean the house"
+			}
+		]
+	},
+	{
+		"name": "PETER PAN",
+		"questions": [
+			{
+				"question": "What is the name of the magical island where Peter Pan lives?",
+				"options": ["Neverland", "Narnia", "Avalon", "Atlantis"],
+				"correctAnswer": "Neverland"
+			},
+			{
+				"question": "Who is Peter Pan's arch-nemesis?",
+				"options": ["Captain Hook", "Smee", "Mr. Smee", "Blackbeard"],
+				"correctAnswer": "Captain Hook"
+			},
+			{
+				"question": "What is the name of Peter Pan's fairy companion?",
+				"options": ["Tinkerbell", "Pixie", "Fawn", "Wendy"],
+				"correctAnswer": "Tinkerbell"
+			},
+			{
+				"question": "What kind of animal is Peter Pan's loyal friend, Tinkerbell?",
+				"options": ["Fairy", "Butterfly", "Bird", "Pixie"],
+				"correctAnswer": "Fairy"
+			},
+			{
+				"question": "What does Peter Pan use to fly?",
+				"options": ["Fairy dust", "Wishing star", "Magic wand", "Happy thoughts"],
+				"correctAnswer": "Fairy dust"
+			},
+			{
+				"question": "What is the name of the group of children led by Peter Pan in Neverland?",
+				"options": ["Lost Boys", "Neverlandians", "Peter's Pals", "Pan's People"],
+				"correctAnswer": "Lost Boys"
+			},
+			{
+				"question": "What is the name of the pirate ship commanded by Captain Hook?",
+				"options": ["Jolly Roger", "Black Pearl", "Queen Anne's Revenge", "Sparrow's Revenge"],
+				"correctAnswer": "Jolly Roger"
+			},
+			{
+				"question": "What game does Peter Pan play with the Darling children when they first meet?",
+				"options": ["Pirates", "Hide and Seek", "Tag", "Flying"],
+				"correctAnswer": "Flying"
+			},
+			{
+				"question": "What item does Peter Pan use to wake Wendy from her sleep?",
+				"options": ["Kiss", "Tick-tock sound of a clock", "Fairy dust", "Magic potion"],
+				"correctAnswer": "Tick-tock sound of a clock"
+			},
+			{
+				"question": "What does Peter Pan say will prevent him from growing up?",
+				"options": ["Happy thoughts", "Fairy dust", "Neverland magic", "His heart"],
+				"correctAnswer": "Happy thoughts"
+			}
+		]
+	},
+	{
+		"name": "BELLE (BEAUTY AND THE BEAST)",
+		"questions": [
+			{
+				"question": "What is Belle's father's name?",
+				"options": ["Maurice", "Gaston", "Philippe", "Jean-Claude"],
+				"correctAnswer": "Maurice"
+			},
+			{
+				"question": "What is the name of the enchanted castle's cursed prince?",
+				"options": ["Adam", "Gaston", "Philippe", "Jean-Claude"],
+				"correctAnswer": "Adam"
+			},
+			{
+				"question": "What does Belle love to do in her free time?",
+				"options": ["Read books", "Sing songs", "Cook meals", "Go horseback riding"],
+				"correctAnswer": "Read books"
+			},
+			{
+				"question": "What kind of animal is Belle's father's loyal companion?",
+				"options": ["Horse", "Dog", "Cat", "Bird"],
+				"correctAnswer": "Horse"
+			},
+			{
+				"question": "What does Belle trade her freedom for to save her father?",
+				"options": ["A rose", "A mirror", "A book", "A necklace"],
+				"correctAnswer": "A rose"
+			},
+			{
+				"question": "What does Belle's father invent?",
+				"options": ["Automobiles", "Telephones", "Music boxes", "Wood choppers"],
+				"correctAnswer": "Music boxes"
+			},
+			{
+				"question": "What does Belle do to break the curse on the Beast and his servants?",
+				"options": [
+					"Declares her love for the Beast",
+					"Kisses the Beast",
+					"Defeats Gaston in a fight",
+					"Solves a riddle"
+				],
+				"correctAnswer": "Declares her love for the Beast"
+			},
+			{
+				"question": "What is the name of Belle's suitor who is determined to marry her?",
+				"options": ["Gaston", "Lumiere", "Cogsworth", "LeFou"],
+				"correctAnswer": "Gaston"
+			},
+			{
+				"question": "What object in the castle is enchanted to serve as the gateway to the Beast's world?",
+				"options": ["Magic mirror", "Enchanted rose", "Golden key", "Spellbook"],
+				"correctAnswer": "Magic mirror"
+			},
+			{
+				"question": "What does Belle say about the provincial town she lives in?",
+				"options": ["It's boring", "It's too small", "Everyone knows everyone", "It's provincial"],
+				"correctAnswer": "It's provincial"
+			}
+		]
+	},
+	{
+		"name": "ALADDIN",
+		"questions": [
+			{
+				"question": "What is the name of Aladdin's monkey companion?",
+				"options": ["Abu", "Rajah", "Iago", "Jafar"],
+				"correctAnswer": "Abu"
+			},
+			{
+				"question": "What is the name of Aladdin's love interest?",
+				"options": ["Jasmine", "Ariel", "Belle", "Mulan"],
+				"correctAnswer": "Jasmine"
+			},
+			{
+				"question": "What is the name of the evil sorcerer in Aladdin?",
+				"options": ["Jafar", "Iago", "Maleficent", "Ursula"],
+				"correctAnswer": "Jafar"
+			},
+			{
+				"question": "What is the name of the city where Aladdin is set?",
+				"options": ["Agrabah", "Arendelle", "Atlantica", "Corona"],
+				"correctAnswer": "Agrabah"
+			},
+			{
+				"question": "What kind of animal is Aladdin's loyal friend, Abu?",
+				"options": ["Monkey", "Parrot", "Tiger", "Elephant"],
+				"correctAnswer": "Monkey"
+			},
+			{
+				"question": "What is the name of the cave where the magic lamp is located?",
+				"options": ["Cave of Wonders", "Cave of Secrets", "Cave of Dreams", "Cave of Miracles"],
+				"correctAnswer": "Cave of Wonders"
+			},
+			{
+				"question": "What does Aladdin use to fly around the city with Jasmine?",
+				"options": ["Magic carpet", "Magic broomstick", "Flying horse", "Wings"],
+				"correctAnswer": "Magic carpet"
+			},
+			{
+				"question": "What is the name of the genie in Aladdin?",
+				"options": ["Genie", "Abu", "Iago", "Rajah"],
+				"correctAnswer": "Genie"
+			},
+			{
+				"question": "What song does Aladdin sing to Jasmine while showing her the world?",
+				"options": ["A Whole New World", "Friend Like Me", "Prince Ali", "One Jump Ahead"],
+				"correctAnswer": "A Whole New World"
+			},
+			{
+				"question": "What does Aladdin use to rub the magic lamp?",
+				"options": ["Cloth", "Towel", "His hand", "Magic wand"],
+				"correctAnswer": "His hand"
+			}
+		]
+	}
+]
