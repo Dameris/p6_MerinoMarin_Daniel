@@ -1,57 +1,80 @@
 <template>
-	<div class="trivia__Container">
-		<template v-if="currentTest">
-			<h1>{{ currentTest.name }}</h1>
-			<template v-if="!showResult">
-				<h2>{{ currentQuestion.question }}</h2>
-				<ul>
-					<li
-						class="trivia__option"
-						v-for="(option, index) in currentQuestion.options"
-						:key="index"
-						@click="checkAnswer(option)"
-					>
-						{{ option }}
-					</li>
-				</ul>
-				<p class="trivia__timeRemaning">{{ timeRemaining }}</p>
-			</template>
-			<div
-				v-else
-				class="trivia__resultContainer"
-			>
-				<p>{{ result }}</p>
-				<template v-if="currentQuestionIndex < currentTest.questions.length - 1">
-					<button
-						class="trivia__next--btn"
-						@click="nextQuestion"
-					>
-						NEXT QUESTION
-					</button>
-				</template>
-				<template v-else>
-					<h2>Your final score is: {{ userScore }} / {{ totalQuestions }}</h2>
-					<button
-						class="trivia__next--btn"
-						@click="restartQuiz"
-					>
-						FINISH
-					</button>
-				</template>
+	<div class="trivia__container">
+		<template v-if="showTestsExplanation && !currentTest">
+			<div class="trivia__explanation">
+				<h2>WELCOME TO THE TRIVIA SECTION!</h2>
+				<p>THIS SECTION OFFERS A VARIETY OF QUIZZES TO TEST YOUR KNOWLEDGE ABOUT THE DISNEY WORLD.</p>
+				<button
+					@click="showTestsExplanation = false"
+					class="trivia__next--btn"
+				>
+					START
+				</button>
 			</div>
 		</template>
-		<template v-else>
-			<h2>CHOOSE A TEST:</h2>
-			<ul class="trivia__test--list">
-				<li
-					class="trivia__test--item"
-					v-for="(test, index) in tests"
-					:key="index"
-					@click="startTest(test)"
+		<template v-if="!showTestsExplanation">
+			<template v-if="currentTest">
+				<h1>{{ currentTest.name }}</h1>
+				<template v-if="!showResult">
+					<h2>{{ currentQuestion.question }}</h2>
+					<ul>
+						<li
+							class="trivia__option"
+							v-for="(option, index) in currentQuestion.options"
+							:key="index"
+							@click="checkAnswer(option)"
+						>
+							{{ option }}
+						</li>
+					</ul>
+					<p class="trivia__timeRemaning">{{ timeRemaining }}</p>
+				</template>
+				<div
+					v-else
+					class="trivia__resultContainer"
 				>
-					{{ test.name }}
-				</li>
-			</ul>
+					<p>{{ result }}</p>
+					<template v-if="currentQuestionIndex < currentTest.questions.length - 1">
+						<button
+							class="trivia__next--btn"
+							@click="nextQuestion"
+						>
+							NEXT QUESTION
+						</button>
+					</template>
+					<template v-else>
+						<h2>YOUR FINAL SCORE IS: {{ userScore }} / {{ totalQuestions }}</h2>
+						<button
+							class="trivia__next--btn"
+							@click="restartQuiz"
+						>
+							FINISH
+						</button>
+					</template>
+				</div>
+			</template>
+			<template v-else>
+				<div class="trivia__test--container">
+					<h2>CHOOSE A TEST:</h2>
+					<ul class="trivia__test--list">
+						<li
+							class="trivia__test--item"
+							v-for="(test, index) in tests"
+							:key="index"
+							@click="startTest(test)"
+							:style="{ backgroundImage: `url(${test.backgroundImage})` }"
+						>
+							{{ test.name }}
+						</li>
+					</ul>
+					<button
+						@click="showTestsExplanation = true"
+						class="trivia__next--btn"
+					>
+						BACK
+					</button>
+				</div>
+			</template>
 		</template>
 	</div>
 </template>
@@ -63,6 +86,7 @@
 				tests: [],
 
 				// Inicialización de las variables del juego
+				showTestsExplanation: true,
 				currentTestIndex: null,
 				currentQuestionIndex: null,
 				showResult: false,
@@ -182,11 +206,20 @@
 </script>
 
 <style scoped>
-	.trivia__Container {
-		max-width: 50em;
-		margin: 0 auto;
-		padding-top: 1em;
-		text-align: center;
+	.trivia__container {
+		position: relative;
+	}
+
+	.trivia__explanation {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+		color: #fff;
+		background-image: url("../../img/trivia_bg.jpg");
+		background-size: cover;
+		background-position: center;
 	}
 
 	.trivia__option {
@@ -216,6 +249,7 @@
 	.trivia__next--btn {
 		padding: 1em 2em;
 		margin-top: 1em;
+		margin-bottom: 1em;
 		cursor: pointer;
 		border: none;
 		border-radius: 0.4em;
@@ -227,21 +261,41 @@
 		background-color: #ffafaf;
 	}
 
+	.trivia__test--container {
+		padding: 1em;
+		min-height: 100vh;
+		color: #fff;
+		text-align: center;
+		background-image: url("../../img/trivia_bg.jpg");
+		background-size: cover;
+		background-position: center;
+	}
+
 	.trivia__test--list {
-		padding: 0;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
 		list-style-type: none;
 	}
 
 	.trivia__test--item {
+		display: flex;
+		align-items: flex-start;
 		padding: 1em;
-		margin-bottom: 0.5em;
+		margin: 1em;
+		width: calc(30em - 1em);
+		height: calc(30em - 1em);
 		cursor: pointer;
+		border: 0.1em solid #fff;
 		border-radius: 0.4em;
 		color: #fff;
-		background-color: #ff5757;
+		background-size: cover;
+		background-position: center;
+		filter: grayscale(100%);
+		transition: filter 0.3s ease;
 	}
 
 	.trivia__test--item:hover {
-		background-color: #ffafaf;
+		filter: grayscale(0%);
 	}
 </style>

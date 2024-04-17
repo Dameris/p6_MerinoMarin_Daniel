@@ -47,7 +47,8 @@
 				"options": ["Cinderella", "Bambi", "Fantasia", "Treasure Planet"],
 				"correctAnswer": "Fantasia"
 			}
-		]
+		],
+		"backgroundImage": "./img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png"
 	},
 	{
 		"name": "WOODY (TOY STORY)",
@@ -107,7 +108,8 @@
 				"options": ["Japan", "France", "China", "Germany"],
 				"correctAnswer": "Japan"
 			}
-		]
+		],
+		"backgroundImage": "./img/json_img/woody/33631_woody_character_pixar.png"
 	},
 	{
 		"name": "SIMBA (THE LION KING)",
@@ -162,7 +164,8 @@
 				"options": ["Long live the king", "Hakuna Matata", "I'm sorry, Scar", "You're not my brother"],
 				"correctAnswer": "You're not my brother"
 			}
-		]
+		],
+		"backgroundImage": "./img/json_img"
 	},
 	{
 		"name": "ARIEL (THE LITTLE MERMAID)",
@@ -217,7 +220,8 @@
 				"options": ["A human", "A mermaid", "A princess", "A queen"],
 				"correctAnswer": "A human"
 			}
-		]
+		],
+		"backgroundImage": "./img/json_img"
 	},
 	{
 		"name": "ELSA (FROZEN)",
@@ -277,7 +281,8 @@
 				"options": ["Gloves", "A crown", "A wand", "A crystal"],
 				"correctAnswer": "Gloves"
 			}
-		]
+		],
+		"backgroundImage": "./img/json_img/elsa/33631_elsa_character_disney.png"
 	},
 	{
 		"name": "BUZZ LIGHTYEAR (TOY STORY)",
@@ -347,7 +352,8 @@
 				],
 				"correctAnswer": "Buzz Lightyear of Star Command"
 			}
-		]
+		],
+		"backgroundImage": "./img/json_img/buzz/33631_buzz_lightyear_character_pixar.png"
 	},
 	{
 		"name": "CINDERELLA",
@@ -402,7 +408,8 @@
 				"options": ["Sew new dresses", "Cook dinner", "Clean the house", "Sing a song"],
 				"correctAnswer": "Clean the house"
 			}
-		]
+		],
+		"backgroundImage": "./img/json_img"
 	},
 	{
 		"name": "PETER PAN",
@@ -457,7 +464,8 @@
 				"options": ["Happy thoughts", "Fairy dust", "Neverland magic", "His heart"],
 				"correctAnswer": "Happy thoughts"
 			}
-		]
+		],
+		"backgroundImage": "./img/json_img"
 	},
 	{
 		"name": "BELLE (BEAUTY AND THE BEAST)",
@@ -517,7 +525,8 @@
 				"options": ["It's boring", "It's too small", "Everyone knows everyone", "It's provincial"],
 				"correctAnswer": "It's provincial"
 			}
-		]
+		],
+		"backgroundImage": "./img/json_img"
 	},
 	{
 		"name": "ALADDIN",
@@ -572,6 +581,7 @@
 				"options": ["Cloth", "Towel", "His hand", "Magic wand"],
 				"correctAnswer": "His hand"
 			}
-		]
+		],
+		"backgroundImage": "./img/json_img"
 	}
 ]
