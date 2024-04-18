@@ -165,7 +165,7 @@
 				"correctAnswer": "You're not my brother"
 			}
 		],
-		"backgroundImage": "./img/json_img"
+		"backgroundImage": "./img/json_img/simba/33631_simba_character_sq_l.jpg"
 	},
 	{
 		"name": "ARIEL (THE LITTLE MERMAID)",
@@ -221,7 +221,7 @@
 				"correctAnswer": "A human"
 			}
 		],
-		"backgroundImage": "./img/json_img"
+		"backgroundImage": "./img/json_img/ariel/33631_ariel_character_sq_l.jpg"
 	},
 	{
 		"name": "ELSA (FROZEN)",
@@ -409,7 +409,7 @@
 				"correctAnswer": "Clean the house"
 			}
 		],
-		"backgroundImage": "./img/json_img"
+		"backgroundImage": "./img/json_img/cinderella/33631_cinderella_character_sq_l.jpg"
 	},
 	{
 		"name": "PETER PAN",
@@ -465,7 +465,7 @@
 				"correctAnswer": "Happy thoughts"
 			}
 		],
-		"backgroundImage": "./img/json_img"
+		"backgroundImage": "./img/json_img/peter-pan/33631_peter_pan_character_sq_l.jpg"
 	},
 	{
 		"name": "BELLE (BEAUTY AND THE BEAST)",
@@ -526,7 +526,7 @@
 				"correctAnswer": "It's provincial"
 			}
 		],
-		"backgroundImage": "./img/json_img"
+		"backgroundImage": "./img/json_img/belle/33631_belle_character_sq_l.jpg"
 	},
 	{
 		"name": "ALADDIN",
@@ -582,6 +582,6 @@
 				"correctAnswer": "His hand"
 			}
 		],
-		"backgroundImage": "./img/json_img"
+		"backgroundImage": "./img/json_img/aladdin/33631_aladdin_character_sq_l.jpg"
 	}
 ]
