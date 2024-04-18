@@ -12,69 +12,80 @@
 				</button>
 			</div>
 		</template>
-		<template v-if="!showTestsExplanation">
-			<template v-if="currentTest">
-				<h1>{{ currentTest.name }}</h1>
-				<template v-if="!showResult">
-					<h2>{{ currentQuestion.question }}</h2>
-					<ul>
-						<li
-							class="trivia__option"
-							v-for="(option, index) in currentQuestion.options"
-							:key="index"
-							@click="checkAnswer(option)"
+		<template v-else>
+			<h1 v-if="currentTest">{{ currentTest.name }}</h1>
+			<div
+				v-if="currentTest"
+				class="trivia__questionContainer"
+			>
+				<h2 class="trivia__questionTitle">{{ currentQuestion.question }}</h2>
+				<ul>
+					<li
+						v-for="(option, index) in currentQuestion.options"
+						:key="index"
+						:class="{
+							trivia__option: true,
+							'trivia__option--correct': showResult && option === currentQuestion.correctAnswer,
+							'trivia__option--disabled': showResult
+						}"
+						@click="showResult ? null : checkAnswer(option)"
+					>
+						{{ option }}
+						<svg
+							v-if="showResult && option === currentQuestion.correctAnswer"
+							xmlns="http://www.w3.org/2000/svg"
+							class="trivia__tick"
+							viewBox="0 0 24 24"
+							fill="green"
+							width="24"
+							height="24"
 						>
-							{{ option }}
-						</li>
-					</ul>
-					<p class="trivia__timeRemaning">{{ timeRemaining }}</p>
-				</template>
+							<path
+								d="M0 0h24v24H0z"
+								fill="none"
+							/>
+							<path d="M9 16.2l-3.5-3.5 1.4-1.4 2.1 2.1 4.6-4.6 1.4 1.4-6 6z" />
+						</svg>
+					</li>
+				</ul>
+				<p class="trivia__timeRemaining">{{ timeRemaining }}</p>
 				<div
-					v-else
+					v-if="showResult"
 					class="trivia__resultContainer"
 				>
 					<p>{{ result }}</p>
-					<template v-if="currentQuestionIndex < currentTest.questions.length - 1">
-						<button
-							class="trivia__next--btn"
-							@click="nextQuestion"
-						>
-							NEXT QUESTION
-						</button>
-					</template>
-					<template v-else>
-						<h2>YOUR FINAL SCORE IS: {{ userScore }} / {{ totalQuestions }}</h2>
-						<button
-							class="trivia__next--btn"
-							@click="restartQuiz"
-						>
-							FINISH
-						</button>
-					</template>
-				</div>
-			</template>
-			<template v-else>
-				<div class="trivia__test--container">
-					<h2>CHOOSE A TEST:</h2>
-					<ul class="trivia__test--list">
-						<li
-							class="trivia__test--item"
-							v-for="(test, index) in tests"
-							:key="index"
-							@click="startTest(test)"
-							:style="{ backgroundImage: `url(${test.backgroundImage})` }"
-						>
-							{{ test.name }}
-						</li>
-					</ul>
+					<h2>YOUR FINAL SCORE IS: {{ userScore }} / {{ totalQuestions }}</h2>
 					<button
-						@click="showTestsExplanation = true"
 						class="trivia__next--btn"
+						@click="nextQuestion"
 					>
-						BACK
+						{{ currentQuestionIndex < currentTest.questions.length - 1 ? "NEXT QUESTION" : "FINISH" }}
 					</button>
 				</div>
-			</template>
+			</div>
+			<div
+				v-else
+				class="trivia__test--container"
+			>
+				<h2>CHOOSE A TEST:</h2>
+				<ul class="trivia__test--list">
+					<li
+						class="trivia__test--item"
+						v-for="(test, index) in tests"
+						:key="index"
+						@click="startTest(test)"
+						:style="{ backgroundImage: `url(${test.backgroundImage})` }"
+					>
+						{{ test.name }}
+					</li>
+				</ul>
+				<button
+					@click="showTestsExplanation = true"
+					class="trivia__next--btn"
+				>
+					BACK
+				</button>
+			</div>
 		</template>
 	</div>
 </template>
@@ -84,8 +95,6 @@
 		data() {
 			return {
 				tests: [],
-
-				// Inicialización de las variables del juego
 				showTestsExplanation: true,
 				currentTestIndex: null,
 				currentQuestionIndex: null,
@@ -104,12 +113,10 @@
 		},
 
 		computed: {
-			// Calcula el test actual
 			currentTest() {
 				return this.currentTestIndex !== null ? this.tests[this.currentTestIndex] : null
 			},
 
-			// Calcula la pregunta actual
 			currentQuestion() {
 				return this.currentTest && this.currentQuestionIndex !== null
 					? this.currentTest.questions[this.currentQuestionIndex]
@@ -118,7 +125,6 @@
 		},
 
 		methods: {
-			// Fetch de los test
 			async fetchTests() {
 				try {
 					const response = await fetch("/testsTrivia.json")
@@ -131,10 +137,8 @@
 				}
 			},
 
-			// Inicia el test seleccionado
 			startTest(test) {
 				this.currentTestIndex = this.tests.indexOf(test)
-				// Clona el test actual para no modificar el original
 				this.currentTest = JSON.parse(JSON.stringify(test))
 				this.currentTest.questions = this.shuffleArray(this.currentTest.questions)
 				this.currentQuestionIndex = 0
@@ -142,12 +146,12 @@
 				this.result = ""
 				this.userScore = 0
 				this.totalQuestions = this.currentTest.questions.length
+				this.timeRemaining = 10
 
 				this.startTimer()
 			},
 
 			shuffleArray(array) {
-				// Función para mezclar un array usando el algoritmo de Fisher-Yates
 				for (let i = array.length - 1; i > 0; i--) {
 					const j = Math.floor(Math.random() * (i + 1))
 					;[array[i], array[j]] = [array[j], array[i]]
@@ -167,17 +171,16 @@
 			},
 
 			checkAnswer(option) {
-				this.timeRemaining = 1000
+				this.timeRemaining = 100000
 
 				if (option === this.currentQuestion.correctAnswer) {
 					this.result = "CORRECT ANSWER!"
 					this.userScore++
 				} else if (option !== this.currentQuestion.correctAnswer || option === "") {
-					this.result = "INCORECT ANSWER! The correct answer is: " + this.currentQuestion.correctAnswer
+					this.result = "INCORRECT ANSWER! The correct answer is: " + this.currentQuestion.correctAnswer
 				}
 				this.showResult = true
 
-				// Guardar el historial después de cada test
 				this.history.push({
 					test: this.currentTest,
 					score: this.userScore,
@@ -194,12 +197,8 @@
 				} else {
 					this.currentTestIndex = null
 					this.currentQuestionIndex = null
+					clearInterval(this.timer)
 				}
-			},
-
-			restartQuiz() {
-				this.currentTestIndex = null
-				this.currentQuestionIndex = null
 			}
 		}
 	}
@@ -222,27 +221,54 @@
 		background-position: center;
 	}
 
+	.trivia__questionContainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.trivia__questionTitle {
+		padding-bottom: 4em;
+	}
+
 	.trivia__option {
 		padding: 0.8em;
 		margin-bottom: 0.5em;
+		max-width: 30em;
+		min-width: 15em;
 		border-radius: 0.4em;
 		cursor: pointer;
 		list-style: none;
+		text-align: center;
 		color: #fff;
-		background-color: #ffafaf;
-	}
-
-	.trivia__option:hover {
 		background-color: #ff5757;
 	}
 
-	.trivia__timeRemaning {
+	.trivia__option--correct {
+		background-color: #57ff57;
+	}
+
+	.trivia__option--disabled {
+		pointer-events: none;
+	}
+
+	.trivia__option:hover {
+		background-color: #ffafaf;
+	}
+
+	.trivia__timeRemaining {
+		padding-top: 2em;
 		font-size: 5em;
 		font-weight: bold;
 		color: #ff5757;
 	}
 
 	.trivia__resultContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		margin-top: 1em;
 	}
 
