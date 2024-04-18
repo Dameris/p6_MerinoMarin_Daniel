@@ -146,7 +146,7 @@
 
 					if (user) {
 						this.showSuccessAlert = true
-						this.successMessage = "Login successful!"
+						this.successMessage = "LOG IN SUCCESSFUL!"
 
 						// Restablecer los datos del formulario
 						this.formData.email = ""

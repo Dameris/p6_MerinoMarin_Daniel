@@ -19,7 +19,7 @@
 	{
 		"id": 2,
 		"name": "Minnie Mouse",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/minnie-mouse/43102_minnie_character_page_mb.png",
 		"images": {
 			"img1": "./img/json_img/minnie-mouse/33631_minnie_mouse_character_disney.png",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
@@ -36,7 +36,7 @@
 	{
 		"id": 3,
 		"name": "Elsa",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/elsa/33631_elsa_character_mb.png",
 		"images": {
 			"img1": "./img/json_img/elsa/33631_elsa_character_disney.png",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
@@ -53,7 +53,7 @@
 	{
 		"id": 4,
 		"name": "Stitch",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/stitch/33631_stitch_character_mb.png",
 		"images": {
 			"img1": "./img/json_img/stitch/33631_stitch_character_disney.png",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
@@ -69,10 +69,10 @@
 
 	{
 		"id": 5,
-		"name": "Mickey Mouse",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"name": "Ariel",
+		"img-bg": "./img/json_img/ariel/33631_ariel_character_mb.png",
 		"images": {
-			"img1": "./img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png",
+			"img1": "./img/json_img/ariel/33631_ariel_character_sq_l.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
 			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
 			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
@@ -86,10 +86,10 @@
 
 	{
 		"id": 6,
-		"name": "Minnie Mouse",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"name": "Dumbo",
+		"img-bg": "./img/json_img/dumbo/33631_dumbo_character_mb.png",
 		"images": {
-			"img1": "./img/json_img/minnie-mouse/33631_minnie_mouse_character_disney.png",
+			"img1": "./img/json_img/dumbo/33631_dumbo_character_sq_l.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
 			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
 			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
@@ -103,10 +103,10 @@
 
 	{
 		"id": 7,
-		"name": "Elsa",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"name": "Winnie the Pooh",
+		"img-bg": "./img/json_img/winnie-the-pooh/33631_winnie-the-pooh_character_mb.png",
 		"images": {
-			"img1": "./img/json_img/elsa/33631_elsa_character_disney.png",
+			"img1": "./img/json_img/winnie-the-pooh/33631_winnie-the-pooh_character_sq_l.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
 			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
 			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
@@ -120,10 +120,10 @@
 
 	{
 		"id": 8,
-		"name": "Stitch",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"name": "Jack Skellington",
+		"img-bg": "./img/json_img/jack-skellington/33631_jack_skellington_character_mb.png",
 		"images": {
-			"img1": "./img/json_img/stitch/33631_stitch_character_disney.png",
+			"img1": "./img/json_img/jack-skellington/33631_jack_skellington_character_sq_l.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
 			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
 			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
@@ -137,10 +137,10 @@
 
 	{
 		"id": 9,
-		"name": "Mickey Mouse",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"name": "Marie",
+		"img-bg": "./img/json_img/marie/33631_marie_character_mb.png",
 		"images": {
-			"img1": "./img/json_img/mickey-mouse/33631_mickey_mouse_character_disney.png",
+			"img1": "./img/json_img/marie/33631_marie_character_sq_l.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
 			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
 			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
@@ -154,10 +154,10 @@
 
 	{
 		"id": 10,
-		"name": "Minnie Mouse",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"name": "Peter Pan",
+		"img-bg": "./img/json_img/peter-pan/33631_peter_pan_character_mb.png",
 		"images": {
-			"img1": "./img/json_img/minnie-mouse/33631_minnie_mouse_character_disney.png",
+			"img1": "./img/json_img/peter-pan/33631_peter_pan_character_sq_l.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
 			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
 			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
@@ -171,10 +171,10 @@
 
 	{
 		"id": 11,
-		"name": "Elsa",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"name": "Cheshire Cat",
+		"img-bg": "./img/json_img/cheshire-cat/36814_chesire-cat_character_mb.png",
 		"images": {
-			"img1": "./img/json_img/elsa/33631_elsa_character_disney.png",
+			"img1": "./img/json_img/cheshire-cat/36814_cheshire-cat_character_sq_m.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
 			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
 			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
@@ -188,10 +188,10 @@
 
 	{
 		"id": 12,
-		"name": "Stitch",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"name": "Chip and Dale",
+		"img-bg": "./img/json_img/chip-dale/33631_chip_n_dale_character_mb.png",
 		"images": {
-			"img1": "./img/json_img/stitch/33631_stitch_character_disney.png",
+			"img1": "./img/json_img/chip-dale/33631_chip_n_dale_character_sq_l.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
 			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
 			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",

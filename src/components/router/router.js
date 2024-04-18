@@ -101,4 +101,12 @@ router.beforeEach((to, from, next) => {
 	}
 })
 
+router.beforeEach((to, from, next) => {
+	if (to !== from) {
+		// Desplaza la página hacia arriba
+		window.scrollTo(0, 0)
+	}
+	next()
+})
+
 export default router

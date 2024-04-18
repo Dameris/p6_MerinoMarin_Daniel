@@ -69,10 +69,10 @@
 
 	{
 		"id": 5,
-		"name": "Woody",
+		"name": "Sulley Sullivan",
 		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
 		"images": {
-			"img1": "./img/json_img/woody/33631_woody_character_pixar.png",
+			"img1": "./img/json_img/sulley/36814_sulley_sq_m.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
 			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
 			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
@@ -86,10 +86,10 @@
 
 	{
 		"id": 6,
-		"name": "Buzz Lightyear",
+		"name": "Rex",
 		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
 		"images": {
-			"img1": "./img/json_img/buzz/33631_buzz_lightyear_character_pixar.png",
+			"img1": "./img/json_img/rex/33631_rex_character_sq_l.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
 			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
 			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
@@ -103,10 +103,10 @@
 
 	{
 		"id": 7,
-		"name": "Wall - e",
+		"name": "Forky",
 		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
 		"images": {
-			"img1": "./img/json_img/wall-e/36814_wall-e_pixar.png",
+			"img1": "./img/json_img/forky/33631_forky_character_sq_l.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
 			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
 			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
@@ -120,10 +120,10 @@
 
 	{
 		"id": 8,
-		"name": "Lighting MCQueen",
+		"name": "Merida",
 		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
 		"images": {
-			"img1": "./img/json_img/rayo/33631_lightning_mcqueen_character_pixar.png",
+			"img1": "./img/json_img/merida/33631_merida_character_sq_l.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
 			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
 			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
@@ -137,10 +137,10 @@
 
 	{
 		"id": 9,
-		"name": "Woody",
+		"name": "Lotso",
 		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
 		"images": {
-			"img1": "./img/json_img/woody/33631_woody_character_pixar.png",
+			"img1": "./img/json_img/lotso/33631_lotso_character_sq_l.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
 			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
 			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
@@ -154,10 +154,10 @@
 
 	{
 		"id": 10,
-		"name": "Buzz Lightyear",
+		"name": "Mike Wazowski",
 		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
 		"images": {
-			"img1": "./img/json_img/buzz/33631_buzz_lightyear_character_pixar.png",
+			"img1": "./img/json_img/mike/33631_mike_character_sq_l.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
 			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
 			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
@@ -171,10 +171,10 @@
 
 	{
 		"id": 11,
-		"name": "Wall - e",
+		"name": "Bo Peep",
 		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
 		"images": {
-			"img1": "./img/json_img/wall-e/36814_wall-e_pixar.png",
+			"img1": "./img/json_img/bo-peep/36814_bo-peep_character_sq_m.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
 			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
 			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",
@@ -188,10 +188,10 @@
 
 	{
 		"id": 12,
-		"name": "Lighting MCQueen",
+		"name": "Jessie",
 		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
 		"images": {
-			"img1": "./img/json_img/rayo/33631_lightning_mcqueen_character_pixar.png",
+			"img1": "./img/json_img/jessie/33631_jessie_character_sq_l.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
 			"img3": "./img/json_img/mickey-mouse/NBC_walt_disney_mickey.png",
 			"img4": "./img/json_img/mickey-mouse/Sorcerer_Mickey_sparkling.png",

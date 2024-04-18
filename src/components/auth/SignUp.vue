@@ -151,13 +151,30 @@
 				>LOG IN</router-link
 			>
 		</p>
+
+		<SuccessAlert
+			v-if="showSuccessAlert"
+			:message="successMessage"
+		/>
+		<ErrorAlert
+			v-if="showErrorAlert"
+			:message="errorMessage"
+		/>
 	</div>
 </template>
 
 <script>
 	import { openDB } from "idb"
 
+	import SuccessAlert from "../shared/SuccessAlert.vue"
+	import ErrorAlert from "../shared/ErrorAlert.vue"
+
 	export default {
+		components: {
+			SuccessAlert,
+			ErrorAlert
+		},
+
 		data() {
 			return {
 				pageTitle: "Sign Up Info Disney",
@@ -170,11 +187,18 @@
 					country: "",
 					gender: ""
 				},
+
 				// Variables para controlar los errores de validación de los campos del formulario
 				emailError: false,
 				passwordError: false,
 				firstNameError: false,
 				lastNameError: false,
+
+				// Variables para controlar las alertas
+				showSuccessAlert: false,
+				showErrorAlert: false,
+				successMessage: "",
+				errorMessage: "",
 
 				// Variables para almacenar la lista de países
 				countries: [],
@@ -211,10 +235,20 @@
 
 			async checkForm() {
 				if (this.emailError || this.passwordError || this.firstNameError || this.lastNameError) {
-					alert("All input fields must contain valid information.")
+					this.showErrorAlert = true
+					this.errorMessage = "All input fields must contain valid information."
+
+					// Limpiar el mensaje de error después de 1 segundo
+					setTimeout(() => {
+						this.showErrorAlert = false
+						this.errorMessage = ""
+					}, 1000)
 				} else {
 					// Añade el usuario a IndexedDB
 					await this.addUserToDB()
+
+					this.showSuccessAlert = true
+					this.successMessage = "SIGN UP SUCCESSFUL!"
 
 					// Restablecer los datos del formulario
 					this.formData.email = ""
@@ -224,10 +258,9 @@
 					this.formData.country = ""
 					this.formData.gender = ""
 
-					// // Iniciar sesión automáticamente
-					// useAuthStore.login({ email: this.formData.email, password: this.formData.password })
-
-					this.$router.push("/")
+					setTimeout(() => {
+						this.$router.push("/")
+					}, 1000)
 				}
 			},
 
@@ -238,6 +271,13 @@
 				// Abre una transacción y almacena el usuario en el almacén de objetos "users"
 				const tx = this.db.transaction("users", "readwrite")
 				const userStore = tx.objectStore("users")
+				const existingUser = await userStore.index("email").get(this.formData.email)
+
+				if (existingUser) {
+					this.showErrorAlert = true
+					this.errorMessage = "The email address is already in use."
+					return
+				}
 
 				await userStore.add({
 					email: this.formData.email,
