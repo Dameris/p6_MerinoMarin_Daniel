@@ -48,13 +48,14 @@
 						</svg>
 					</li>
 				</ul>
-				<p class="trivia__timeRemaining">{{ timeRemaining }}</p>
 				<div
 					v-if="showResult"
 					class="trivia__resultContainer"
 				>
-					<p>{{ result }}</p>
-					<h2>YOUR FINAL SCORE IS: {{ userScore }} / {{ totalQuestions }}</h2>
+					<strong
+						><p>{{ result }}</p></strong
+					>
+					<h2>YOUR SCORE IS: {{ userScore }} / {{ totalQuestions }}</h2>
 					<button
 						class="trivia__next--btn"
 						@click="nextQuestion"
@@ -102,8 +103,6 @@
 				result: "",
 				userScore: 0,
 				totalQuestions: 0,
-				timer: null,
-				timeRemaining: 10,
 				history: []
 			}
 		},
@@ -146,9 +145,6 @@
 				this.result = ""
 				this.userScore = 0
 				this.totalQuestions = this.currentTest.questions.length
-				this.timeRemaining = 10
-
-				this.startTimer()
 			},
 
 			shuffleArray(array) {
@@ -159,20 +155,7 @@
 				return array
 			},
 
-			startTimer() {
-				this.timer = setInterval(() => {
-					if (this.timeRemaining > 0) {
-						this.timeRemaining--
-					} else {
-						this.nextQuestion()
-						this.checkAnswer("")
-					}
-				}, 1000)
-			},
-
 			checkAnswer(option) {
-				this.timeRemaining = 100000
-
 				if (option === this.currentQuestion.correctAnswer) {
 					this.result = "CORRECT ANSWER!"
 					this.userScore++
@@ -189,15 +172,12 @@
 			},
 
 			nextQuestion() {
-				this.timeRemaining = 10
-
 				if (this.currentQuestionIndex < this.currentTest.questions.length - 1) {
 					this.currentQuestionIndex++
 					this.showResult = false
 				} else {
 					this.currentTestIndex = null
 					this.currentQuestionIndex = null
-					clearInterval(this.timer)
 				}
 			}
 		}
@@ -257,13 +237,6 @@
 		background-color: #ffafaf;
 	}
 
-	.trivia__timeRemaining {
-		padding-top: 2em;
-		font-size: 5em;
-		font-weight: bold;
-		color: #ff5757;
-	}
-
 	.trivia__resultContainer {
 		display: flex;
 		flex-direction: column;
@@ -274,7 +247,7 @@
 
 	.trivia__next--btn {
 		padding: 1em 2em;
-		margin-top: 1em;
+		margin-top: 5em;
 		margin-bottom: 1em;
 		cursor: pointer;
 		border: none;
@@ -309,8 +282,8 @@
 		align-items: flex-start;
 		padding: 1em;
 		margin: 1em;
-		width: calc(30em - 1em);
-		height: calc(30em - 1em);
+		width: calc(20em - 1em);
+		height: calc(20em - 1em);
 		cursor: pointer;
 		border: 0.1em solid #fff;
 		border-radius: 0.4em;
@@ -324,4 +297,13 @@
 	.trivia__test--item:hover {
 		filter: grayscale(0%);
 	}
+
+	/* Media query */
+	@media (max-width: 765px) {
+		.trivia__explanation,
+		.trivia__questionContainer {
+			text-align: center;
+		}
+	}
+	/* End of media query */
 </style>
