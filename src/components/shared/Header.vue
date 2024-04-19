@@ -167,10 +167,10 @@
 					v-model="searchQuery"
 					@input="search"
 				/>
-				<!-- Desplegable de resultados de búsqueda -->
+				<!-- Desplegable de resultados de búsqueda en tiempo real -->
 				<ul
-					v-if="searchResults.length > 0"
 					class="header__searchDropdown"
+					v-if="searchResults.length > 0"
 				>
 					<li
 						v-for="result in searchResults"
@@ -797,17 +797,10 @@
 	}
 
 	.header__searchInput {
-		width: 22em;
-		padding: 0.6em 1em;
-		margin-right: 0.5em;
-		border: none;
-		border-radius: 0.3em;
-		color: #ff5757;
-		background-color: #f5f5f5;
-		box-shadow:
-			0 2em 4em rgba(0, 0, 0, 0.1),
-			background-color 0.3s,
-			box-shadow 0.3s;
+		padding: 0.5em 1em 0.5em 1em;
+		border: 0.2em solid #ff5757;
+		border-radius: 1.5em;
+		width: 15em;
 	}
 
 	.header__searchInput::placeholder {
@@ -823,29 +816,23 @@
 	/* Drop down for search results */
 	.header__searchDropdown {
 		position: absolute;
-		max-height: 15em;
 		width: 100%;
-		padding: 0.2em 0;
-		margin: 0;
-		top: calc(100% + 0.4em);
+		top: 4vh;
 		left: 0;
-		border: 0.1em solid #ccc;
-		border-radius: 0.5em;
-		box-shadow: 0 2em 0.5em rgba(0, 0, 0, 0.1);
+		border-radius: 0.3em;
+		border: 0.2em solid #ff5757;
+		border-top: none;
+		background-color: #fff;
 		z-index: 1000;
-		overflow-y: auto;
-		color: #fff;
-		background-color: #ffafaf;
 	}
 
 	.header__searchDropdown li {
-		padding: 0.5em;
+		padding: 1em;
 		list-style: none;
-		cursor: pointer;
 	}
 
 	.header__searchDropdown li:hover {
-		background-color: #ff5757;
+		background-color: #f4f4f4;
 	}
 
 	.header__searchImage {
@@ -876,11 +863,11 @@
 		}
 
 		.header__logo {
-			max-width: 8em; /* Reducir el tamaño del logo para pantallas pequeñas */
+			max-width: 8em;
 		}
 
 		.header__searchInput {
-			width: 12em; /* Ajustar el ancho del campo de búsqueda */
+			width: 12em;
 		}
 	}
 
