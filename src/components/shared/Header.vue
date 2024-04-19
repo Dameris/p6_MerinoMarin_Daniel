@@ -27,7 +27,7 @@
 					</button>
 					<!-- Lista de elementos del menú deslizable -->
 					<ul class="header__list--slide">
-						<li>
+						<li v-if="!isAuthenticated">
 							<router-link
 								class="header__btn--logIn"
 								to="/logIn"
@@ -35,7 +35,7 @@
 								LOG IN
 							</router-link>
 						</li>
-						<li>
+						<li v-if="!isAuthenticated">
 							<router-link
 								class="header__btn--signUp"
 								to="/signUp"
@@ -43,8 +43,25 @@
 								SIGN UP
 							</router-link>
 						</li>
+						<li v-if="isAuthenticated">
+							<router-link
+								class="header__btn--logIn"
+								to="/private/userProfile"
+							>
+								PROFILE
+							</router-link>
+						</li>
+						<li v-if="isAuthenticated">
+							<router-link
+								class="header__btn--signUp"
+								to="/"
+								@click="logout"
+							>
+								LOG OUT
+							</router-link>
+						</li>
 						<li>
-							<!-- Enlace a la página de favoritos, dependiendo del estado de autenticación -->
+							<!-- Enlace a la página del trivial, dependiendo del estado de autenticación -->
 							<router-link
 								:to="isAuthenticated ? '/private/triviaGame' : 'triviaGame'"
 								class="header__link"
@@ -65,7 +82,7 @@
 				<!-- Lista de elementos del menú principal -->
 				<ul class="header__list">
 					<li>
-						<!-- Enlace a la página de favoritos, dependiendo del estado de autenticación -->
+						<!-- Enlace a la página del trivial, dependiendo del estado de autenticación -->
 						<router-link
 							:to="isAuthenticated ? '/private/triviaGame' : 'triviaGame'"
 							class="header__link"
@@ -120,6 +137,7 @@
 						<router-link
 							class="header__btn--signUp"
 							to="/"
+							@click="logout"
 						>
 							LOG OUT
 						</router-link>
