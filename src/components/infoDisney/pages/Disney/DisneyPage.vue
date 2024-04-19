@@ -1,5 +1,13 @@
 <template>
-	<div>
+	<!-- Loader -->
+	<div
+		v-if="!showContent"
+		class="loader__container"
+	>
+		<div class="loader"></div>
+	</div>
+
+	<div v-else>
 		<img
 			src="../../../img/disney_castle.png"
 			class="characterListPage__image"
@@ -49,12 +57,17 @@
 	export default {
 		data() {
 			return {
-				characters: []
+				characters: [],
+				showContent: false
 			}
 		},
 
 		mounted() {
 			this.fetchCharacters()
+
+			setTimeout(() => {
+				this.showContent = true
+			}, 1000)
 		},
 
 		methods: {

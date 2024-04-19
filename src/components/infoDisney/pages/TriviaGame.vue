@@ -1,5 +1,16 @@
 <template>
-	<div class="trivia__container">
+	<!-- Loader -->
+	<div
+		v-if="!showContent"
+		class="loader__container"
+	>
+		<div class="loader"></div>
+	</div>
+
+	<div
+		v-else
+		class="trivia__container"
+	>
 		<template v-if="showTestsExplanation && !currentTest">
 			<div class="trivia__explanation">
 				<h2>WELCOME TO THE TRIVIA SECTION!</h2>
@@ -103,12 +114,17 @@
 				result: "",
 				userScore: 0,
 				totalQuestions: 0,
-				history: []
+				history: [],
+				showContent: false
 			}
 		},
 
 		mounted() {
 			this.fetchTests()
+
+			setTimeout(() => {
+				this.showContent = true
+			}, 1000)
 		},
 
 		computed: {
@@ -185,6 +201,8 @@
 </script>
 
 <style scoped>
+	@import "/src/assets/css/main.css";
+
 	.trivia__container {
 		position: relative;
 	}

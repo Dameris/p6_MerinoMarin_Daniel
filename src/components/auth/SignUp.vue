@@ -1,5 +1,16 @@
 <template>
-	<div class="formBox">
+	<!-- Loader -->
+	<div
+		v-if="!showContent"
+		class="loader__container"
+	>
+		<div class="loader"></div>
+	</div>
+
+	<div
+		v-else
+		class="formBox"
+	>
 		<img
 			src="../img/logo_infoDisney.png"
 			alt="InfoDisney Logo"
@@ -205,13 +216,19 @@
 				selectedCountry: "",
 
 				// IndexedDB
-				db: null
+				db: null,
+
+				showContent: false
 			}
 		},
 
 		mounted() {
 			this.fetchCountries()
 			this.initDatabase()
+
+			setTimeout(() => {
+				this.showContent = true
+			}, 1000)
 		},
 
 		methods: {

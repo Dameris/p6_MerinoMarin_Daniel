@@ -1,5 +1,16 @@
 <template>
-	<section class="characterPage">
+	<!-- Loader -->
+	<div
+		v-if="!showContent"
+		class="loader__container"
+	>
+		<div class="loader"></div>
+	</div>
+
+	<section
+		v-else
+		class="characterPage"
+	>
 		<!-- Encabezado de la página del personaje -->
 		<div class="characterPage__header">
 			<h2>{{ character.name }}</h2>
@@ -46,13 +57,18 @@
 		data() {
 			return {
 				character: {},
-				imageIndex: 0
+				imageIndex: 0,
+				showContent: false
 			}
 		},
 
 		mounted() {
 			// Método que se ejecuta al montar el componente
 			this.fetchCharacters()
+
+			setTimeout(() => {
+				this.showContent = true
+			}, 1000)
 		},
 
 		methods: {

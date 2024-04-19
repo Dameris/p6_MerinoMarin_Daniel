@@ -1,5 +1,16 @@
 <template>
-	<div class="formBox">
+	<!-- Loader -->
+	<div
+		v-if="!showContent"
+		class="loader__container"
+	>
+		<div class="loader"></div>
+	</div>
+
+	<div
+		v-else
+		class="formBox"
+	>
 		<img
 			src="../../img/logo_infoDisney.png"
 			alt="InfoDisney Logo"
@@ -104,8 +115,16 @@
 				emailError: false,
 				firstNameError: false,
 				lastNameError: false,
-				messageError: false
+				messageError: false,
+
+				showContent: false
 			}
+		},
+
+		mounted() {
+			setTimeout(() => {
+				this.showContent = true
+			}, 1000)
 		},
 
 		methods: {

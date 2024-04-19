@@ -1,5 +1,16 @@
 <template>
-	<div class="userProfile">
+	<!-- Loader -->
+	<div
+		v-if="!showContent"
+		class="loader__container"
+	>
+		<div class="loader"></div>
+	</div>
+
+	<div
+		v-else
+		class="userProfile"
+	>
 		<p class="userProfile__p">
 			<!-- Info del usuario -->
 			<img src="/src/components/img/pfp.png" /> <br />
@@ -14,6 +25,18 @@
 
 <script>
 	export default {
+		data() {
+			return {
+				showContent: false
+			}
+		},
+
+		mounted() {
+			setTimeout(() => {
+				this.showContent = true
+			}, 1000)
+		},
+
 		computed: {
 			user() {
 				// Obtener los datos del usuario del localStorage
@@ -30,6 +53,8 @@
 </script>
 
 <style scoped>
+	@import "/src/assets/css/main.css";
+
 	.userProfile {
 		display: flex;
 		align-items: center;

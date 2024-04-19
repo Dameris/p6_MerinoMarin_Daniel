@@ -1,29 +1,56 @@
 <template>
-	<section class="aboutPage">
-		<!-- Contenido de la página -->
-		<div class="aboutPage__content">
-			<h2><strong>ABOUT US</strong></h2>
-			<p>
-				At <mark>InfoDisney</mark>, we are passionate about sharing the magic and fun of the Disney universe with people
-				of all ages and from all corners of the world. Our mission is to provide our visitors with a unique experience
-				filled with information, entertainment, and nostalgia. We believe in the magic of dreams and in the importance
-				of keeping imagination alive. Join our community and embark on the wonderful adventure that is the world of
-				Disney.
-			</p>
+	<div>
+		<!-- Loader -->
+		<div
+			v-if="!showContent"
+			class="loader__container"
+		>
+			<div class="loader"></div>
 		</div>
-		<!-- Imagen de fondo -->
-		<img
-			src="../../img/mickey.png"
-			class="aboutPage__img"
-		/>
-	</section>
+
+		<!-- Contenido de la página -->
+		<section
+			v-else
+			class="aboutPage"
+		>
+			<div class="aboutPage__content">
+				<h2><strong>ABOUT US</strong></h2>
+				<p>
+					At <mark>InfoDisney</mark>, we are passionate about sharing the magic and fun of the Disney universe with
+					people of all ages and from all corners of the world. Our mission is to provide our visitors with a unique
+					experience filled with information, entertainment, and nostalgia. We believe in the magic of dreams and in the
+					importance of keeping imagination alive. Join our community and embark on the wonderful adventure that is the
+					world of Disney.
+				</p>
+			</div>
+			<!-- Imagen de fondo -->
+			<img
+				src="../../img/mickey.png"
+				class="aboutPage__img"
+			/>
+		</section>
+	</div>
 </template>
 
 <script>
-	export default {}
+	export default {
+		data() {
+			return {
+				showContent: false
+			}
+		},
+		mounted() {
+			setTimeout(() => {
+				this.showContent = true
+			}, 1000)
+		}
+	}
 </script>
 
 <style scoped>
+	@import "/src/assets/css/main.css";
+
+	/* Estilos de la página */
 	.aboutPage {
 		position: relative;
 	}
@@ -68,5 +95,5 @@
 			font-size: 0.5em;
 		}
 	}
-	/* End of media queries */
+	/* Fin de media queries */
 </style>

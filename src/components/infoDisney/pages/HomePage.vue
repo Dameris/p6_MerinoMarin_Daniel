@@ -1,5 +1,13 @@
 <template>
-	<div>
+	<!-- Loader -->
+	<div
+		v-if="!showContent"
+		class="loader__container"
+	>
+		<div class="loader"></div>
+	</div>
+
+	<div v-else>
 		<img
 			src="../../img/disney100.png"
 			class="home__image"
@@ -281,8 +289,9 @@
 								><router-link
 									to="/marvelCharacter/2"
 									class="homeSection__link"
-								>HULK</router-link
-							></span>
+									>HULK</router-link
+								></span
+							>
 						</nav>
 					</li>
 					<li>
@@ -329,10 +338,24 @@
 </template>
 
 <script>
-	export default {}
+	export default {
+		data() {
+			return {
+				showContent: false
+			}
+		},
+
+		mounted() {
+			setTimeout(() => {
+				this.showContent = true
+			}, 1000)
+		}
+	}
 </script>
 
 <style scoped>
+	@import "/src/assets/css/main.css";
+
 	.home__image {
 		width: 100%;
 	}
