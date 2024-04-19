@@ -1,6 +1,6 @@
 # p6_MerinoMarin_Daniel
 
-# Aplicación desplegada: [info-disney](https://info-disney.netlify.app)
+# Aplicación desplegada: [info-disney]()
 
 ## Project Setup
 
@@ -20,8 +20,6 @@ npm run dev
 npm run build
 ```
   
-  
-Video prueba aplicación: [Enlace video drive](https://drive.google.com/drive/u/0/folders/1rkZE8oVGp5N4yTBuZYlxD9Sj6riA0gf4)  
   
 ## Documentación del progreso hasta el 01/03/2024  
 `App`  
@@ -292,4 +290,30 @@ El componente `HomePage`  muestra una página principal que incluye secciones pa
   * Funcionalidades implementadas:  
     - Muestra secciones para las franquicias de Disney, Pixar, Star Wars y Marvel.  
     - Proporciona enlaces a las páginas de detalles de los personajes de cada franquicia.  
- 
+
+<br><br>
+
+`TrivaGame`  
+El componente `TriviaPage` proporciona una sección de trivial con una variedad de cuestionarios para poner a prueba el conocimiento sobre el mundo de Disney.  
+
+  * Estructura del componente:  
+    - `Template`: El componente consta de dos secciones principales:  
+                  1. Loader: Muestra un indicador de carga mientras se recuperan los datos de la trivia.  
+                  2. Trivia Container: Contiene la explicación de la sección de trivia y los cuestionarios disponibles.  
+    - `Script`:  El script maneja la lógica del componente, incluyendo la recuperación de datos de los cuestionarios y la interacción del usuario.  
+    - `Estilos`: Define estilos CSS específicos para el componente, asegurando una presentación visual atractiva y coherente.  
+
+  * Funcionalidades implementadas:  
+    - Recupera los datos de los cuestionarios desde el archivo `testsTrivia.json`.  
+    - Presenta preguntas y opciones de respuesta para cada cuestionario.  
+    - Proporciona retroalimentación sobre las respuestas seleccionadas por el usuario.  
+
+  * Estructuras de datos:  
+    - `tests`: Array que almacena los datos de los cuestionarios recuperados del archivo testsTrivia.json.   
+    - `result`: Mensaje que indica si la respuesta seleccionada por el usuario fue correcta o incorrecta.  
+    - `userScore`: Puntuación acumulada por el usuario.  
+
+  * Métodos y propiedades:  
+    - `startTest`: Método que inicia un cuestionario seleccionado por el usuario.  
+    - `shuffleArray`: Método que mezcla aleatoriamente un array.  
+    - `checkAnswer`: Método que verifica la respuesta seleccionada por el usuario y actualiza la puntuación.   
