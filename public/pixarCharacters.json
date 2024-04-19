@@ -2,7 +2,7 @@
 	{
 		"id": 1,
 		"name": "Woody",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/woody/33631_woody_character_mb.png",
 		"images": {
 			"img1": "./img/json_img/woody/33631_woody_character_pixar.png",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
@@ -19,7 +19,7 @@
 	{
 		"id": 2,
 		"name": "Buzz Lightyear",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/buzz/Buzz-lightyear eslaider.jpg",
 		"images": {
 			"img1": "./img/json_img/buzz/33631_buzz_lightyear_character_pixar.png",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
@@ -36,7 +36,7 @@
 	{
 		"id": 3,
 		"name": "Wall - e",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/wall-e/36814_wall-e_mb.png",
 		"images": {
 			"img1": "./img/json_img/wall-e/36814_wall-e_pixar.png",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
@@ -53,7 +53,7 @@
 	{
 		"id": 4,
 		"name": "Lighting MCQueen",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/rayo/33631_lightning_mcqueen_character_mb.png",
 		"images": {
 			"img1": "./img/json_img/rayo/33631_lightning_mcqueen_character_pixar.png",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
@@ -70,7 +70,7 @@
 	{
 		"id": 5,
 		"name": "Sulley Sullivan",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/sulley/36814_sulley_mb.png",
 		"images": {
 			"img1": "./img/json_img/sulley/36814_sulley_sq_m.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
@@ -87,7 +87,7 @@
 	{
 		"id": 6,
 		"name": "Rex",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/rex/33631_rex_character_mb.png",
 		"images": {
 			"img1": "./img/json_img/rex/33631_rex_character_sq_l.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
@@ -104,7 +104,7 @@
 	{
 		"id": 7,
 		"name": "Forky",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/forky/33631_forky_character_mb.png",
 		"images": {
 			"img1": "./img/json_img/forky/33631_forky_character_sq_l.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
@@ -121,7 +121,7 @@
 	{
 		"id": 8,
 		"name": "Merida",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/merida/33631_merida_character_mb.png",
 		"images": {
 			"img1": "./img/json_img/merida/33631_merida_character_sq_l.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
@@ -138,7 +138,7 @@
 	{
 		"id": 9,
 		"name": "Lotso",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/lotso/33631_lotso_character_mb.png",
 		"images": {
 			"img1": "./img/json_img/lotso/33631_lotso_character_sq_l.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
@@ -154,8 +154,8 @@
 
 	{
 		"id": 10,
-		"name": "Mike Wazowski",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"name": "Mike Wazowski",
+		"img-bg": "./img/json_img/mike/33631_mike_character_mb.png",
 		"images": {
 			"img1": "./img/json_img/mike/33631_mike_character_sq_l.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
@@ -172,7 +172,7 @@
 	{
 		"id": 11,
 		"name": "Bo Peep",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/bo-peep/36814_bo-peep_mb.png",
 		"images": {
 			"img1": "./img/json_img/bo-peep/36814_bo-peep_character_sq_m.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
@@ -189,7 +189,7 @@
 	{
 		"id": 12,
 		"name": "Jessie",
-		"img-bg": "./img/json_img/mickey-mouse/mickey_mouse_bg.png",
+		"img-bg": "./img/json_img/jessie/33631_jessie_character_mb.png",
 		"images": {
 			"img1": "./img/json_img/jessie/33631_jessie_character_sq_l.jpg",
 			"img2": "./img/json_img/mickey-mouse/Mickey-mouse-1.png",
